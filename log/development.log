@@ -48216,3 +48216,10 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-11-02 14:58:30 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 1291ms (Views: 1282.2ms | ActiveRecord: 0.0ms)
+
+
