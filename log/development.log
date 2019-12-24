@@ -47441,6 +47441,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2019-11-02 13:38:27 +0000
 Processing by WelcomeController#index as HTML
   Rendering welcome/index.html.erb within layouts/application
@@ -48223,3 +48224,5 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 1291ms (Views: 1282.2ms | ActiveRecord: 0.0ms)
 
 
+=======
+>>>>>>> parent of c837c32... new
