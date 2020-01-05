@@ -1,9 +1,9 @@
 require_relative 'boot'
 
 require 'rails/all'
-# require "google/cloud/firestore"
+require "google/cloud/firestore"
 
-# firestore = Google::Cloud::Firestore.new project_id: palesun
+# firestore = Google::Cloud::Firestore.new project_id: polarisanalytics
 
 # puts "Created Cloud Firestore client with given project ID."
 
@@ -26,7 +26,7 @@ require 'rails/all'
 #   born:   1912
 # )
 
-puts "Added data to the aturing document in the users collection."
+# puts "Added data to the aturing document in the users collection."
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
