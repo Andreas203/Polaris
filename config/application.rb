@@ -1,30 +1,30 @@
 require_relative 'boot'
 
 require 'rails/all'
-require "google/cloud/firestore"
+# require "google/cloud/firestore"
 
-firestore = Google::Cloud::Firestore.new project_id: palesun
+# firestore = Google::Cloud::Firestore.new project_id: palesun
 
-puts "Created Cloud Firestore client with given project ID."
+# puts "Created Cloud Firestore client with given project ID."
 
-doc_ref = firestore.doc "users/alovelace"
+# doc_ref = firestore.doc "users/alovelace"
 
-doc_ref.set(
-  first: "Ada",
-  last:  "Lovelace",
-  born:  1815
-)
+# doc_ref.set(
+#   first: "Ada",
+#   last:  "Lovelace",
+#   born:  1815
+# )
 
-puts "Added data to the alovelace document in the users collection."
+# puts "Added data to the alovelace document in the users collection."
 
-doc_ref = firestore.doc "users/aturing"
+# doc_ref = firestore.doc "users/aturing"
 
-doc_ref.set(
-  first:  "Alan",
-  middle: "Mathison",
-  last:   "Turing",
-  born:   1912
-)
+# doc_ref.set(
+#   first:  "Alan",
+#   middle: "Mathison",
+#   last:   "Turing",
+#   born:   1912
+# )
 
 puts "Added data to the aturing document in the users collection."
 

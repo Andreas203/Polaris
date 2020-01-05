@@ -1,159 +1,144 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>Album example for Bootstrap</title>
+<head>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Scrolling Nav - Start Bootstrap Template</title>
 
-    <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
-  </head>
+  <!-- Bootstrap core CSS -->
+  <link href="https://blackrockdigital.github.io/startbootstrap-scrolling-nav/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <body>
+  <!-- Custom styles for this template -->
+  <link href="https://blackrockdigital.github.io/startbootstrap-scrolling-nav/css/scrolling-nav.css" rel="stylesheet">
 
-<<<<<<< HEAD
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">Polaris</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <!-- Custom font styles -->
+  <link href="https://fonts.googleapis.com/css?family=Gelasio|Josefin+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    /* Background colour for nav bar */
+    .bg-dark-green {
+      background-color: #284678;
+    }
+
+    /* Shrink text in footer */
+    .small-main-footer-font {
+      font-size: 0.6em;
+    }
+    /* Align footer container text */
+    .center-container-content {
+      text-align: center;
+    }
+
+    /* Apply font style to every element */
+    * {
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    footer-dark-blue {
+      color: #034AA6 !important;
+    }
+
+
+  </style>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-green fixed-top" id="mainNav" style="background-color: ##D65353;">
+    <div class="container">
+        <!-- <%= link_to image_tag("polaris_logo_trans.png", alt: "logo", height:"25px"), '/', class: 'logo' %> -->
+        <a class="navbar-brand js-scroll-trigger" style="margin-left:10px;"href="#page-top">Polaris Analytics</a>
+        
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-=======
-    <header>
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About</h4>
-              <p class="text-muted">Polaris Analytics is a data analysis company primarily focused for forecasting financial information for the betterment of everyone. By aggregating financial news and information in once place we can all make more informed financial decisions.</p>
->>>>>>> parent of c837c32... new
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                <li><a href="#" class="text-white">Like on Facebook</a></li>
-                <li><a href="#" class="text-white">Email me</a></li>
-              </ul>
-            </div>
-          </div>
+          <!-- <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>Polaris Analytics</h1>
+      <p class="lead">Full website coming soon...</p>
+    </div>
+  </header> -->
+
+  <section id="about" style="margin: 0.3em;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>About</h2>
+          <p class="lead">Polaris Analytics is a startup focused on brining transparency to quantative forecasting and simplifying the investment selection process. The future website will offer forecast viewing of multiple financial instruments alongside the information that influenced the forecast.</p>
+          <ul>
+            <li>Currently we are working on making <b>consistent</b> financial forecasts</li>
+          </ul>
         </div>
       </div>
-<<<<<<< HEAD
-    </nav>
+    </div>
+  </section>
 
-    <main role="main" class="container">
-
-      <div class="starter-template">
-        <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Forecast direction</th>
-      <th scope="col">Date forecast made</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">ple</th>
-      <td>Up</td>
-      <td>2-Nov</td>
-    </tr>
-    <tr>
-      <th scope="row">Google</th>
-      <td>Down</td>
-      <td>2-Nov</td>
-    </tr>
-    <tr>
-      <th scope="row">Amazon</th>
-      <td>Down</td>
-      <td>2-Nov</td>
-    </tr>
-  </tbody>
-</table>
-=======
-      <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <strong>Polaris Analytics</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <!-- <section id="services" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Services we offer</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
         </div>
->>>>>>> parent of c837c32... new
       </div>
-    </header>
+    </div>
+  </section> -->
 
-    <main role="main">
-
-      <section class="jumbotron text-center">
-        <div class="container">
-          <!-- <img src="/assets/polaris_analytics_logo.png" id="main_logo" alt="polaris analytics logo" style="height:5.5em; width:5.5em; margin-bottom:1em;"/> -->
-          <p class="lead text-muted">Polaris Analytics is a data analysis startup focused for forecasting financial information for the betterment of everyone. By aggregating financial news and information in once place we can all make more informed financial decisions.</p>
-          <p>
-            <a href="#" class="btn btn-primary my-2">Read more about us</a>
-          </p>
+  <!-- <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Contact us</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
         </div>
-      </section>
-
-      <div class="album py-5 bg-light">
-        <div class="container">
-
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <a href="stocks/index">
-                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=APPLE" alt="Card image cap">
-                </a>
-              </div>
-            </div>
-            </div>
-
-
-
-    </main>
-
-    <footer class="text-muted">
-      <div class="footer-copyright text-center py-3">© 2019 Copyright:
-        <a href="https://mdbootstrap.com/education/bootstrap/"> Polaris Analytics</a>
       </div>
-    </footer>
+    </div>
+  </section> -->
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
-    <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
-    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/holder.min.js"></script>
-  </body>
+  <footer class="footer">
+    <div class = "container center-container-content">
+      <%= link_to image_tag("polaris_logo_trans.png", alt: "logo", height:"21px"), '/', class: 'logo' %>
+    </div>
+    <div class="container center-container-content">
+      <span class="text-muted small-main-footer-font">Copyright © <footer-dark-blue>Polaris Analytics </footer-dark-blue> 2020</span>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://blackrockdigital.github.io/startbootstrap-scrolling-nav/vendor/jquery/jquery.min.js"></script>
+  <script src="https://blackrockdigital.github.io/startbootstrap-scrolling-nav/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="https://blackrockdigital.github.io/startbootstrap-scrolling-nav/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="https://blackrockdigital.github.io/startbootstrap-scrolling-nav/js/scrolling-nav.js"></script>
+
+</body>
+
 </html>
