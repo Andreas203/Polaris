@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'stocks/index'
-  get 'information/Stocks'
   get 'welcome/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'welcome#index'
+
+
+  get '/companies/:id', to: 'stocks#company', as: 'company'
+
+  root 'stocks#company'
 end
