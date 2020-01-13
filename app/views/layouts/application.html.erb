@@ -7,9 +7,61 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <style>
+      /* Background colour for nav bar */
+      .bg-dark-green {
+        background-color: #284678;
+      }
+
+      /* Shrink text in footer */
+      .small-main-footer-font {
+        font-size: 0.6em;
+      }
+      /* Align footer container text */
+      .center-container-content {
+        text-align: center;
+      }
+
+      /* Apply font style to every element */
+      * {
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      footer-dark-blue {
+        color: #034AA6 !important;
+      }
+
+
+    </style>
+
   </head>
 
   <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-green fixed-top" id="mainNav" style="background-color: ##D65353;">
+      <div class="container">
+          <!-- <%= link_to image_tag("polaris_logo_trans.png", alt: "logo", height:"25px"), '/', class: 'logo' %> -->
+          <a class="navbar-brand js-scroll-trigger" style="margin-left:10px;"href="/">Polaris Analytics</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/#about">About</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

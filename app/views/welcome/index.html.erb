@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Scrolling Nav - Start Bootstrap Template</title>
+  <title>Polaris Analytics</title>
 
   <!-- Bootstrap core CSS -->
   <link href="https://blackrockdigital.github.io/startbootstrap-scrolling-nav/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -44,44 +44,55 @@
       color: #034AA6 !important;
     }
 
+    body { padding-top: 70px; }
+
 
   </style>
 
 </head>
 
-<body id="page-top">
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-green fixed-top" id="mainNav" style="background-color: ##D65353;">
-    <div class="container">
-        <!-- <%= link_to image_tag("polaris_logo_trans.png", alt: "logo", height:"25px"), '/', class: 'logo' %> -->
-        <a class="navbar-brand js-scroll-trigger" style="margin-left:10px;"href="#page-top">Polaris Analytics</a>
-        
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li> -->
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+<body>
   <!-- <header class="bg-primary text-white">
     <div class="container text-center">
       <h1>Polaris Analytics</h1>
       <p class="lead">Full website coming soon...</p>
     </div>
   </header> -->
+
+  <!-- Page Content -->
+  <div class="container">
+  <!-- Page Features -->
+    <div class="row text-center">
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card bg-secondary text-white">
+          <%= link_to '<button class="card-body">S&P500</button>'.html_safe, company_path(1) %>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card bg-secondary text-white">
+          <%= link_to '<button class="card-body">S&P500</button>'.html_safe, company_path(1) %>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card bg-secondary text-white">
+          <%= link_to '<button class="card-body">S&P500</button>'.html_safe, company_path(1) %>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card bg-secondary text-white">
+          <%= link_to '<button class="card-body">S&P500</button>'.html_safe, company_path(1) %>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
 
   <section id="about" style="margin: 0.3em;">
     <div class="container">
