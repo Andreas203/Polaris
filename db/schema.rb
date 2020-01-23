@@ -19,4 +19,7 @@ ActiveRecord::Schema.define(version: 2020_01_13_033847) do
     t.string "companyName"
   end
 
+  create_table "products", force: :cascade do |t|
+  end
+
 end
