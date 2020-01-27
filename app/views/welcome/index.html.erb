@@ -19,11 +19,13 @@
 
   <!-- Custom font styles -->
   <link href="https://fonts.googleapis.com/css?family=Gelasio|Josefin+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
 
   <style>
     /* Background colour for nav bar */
     .bg-dark-green {
-      background-color: #284678;
+      /* background-color: #284678; */
+      background-color: black;
     }
 
     /* Shrink text in footer */
@@ -35,16 +37,27 @@
       text-align: center;
     }
 
+    .ticker-font *{
+      font-family: 'VT323', monospace !important;
+      color: white;
+    }
+
+    .name-title-color {
+      color: white;
+    }
+
     /* Apply font style to every element */
     * {
-      font-family: 'Josefin Sans', sans-serif;
+      /* font-family: 'Josefin Sans', sans-serif; */
     }
 
     footer-dark-blue {
-      color: #034AA6 !important;
+      color:darkgray !important;
     }
 
-    body { padding-top: 70px; }
+    body { 
+      background-color: black;
+      padding-top: 70px; }
 
 
   </style>
@@ -60,41 +73,10 @@
   </header> -->
 
   <!-- Page Content -->
-  <div class="container">
-  <!-- Page Features -->
-    <div class="row text-center">
 
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card bg-secondary text-white">
-          <%= link_to '<button class="card-body">S&P500</button>'.html_safe, company_path(1) %>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card bg-secondary text-white">
-          <%= link_to '<button class="card-body">S&P500</button>'.html_safe, company_path(1) %>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card bg-secondary text-white">
-          <%= link_to '<button class="card-body">S&P500</button>'.html_safe, company_path(1) %>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card bg-secondary text-white">
-          <%= link_to '<button class="card-body">S&P500</button>'.html_safe, company_path(1) %>
-        </div>
-      </div>
-
-    </div>
-    <!-- /.row -->
-
-  </div>
   <!-- /.container -->
 
-  <section id="about" style="margin: 0.3em;">
+  <!-- <section id="about" style="margin: 0.3em;">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
@@ -106,7 +88,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- <section id="services" class="bg-light">
     <div class="container">
@@ -129,8 +111,50 @@
       </div>
     </div>
   </section> -->
+  <main role="main" class="container">
+    <!-- <div class='container' style="margin: 2em;"></div>
+    <div class="container ticker-font" style="text-align: center;">
+      <h3>Top pick:</h3>
+      <div class="card bg-none" style="background-color: black;">
+        <div class="card-body">
+          <h5 class="card-title">GOOGLE</h5>
+          <p class="card-text" style="color:#05F228;">+3.1% </p>
+        </div>
+      </div>
+    </div> -->
+  
+    <!-- <div class="container ticker-font" style="text-align: center;">
+      <div class="card bg-none" style="background-color: black;">
+        <div class="card-body">
+          <h5 class="card-title">AMAZON</h5>
+          <p class="card-text" style="color:#F20505;">-0.5%</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container ticker-font" style="text-align: center;">
+      <div class="card bg-none" style="background-color: black;">
+        <div class="card-body">
+          <h5 class="card-title">FACEBOOK</h5>
+          <p class="card-text" style="color:#F20505;">-2.6%</p>
+        </div>
+      </div>
+    </div> -->
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" style="font-family: 'VT323', monospace !important;"placeholder="Company name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-secondary" style="font-family: 'VT323', monospace !important;"type="button">Search</button>
+      </div>
+    </div>
 
-  <footer class="footer">
+  </main>
+
+
+
+
+
+
+  <footer class="footer fixed-bottom" style="margin-bottom: 2em;">
     <div class = "container center-container-content">
       <%= link_to image_tag("polaris_logo_trans.png", alt: "logo", height:"21px"), '/', class: 'logo' %>
     </div>
@@ -138,6 +162,7 @@
       <span class="text-muted small-main-footer-font">Copyright © <footer-dark-blue>Polaris Analytics </footer-dark-blue> 2020</span>
     </div>
   </footer>
+
 
 
   <!-- Bootstrap core JavaScript -->
