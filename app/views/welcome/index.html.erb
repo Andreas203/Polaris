@@ -1,180 +1,52 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Polaris Analytics</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="https://blackrockdigital.github.io/startbootstrap-scrolling-nav/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="https://blackrockdigital.github.io/startbootstrap-scrolling-nav/css/scrolling-nav.css" rel="stylesheet">
-
-  <!-- Custom font styles -->
-  <link href="https://fonts.googleapis.com/css?family=Gelasio|Josefin+Sans&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
-
-  <style>
-    /* Background colour for nav bar */
-    .bg-dark-green {
-      /* background-color: #284678; */
-      background-color: black;
-    }
-
-    /* Shrink text in footer */
-    .small-main-footer-font {
-      font-size: 0.6em;
-    }
-    /* Align footer container text */
-    .center-container-content {
-      text-align: center;
-    }
-
-    .ticker-font *{
-      font-family: 'VT323', monospace !important;
-      color: white;
-    }
-
-    .name-title-color {
-      color: white;
-    }
-
-    /* Apply font style to every element */
-    * {
-      /* font-family: 'Josefin Sans', sans-serif; */
-    }
-
-    footer-dark-blue {
-      color:darkgray !important;
-    }
-
-    body { 
-      background-color: black;
-      padding-top: 70px; }
-
-
-  </style>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <!-- <link href="https://colorlib.com/etc/searchf/colorlib-search-3/css/main.css" rel="stylesheet" /> -->
+    <link href="/assets/main.scss" media="screen" rel="stylesheet" />
 </head>
 
 <body>
-  <!-- <header class="bg-primary text-white">
-    <div class="container text-center">
-      <h1>Polaris Analytics</h1>
-      <p class="lead">Full website coming soon...</p>
+    <div class="s003">
+        <form>
+            <div class="inner-form">
+                <div class="input-field second-wrap">
+                    <input id="search" type="text" placeholder="Enter stock name or symbol..." />
+                </div>
+                <div class="input-field third-wrap">
+                    <button class="btn-search" type="button">
+                        <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
-  </header> -->
+    <script src="https://colorlib.com/etc/searchf/colorlib-search-3/js/extention/choices.js" type="7cc520479767005a4c0c8d80-text/javascript"></script>
+    <script type="7cc520479767005a4c0c8d80-text/javascript">
+        const choices = new Choices('[data-trigger]', {
+            searchEnabled: false,
+            itemSelectText: '',
+        });
+    </script>
 
-  <!-- Page Content -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="7cc520479767005a4c0c8d80-text/javascript"></script>
+    <script type="7cc520479767005a4c0c8d80-text/javascript">
+        window.dataLayer = window.dataLayer || [];
 
-  <!-- /.container -->
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-  <!-- <section id="about" style="margin: 0.3em;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>About</h2>
-          <p class="lead">Polaris Analytics is a startup focused on brining transparency to quantative forecasting and simplifying the investment selection process. The future website will offer forecast viewing of multiple financial instruments alongside the information that influenced the forecast.</p>
-          <ul>
-            <li>Currently we are working on making <b>consistent</b> financial forecasts</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- <section id="services" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Services we offer</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- <section id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Contact us</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <main role="main" class="container">
-    <!-- <div class='container' style="margin: 2em;"></div>
-    <div class="container ticker-font" style="text-align: center;">
-      <h3>Top pick:</h3>
-      <div class="card bg-none" style="background-color: black;">
-        <div class="card-body">
-          <h5 class="card-title">GOOGLE</h5>
-          <p class="card-text" style="color:#05F228;">+3.1% </p>
-        </div>
-      </div>
-    </div> -->
-  
-    <!-- <div class="container ticker-font" style="text-align: center;">
-      <div class="card bg-none" style="background-color: black;">
-        <div class="card-body">
-          <h5 class="card-title">AMAZON</h5>
-          <p class="card-text" style="color:#F20505;">-0.5%</p>
-        </div>
-      </div>
-    </div>
-  
-    <div class="container ticker-font" style="text-align: center;">
-      <div class="card bg-none" style="background-color: black;">
-        <div class="card-body">
-          <h5 class="card-title">FACEBOOK</h5>
-          <p class="card-text" style="color:#F20505;">-2.6%</p>
-        </div>
-      </div>
-    </div> -->
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" style="font-family: 'VT323', monospace !important;"placeholder="Company name" aria-label="Recipient's username" aria-describedby="basic-addon2">
-      <div class="input-group-append">
-        <button class="btn btn-secondary" style="font-family: 'VT323', monospace !important;"type="button">Search</button>
-      </div>
-    </div>
-
-  </main>
-
-
-
-
-
-
-  <footer class="footer fixed-bottom" style="margin-bottom: 2em;">
-    <div class = "container center-container-content">
-      <%= link_to image_tag("polaris_logo_trans.png", alt: "logo", height:"21px"), '/', class: 'logo' %>
-    </div>
-    <div class="container center-container-content">
-      <span class="text-muted small-main-footer-font">Copyright © <footer-dark-blue>Polaris Analytics </footer-dark-blue> 2020</span>
-    </div>
-  </footer>
-
-
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://blackrockdigital.github.io/startbootstrap-scrolling-nav/vendor/jquery/jquery.min.js"></script>
-  <script src="https://blackrockdigital.github.io/startbootstrap-scrolling-nav/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="https://blackrockdigital.github.io/startbootstrap-scrolling-nav/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom JavaScript for this theme -->
-  <script src="https://blackrockdigital.github.io/startbootstrap-scrolling-nav/js/scrolling-nav.js"></script>
-
+        gtag('config', 'UA-23581568-13');
+    </script>
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="7cc520479767005a4c0c8d80-|49" defer=""></script>
 </body>
 
 </html>
