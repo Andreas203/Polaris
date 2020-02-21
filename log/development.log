@@ -2232,3 +2232,173 @@ Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
 >>>>>>> 5da40ba84341e46098b402e9303fe7ef81d670ae
 
 
+  [1m[35m (16.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (20.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+Migrating to AddSymbolPastPresentToCompanies (20200210094716)
+  [1m[35m (28.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (16.9ms)[0m  [1m[35mALTER TABLE "companies" ADD "symbol" character varying[0m
+  ↳ db/migrate/20200210094716_add_symbol_past_present_to_companies.rb:3
+  [1m[35m (15.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (17.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (23.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (20.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+Migrating to AddSymbolPastPresentToCompanies (20200210094716)
+  [1m[35m (15.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (17.3ms)[0m  [1m[35mALTER TABLE "companies" ADD "symbol" character varying[0m
+  ↳ db/migrate/20200210094716_add_symbol_past_present_to_companies.rb:3
+  [1m[35m (16.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (17.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+Migrating to AddSymbolPastPresentToCompanies (20200210094716)
+  [1m[35m (15.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (17.7ms)[0m  [1m[35mALTER TABLE "companies" ADD "symbol" character varying[0m
+  ↳ db/migrate/20200210094716_add_symbol_past_present_to_companies.rb:3
+  [1m[35m (15.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (16.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (25.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (17.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (16.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+Migrating to CreateTableCompanies (20200210102415)
+  [1m[35m (15.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (54.3ms)[0m  [1m[35mCREATE TABLE "companies" ("id" bigserial primary key)[0m
+  ↳ db/migrate/20200210102415_create_table_companies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (15.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200210102415"]]
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+Migrating to AddColumnsToCompanies (20200210102512)
+  [1m[35m (15.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (19.0ms)[0m  [1m[35mALTER TABLE "companies" ADD "symbol" character varying[0m
+  ↳ db/migrate/20200210102512_add_columns_to_companies.rb:3
+  [1m[35m (18.8ms)[0m  [1m[35mALTER TABLE "componies" ADD "past" jsonb[0m
+  ↳ db/migrate/20200210102512_add_columns_to_companies.rb:4
+  [1m[35m (15.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (17.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+Migrating to AddColumnsToCompanies (20200210102512)
+  [1m[35m (15.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (23.2ms)[0m  [1m[35mALTER TABLE "companies" ADD "symbol" character varying[0m
+  ↳ db/migrate/20200210102512_add_columns_to_companies.rb:3
+  [1m[35m (17.2ms)[0m  [1m[35mALTER TABLE "companies" ADD "past" jsonb[0m
+  ↳ db/migrate/20200210102512_add_columns_to_companies.rb:4
+  [1m[35m (15.5ms)[0m  [1m[35mALTER TABLE "companies" ADD "pred" jsonb[0m
+  ↳ db/migrate/20200210102512_add_columns_to_companies.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (17.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200210102512"]]
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (16.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (16.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (17.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (15.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (17.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (16.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (15.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (14.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (14.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (16.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (17.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (17.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+Migrating to CreateTableCompanies (20200210103037)
+  [1m[35m (15.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (20.4ms)[0m  [1m[35mCREATE TABLE "companies" ("id" bigserial primary key)[0m
+  ↳ db/migrate/20200210103037_create_table_companies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (16.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200210103037"]]
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+Migrating to AddColumnsToCompanies (20200210103105)
+  [1m[35m (15.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (18.5ms)[0m  [1m[35mALTER TABLE "companies" ADD "companyName" character varying[0m
+  ↳ db/migrate/20200210103105_add_columns_to_companies.rb:3
+  [1m[35m (16.8ms)[0m  [1m[35mALTER TABLE "companies" ADD "companySymbol" character varying[0m
+  ↳ db/migrate/20200210103105_add_columns_to_companies.rb:4
+  [1m[35m (15.7ms)[0m  [1m[35mALTER TABLE "companies" ADD "past" jsonb[0m
+  ↳ db/migrate/20200210103105_add_columns_to_companies.rb:5
+  [1m[35m (15.6ms)[0m  [1m[35mALTER TABLE "companies" ADD "pred" jsonb[0m
+  ↳ db/migrate/20200210103105_add_columns_to_companies.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (15.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200210103105"]]
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (16.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (15.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (15.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (19.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(737815420147457505)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
+  [1m[35m (16.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/bin/rake:23
