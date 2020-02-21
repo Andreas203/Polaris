@@ -43,5 +43,8 @@ postgresql_settings: &postgresql_settings
 development:
   <<: *postgresql_settings
 
+test:
+  <<: *postgresql_settings
+
 production:
   <<: *postgresql_settings
