@@ -11,8 +11,19 @@
 </head>
 
 <body>
+
     <div class="s003">
-        <form>
+      <%= form_tag(welcome_index_path, :method => "get",
+        class: 'inner-form') do %>
+        <div class="input-group">
+          <%= search_field_tag :search, params[:search], placeholder: "Enter stock name or symbol...", class: "form-control" %>
+        <div class="input-group-btn">
+          <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
+        </div>
+        </div>
+      <% end %>
+    </div>
+        <!-- <form>
             <div class="inner-form">
                 <div class="input-field second-wrap">
                     <input id="search" type="text" placeholder="Enter stock name or symbol..." />
@@ -25,8 +36,33 @@
                     </button>
                 </div>
             </div>
-        </form>
+        </form> -->
+
+
+    <div>
+    <table class="table table-dark">
+      <% @results.each do |result| %>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Symbol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><%= result.id %></th>
+          <td><%= result.companyName %><td>
+          <td><%= result.companySymbol %><td>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
     </div>
+
+
+
+
     <script src="https://colorlib.com/etc/searchf/colorlib-search-3/js/extention/choices.js" type="7cc520479767005a4c0c8d80-text/javascript"></script>
     <script type="7cc520479767005a4c0c8d80-text/javascript">
         const choices = new Choices('[data-trigger]', {

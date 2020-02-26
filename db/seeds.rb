@@ -4,4 +4,8 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Company.create(companyName: 'Samsung', companySymbol: 'SMSN', past: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true}, pred: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true})
+Company.create(companyName: 'Tesla', companySymbol: 'TSLA', past: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true}, pred: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true})
+Company.create(companyName: 'Amazon', companySymbol: 'AMZN', past: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true}, pred: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true})
+Company.create(companyName: 'Microsoft', companySymbol: 'MSFT', past: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true}, pred: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true})
+Company.create(companyName: 'Activision', companySymbol: 'ATVI', past: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true}, pred: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true})

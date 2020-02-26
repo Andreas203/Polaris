@@ -15,12 +15,13 @@
 postgresql_settings: &postgresql_settings
   adapter: postgresql
   encoding: unicode
-  database: fuck_you
-  pool: 5
   username: postgres
-  password:
+  password: JamesandAndy
+  socket: /cloudsql/polaris-analytics
+  database: postgres
+  pool: 5
 
-  
+
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
