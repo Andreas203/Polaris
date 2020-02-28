@@ -18,7 +18,7 @@ postgresql_settings: &postgresql_settings
   username: postgres
   password: JamesandAndy
   socket: /cloudsql/polaris-analytics
-  database: postgres
+  database: a1
   pool: 5
 
 
