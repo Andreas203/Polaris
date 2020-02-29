@@ -7220,3 +7220,33 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 251ms (Views: 174.9ms | ActiveRecord: 67.4ms)
 
 
+Started GET "/" for ::1 at 2020-02-27 12:00:37 +0000
+Started GET "/" for ::1 at 2020-02-27 12:00:38 +0000
+  [1m[35m (31.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (46.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:44
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (141.1ms)
+  [1m[36mCompany Load (69.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:44
+  Rendered welcome/index.html.erb within layouts/application (104.0ms)
+Completed 200 OK in 2959ms (Views: 2830.2ms | ActiveRecord: 108.3ms)
+
+
+Completed 200 OK in 2781ms (Views: 2706.2ms | ActiveRecord: 69.9ms)
+
+
+Started GET "/welcome/index?utf8=%E2%9C%93&search=TSLA" for ::1 at 2020-02-27 12:00:54 +0000
+Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"TSLA"}
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (15.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE ("companies"."companyName" = $1 OR "companies"."companySymbol" = $2)[0m  [["companyName", "TSLA"], ["companySymbol", "TSLA"]]
+  ↳ app/views/welcome/index.html.erb:44
+  Rendered welcome/index.html.erb within layouts/application (82.8ms)
+Completed 200 OK in 306ms (Views: 258.9ms | ActiveRecord: 42.2ms)
+
+
