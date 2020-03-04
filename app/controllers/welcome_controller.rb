@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
       @results = Company.all
     else
       @parameter = params[:search]
-      @results = "PRINT"#Company.where(companyName: @parameter).or(Company.where(companySymbol: @parameter))
+      @results = ["four", "two", "three"] #Company.where(companyName: @parameter).or(Company.where(companySymbol: @parameter))
     end
   end
 end

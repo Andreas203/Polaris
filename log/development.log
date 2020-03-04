@@ -22432,3 +22432,23 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 3060ms (Views: 3056.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-03-04 13:20:36 +0000
+  [1m[35m (15.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (14.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (91.0ms)
+Started GET "/" for ::1 at 2020-03-04 13:20:39 +0000
+Completed 200 OK in 888ms (Views: 808.3ms | ActiveRecord: 62.4ms)
+
+
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (15.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 191ms (Views: 172.7ms | ActiveRecord: 15.1ms)
+
+
