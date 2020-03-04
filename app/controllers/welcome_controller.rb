@@ -1,11 +1,14 @@
 class WelcomeController < ApplicationController
   def index
     if params[:search].blank?
-      #@results = Company.all
-      @results = ["four", "two", "three"]
+      if @results.empty?
+        @results = ["ome","doe","trese"]
+      else
+        @results = Company.all
+      end
     else
       @parameter = params[:search]
-      @results = ["four", "two", "three"] #Company.where(companyName: @parameter).or(Company.where(companySymbol: @parameter))
+      @results = Company.where(companyName: @parameter).or(Company.where(companySymbol: @parameter))
     end
   end
 end
