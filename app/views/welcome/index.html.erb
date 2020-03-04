@@ -31,7 +31,7 @@
   border-collapse: collapse; /* Collapse borders */
   width: 100%; /* Full-width */
   border: 1px solid #ddd; /* Add a grey border */
-  font-size: 18px; /* Increase font-size */
+  font-size: 14px;
 }
 
 #myTable th, #myTable td {
@@ -60,10 +60,12 @@
             <div class="col-md-12">
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for company name or symbol">
 
-<table id="myTable" class="dark">
-  <tr class="header">
+
+
+<table class="table" id="myTable">
+  <thead class="thead-light">
     <th style="width:60%;">Name</th>
-    <th style="width:20%; color:#272723 !important;">Symbol</th>
+    <th style="width:20%;">Symbol</th>
     <th style="width:20%;">7 day forecast</th>
   </tr>
   <% @results.each do |result| %>
@@ -76,6 +78,8 @@
 
 
 </table>
+
+
         </div>
     </div>
 </body>
