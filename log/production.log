@@ -1,0 +1,68 @@
+D, [2020-03-04T14:24:33.193701 #1628] DEBUG -- :   [1m[35m (15.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-03-04T14:24:33.281494 #1628] DEBUG -- :   [1m[35m (15.6ms)[0m  [1m[35mBEGIN[0m
+D, [2020-03-04T14:24:33.299231 #1628] DEBUG -- :   [1m[36mCompany Create (16.5ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Samsung"], ["companySymbol", "SMSN"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+D, [2020-03-04T14:24:33.323271 #1628] DEBUG -- :   [1m[35m (20.2ms)[0m  [1m[35mCOMMIT[0m
+D, [2020-03-04T14:24:33.341483 #1628] DEBUG -- :   [1m[35m (17.6ms)[0m  [1m[35mBEGIN[0m
+D, [2020-03-04T14:24:33.358847 #1628] DEBUG -- :   [1m[36mCompany Create (16.4ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Tesla"], ["companySymbol", "TSLA"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+D, [2020-03-04T14:24:33.376565 #1628] DEBUG -- :   [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+D, [2020-03-04T14:24:33.393280 #1628] DEBUG -- :   [1m[35m (16.0ms)[0m  [1m[35mBEGIN[0m
+D, [2020-03-04T14:24:33.410352 #1628] DEBUG -- :   [1m[36mCompany Create (16.1ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Amazon"], ["companySymbol", "AMZN"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+D, [2020-03-04T14:24:33.428117 #1628] DEBUG -- :   [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+D, [2020-03-04T14:24:33.444563 #1628] DEBUG -- :   [1m[35m (15.9ms)[0m  [1m[35mBEGIN[0m
+D, [2020-03-04T14:24:33.461348 #1628] DEBUG -- :   [1m[36mCompany Create (15.8ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Microsoft"], ["companySymbol", "MSFT"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+D, [2020-03-04T14:24:33.478875 #1628] DEBUG -- :   [1m[35m (16.9ms)[0m  [1m[35mCOMMIT[0m
+D, [2020-03-04T14:24:33.495404 #1628] DEBUG -- :   [1m[35m (15.9ms)[0m  [1m[35mBEGIN[0m
+D, [2020-03-04T14:24:33.511890 #1628] DEBUG -- :   [1m[36mCompany Create (15.6ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Activision"], ["companySymbol", "ATVI"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+D, [2020-03-04T14:24:33.529467 #1628] DEBUG -- :   [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+D, [2020-03-04T14:27:53.990260 #10920] DEBUG -- :   [1m[35m (16.6ms)[0m  [1m[35mCREATE DATABASE "postgres" ENCODING = 'unicode'[0m
+D, [2020-03-04T14:27:56.449036 #10920] DEBUG -- :   [1m[35m (14.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-03-04T14:27:56.555157 #10920] DEBUG -- :   [1m[35m (15.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+D, [2020-03-04T14:27:56.587225 #10920] DEBUG -- :   [1m[35m (15.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-03-04T14:27:56.621033 #10920] DEBUG -- :   [1m[35m (15.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+D, [2020-03-04T14:27:56.653008 #10920] DEBUG -- :   [1m[35m (15.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-03-04T14:27:56.685293 #10920] DEBUG -- :   [1m[35m (15.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+D, [2020-03-04T14:28:28.023942 #7724] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (16.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+D, [2020-03-04T14:28:28.071402 #7724] DEBUG -- :   [1m[35m (16.7ms)[0m  [1m[35mBEGIN[0m
+D, [2020-03-04T14:28:28.089294 #7724] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Update (15.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "production"], ["updated_at", "2020-03-04 14:28:28.072187"], ["key", "environment"]]
+D, [2020-03-04T14:28:28.107497 #7724] DEBUG -- :   [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2020-03-04T14:28:48.625626 #7816] DEBUG -- :   [1m[35m (17.2ms)[0m  [1m[35mCREATE DATABASE "postgres" ENCODING = 'unicode'[0m
+D, [2020-03-04T14:28:51.133497 #7816] DEBUG -- :   [1m[35m (20.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-03-04T14:28:51.238335 #7816] DEBUG -- :   [1m[35m (15.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+D, [2020-03-04T14:28:51.272075 #7816] DEBUG -- :   [1m[35m (16.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-03-04T14:28:51.307505 #7816] DEBUG -- :   [1m[35m (16.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+D, [2020-03-04T14:28:51.341504 #7816] DEBUG -- :   [1m[35m (16.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-03-04T14:28:51.374723 #7816] DEBUG -- :   [1m[35m (16.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+D, [2020-03-04T14:29:44.365325 #2916] DEBUG -- :   [1m[35m (15.8ms)[0m  [1m[35mCREATE DATABASE "postgres" ENCODING = 'unicode'[0m
+D, [2020-03-04T14:29:46.819711 #2916] DEBUG -- :   [1m[35m (15.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-03-04T14:29:46.921138 #2916] DEBUG -- :   [1m[35m (16.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+D, [2020-03-04T14:29:46.955583 #2916] DEBUG -- :   [1m[35m (16.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-03-04T14:29:46.988666 #2916] DEBUG -- :   [1m[35m (15.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+D, [2020-03-04T14:29:47.022114 #2916] DEBUG -- :   [1m[35m (15.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-03-04T14:29:47.057209 #2916] DEBUG -- :   [1m[35m (17.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+D, [2020-03-04T14:30:02.716425 #12632] DEBUG -- :   [1m[35m (17.3ms)[0m  [1m[35mCREATE DATABASE "postgres" ENCODING = 'unicode'[0m
+D, [2020-03-04T14:30:05.044338 #12632] DEBUG -- :   [1m[35mSQL (16.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+D, [2020-03-04T14:30:05.098063 #12632] DEBUG -- :   [1m[35m (21.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "companies" CASCADE[0m
+D, [2020-03-04T14:30:05.125152 #12632] DEBUG -- :   [1m[35m (26.5ms)[0m  [1m[35mCREATE TABLE "companies" ("id" bigserial primary key, "companyName" character varying, "companySymbol" character varying, "past" jsonb, "pred" jsonb)[0m
+D, [2020-03-04T14:30:05.330030 #12632] DEBUG -- :   [1m[35m (19.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-03-04T14:30:05.438498 #12632] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (16.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+D, [2020-03-04T14:30:05.486364 #12632] DEBUG -- :   [1m[35m (18.1ms)[0m  [1m[35mBEGIN[0m
+D, [2020-03-04T14:30:05.504583 #12632] DEBUG -- :   [1m[35m (16.1ms)[0m  [1m[35mCOMMIT[0m
+D, [2020-03-04T14:30:05.539516 #12632] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (17.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+D, [2020-03-04T14:30:05.556553 #12632] DEBUG -- :   [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+D, [2020-03-04T14:30:05.573205 #12632] DEBUG -- :   [1m[35m (15.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2020-03-04T14:30:07.928883 #12632] DEBUG -- :   [1m[35m (16.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-03-04T14:30:08.027086 #12632] DEBUG -- :   [1m[35m (15.5ms)[0m  [1m[35mBEGIN[0m
+D, [2020-03-04T14:30:08.045403 #12632] DEBUG -- :   [1m[36mCompany Create (16.4ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Samsung"], ["companySymbol", "SMSN"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+D, [2020-03-04T14:30:08.063323 #12632] DEBUG -- :   [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+D, [2020-03-04T14:30:08.080311 #12632] DEBUG -- :   [1m[35m (15.6ms)[0m  [1m[35mBEGIN[0m
+D, [2020-03-04T14:30:08.098756 #12632] DEBUG -- :   [1m[36mCompany Create (16.3ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Tesla"], ["companySymbol", "TSLA"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+D, [2020-03-04T14:30:08.116241 #12632] DEBUG -- :   [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+D, [2020-03-04T14:30:08.132300 #12632] DEBUG -- :   [1m[35m (15.4ms)[0m  [1m[35mBEGIN[0m
+D, [2020-03-04T14:30:08.150507 #12632] DEBUG -- :   [1m[36mCompany Create (16.3ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Amazon"], ["companySymbol", "AMZN"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+D, [2020-03-04T14:30:08.168911 #12632] DEBUG -- :   [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2020-03-04T14:30:08.185679 #12632] DEBUG -- :   [1m[35m (15.3ms)[0m  [1m[35mBEGIN[0m
+D, [2020-03-04T14:30:08.204070 #12632] DEBUG -- :   [1m[36mCompany Create (16.5ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Microsoft"], ["companySymbol", "MSFT"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+D, [2020-03-04T14:30:08.221746 #12632] DEBUG -- :   [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+D, [2020-03-04T14:30:08.238123 #12632] DEBUG -- :   [1m[35m (15.8ms)[0m  [1m[35mBEGIN[0m
+D, [2020-03-04T14:30:08.255953 #12632] DEBUG -- :   [1m[36mCompany Create (16.1ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Activision"], ["companySymbol", "ATVI"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+D, [2020-03-04T14:30:08.273116 #12632] DEBUG -- :   [1m[35m (16.6ms)[0m  [1m[35mCOMMIT[0m

@@ -7220,6 +7220,36 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 251ms (Views: 174.9ms | ActiveRecord: 67.4ms)
 
 
+<<<<<<< HEAD
+Started GET "/" for ::1 at 2020-02-27 12:00:37 +0000
+Started GET "/" for ::1 at 2020-02-27 12:00:38 +0000
+  [1m[35m (31.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (46.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:44
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (141.1ms)
+  [1m[36mCompany Load (69.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:44
+  Rendered welcome/index.html.erb within layouts/application (104.0ms)
+Completed 200 OK in 2959ms (Views: 2830.2ms | ActiveRecord: 108.3ms)
+
+
+Completed 200 OK in 2781ms (Views: 2706.2ms | ActiveRecord: 69.9ms)
+
+
+Started GET "/welcome/index?utf8=%E2%9C%93&search=TSLA" for ::1 at 2020-02-27 12:00:54 +0000
+Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"TSLA"}
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (15.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE ("companies"."companyName" = $1 OR "companies"."companySymbol" = $2)[0m  [["companyName", "TSLA"], ["companySymbol", "TSLA"]]
+  ↳ app/views/welcome/index.html.erb:44
+  Rendered welcome/index.html.erb within layouts/application (82.8ms)
+Completed 200 OK in 306ms (Views: 258.9ms | ActiveRecord: 42.2ms)
+=======
 Started GET "/" for ::1 at 2020-02-26 19:57:40 +0000
   [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/rubyonrails/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
@@ -22198,6 +22228,755 @@ Processing by WelcomeController#index as HTML
   ↳ app/views/welcome/index.html.erb:50
   Rendered welcome/index.html.erb within layouts/application (1.6ms)
 Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.3ms)
+>>>>>>> 7d4835fe61275d1b48ab896f098e69e137a76ed8
+
+
+Started GET "/" for ::1 at 2020-02-29 16:26:31 +0000
+  
+PG::ConnectionBad (FATAL:  password authentication failed for user "postgres"
+):
+  
+pg-1.2.1-x64 (mingw32) lib/pg.rb:57:in `initialize'
+pg-1.2.1-x64 (mingw32) lib/pg.rb:57:in `new'
+pg-1.2.1-x64 (mingw32) lib/pg.rb:57:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-02-29 16:29:49 +0000
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "a1" does not exist
+):
+  
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-02-29 16:31:41 +0000
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "a1" does not exist
+):
+  
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-02-29 16:32:20 +0000
+  [1m[35m (80.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (102.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (539.5ms)
+Completed 200 OK in 16312ms (Views: 15780.1ms | ActiveRecord: 512.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-04 13:12:05 +0000
+Started GET "/" for ::1 at 2020-03-04 13:12:06 +0000
+  [1m[35m (18.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/HP/palesun/app/views/welcome/index.html.erb:111: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/welcome/index.html.erb:111: syntax error, unexpected ensure, expecting end-of-input
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/HP/palesun/app/views/welcome/index.html.erb:111: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/welcome/index.html.erb:111: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/" for ::1 at 2020-03-04 13:12:50 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3060ms (Views: 3056.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-04 13:20:36 +0000
+  [1m[35m (15.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (14.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (91.0ms)
+Started GET "/" for ::1 at 2020-03-04 13:20:39 +0000
+Completed 200 OK in 888ms (Views: 808.3ms | ActiveRecord: 62.4ms)
+
+
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (15.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 191ms (Views: 172.7ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-04 13:28:34 +0000
+  [1m[35m (16.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (128.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (199.4ms)
+Completed 500 Internal Server Error in 1483ms (ActiveRecord: 181.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `welcome_about_path' for #<#<Class:0x000000000b55e488>:0x000000000b566fc0>
+Did you mean?  welcome_index_path):
+    51:                 <%= link_to "Forecasts", root_path, :class => "nav-link" %>
+    52:             </li>
+    53:             <!-- <li class="nav-item">
+    54:                 <%= link_to "About us", welcome_about_path, :class => "nav-link" %>
+    55:             </li> -->
+    56:         </ul>
+    57:         </div>
+  
+app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb__489839328_95147100'
+Started GET "/" for ::1 at 2020-03-04 13:31:42 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (15.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (82.4ms)
+Completed 500 Internal Server Error in 733ms (ActiveRecord: 66.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `welcome_about_path' for #<#<Class:0x000000000e992b00>:0x000000000e9911d8>
+Did you mean?  welcome_index_path):
+    51:                 <%= link_to "Forecasts", root_path, :class => "nav-link" %>
+    52:             </li>
+    53:             <!-- <li class="nav-item">
+    54:                 <%= link_to "About us", welcome_about_path, :class => "nav-link" %>
+    55:             </li> -->
+    56:         </ul>
+    57:         </div>
+  
+app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb__489839328_122712040'
+Started GET "/" for ::1 at 2020-03-04 13:32:14 +0000
+  [1m[35m (16.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (16.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (88.6ms)
+Started GET "/" for ::1 at 2020-03-04 13:32:18 +0000
+Completed 500 Internal Server Error in 1578ms (ActiveRecord: 68.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `welcome_about_path' for #<#<Class:0x000000000b584980>:0x000000000b58d4b8>
+Did you mean?  welcome_index_path):
+    51:                 <%= link_to "Forecasts", root_path, :class => "nav-link" %>
+    52:             </li>
+    53:             <!-- <li class="nav-item">
+    54:                 <%= link_to "About us", welcome_about_path, :class => "nav-link" %>
+    55:             </li> -->
+    56:         </ul>
+    57:         </div>
+  
+app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb__705651226_95225580'
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (16.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (22.1ms)
+Completed 500 Internal Server Error in 660ms (ActiveRecord: 16.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `welcome_about_path' for #<#<Class:0x000000000b584980>:0x000000000e5c3330>
+Did you mean?  welcome_index_path):
+    51:                 <%= link_to "Forecasts", root_path, :class => "nav-link" %>
+    52:             </li>
+    53:             <!-- <li class="nav-item">
+    54:                 <%= link_to "About us", welcome_about_path, :class => "nav-link" %>
+    55:             </li> -->
+    56:         </ul>
+    57:         </div>
+  
+app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb__705651226_120455220'
+Started GET "/" for ::1 at 2020-03-04 13:33:23 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (15.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (99.0ms)
+Completed 200 OK in 452ms (Views: 356.9ms | ActiveRecord: 82.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-03-04 13:40:10 +0000
+Started GET "/" for 127.0.0.1 at 2020-03-04 13:40:11 +0000
+  [1m[35m (15.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (12.9ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    47:                         </div>
+    48:                     </div>
+    49:                     <div class="container" style="margin-top: -160px !important; margin-bottom: 50px;">
+    50:                     <% @results.each do |result| %>
+    51:                     <div class="col-lg-12 mb-4">
+    52:                       <div class="card border-primary h-100 copyable" style="align-items: center !important;">
+    53:                           <div class="card-body d-flex flex-column align-items-start" style="align-items: center !important;">
+  
+app/views/welcome/index.html.erb:50:in `_app_views_welcome_index_html_erb__910541268_95607720'
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    47:                         </div>
+    48:                     </div>
+    49:                     <div class="container" style="margin-top: -160px !important; margin-bottom: 50px;">
+    50:                     <% @results.each do |result| %>
+    51:                     <div class="col-lg-12 mb-4">
+    52:                       <div class="card border-primary h-100 copyable" style="align-items: center !important;">
+    53:                           <div class="card-body d-flex flex-column align-items-start" style="align-items: center !important;">
+  
+app/views/welcome/index.html.erb:50:in `_app_views_welcome_index_html_erb__910541268_95607720'
+Started GET "/" for 127.0.0.1 at 2020-03-04 13:40:29 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 735ms (Views: 732.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?utf8=%E2%9C%93&search=jsj&commit=Search" for 127.0.0.1 at 2020-03-04 13:40:35 +0000
+Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"jsj", "commit"=>"Search"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 156ms (Views: 152.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-04 14:08:22 +0000
+  [1m[35m (19.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (6.7ms)
+Started GET "/" for ::1 at 2020-03-04 14:08:25 +0000
+Completed 200 OK in 786ms (Views: 777.8ms | ActiveRecord: 0.0ms)
+
+
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 150ms (Views: 146.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?utf8=%E2%9C%93&search=jsd&commit=Search" for ::1 at 2020-03-04 14:08:37 +0000
+Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"jsd", "commit"=>"Search"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  
+app/controllers/welcome_controller.rb:6:in `index'
+Started GET "/" for ::1 at 2020-03-04 14:09:01 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 143ms (Views: 138.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?utf8=%E2%9C%93&search=lol&commit=Search" for ::1 at 2020-03-04 14:09:11 +0000
+Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"lol", "commit"=>"Search"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 162ms (Views: 158.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-04 14:14:38 +0000
+  [1m[35m (17.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 2213ms (Views: 2203.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?utf8=%E2%9C%93&search=Samsung&commit=Search" for ::1 at 2020-03-04 14:15:01 +0000
+Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Samsung", "commit"=>"Search"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 142ms (Views: 139.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-04 14:15:54 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (28.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (152.7ms)
+Completed 200 OK in 302ms (Views: 144.9ms | ActiveRecord: 135.0ms)
+
+
+Started GET "/welcome/index?utf8=%E2%9C%93&search=Samsung&commit=Search" for ::1 at 2020-03-04 14:16:00 +0000
+Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Samsung", "commit"=>"Search"}
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (15.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE ("companies"."companyName" = $1 OR "companies"."companySymbol" = $2)[0m  [["companyName", "Samsung"], ["companySymbol", "Samsung"]]
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (73.4ms)
+Completed 200 OK in 211ms (Views: 176.1ms | ActiveRecord: 31.9ms)
+
+
+Started GET "/" for ::1 at 2020-03-04 14:19:24 +0000
+  [1m[35m (15.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (16.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (25.1ms)
+Started GET "/" for ::1 at 2020-03-04 14:19:27 +0000
+Completed 200 OK in 870ms (Views: 723.5ms | ActiveRecord: 102.5ms)
+
+
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (14.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (15.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 199ms (Views: 134.3ms | ActiveRecord: 43.1ms)
+
+
+  [1m[35m (16.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ test/test_helper.rb:3
+  [1m[35m (17.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (46.0ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "companies" DISABLE TRIGGER ALL[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (16.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFixtures Load (15.5ms)[0m  [1m[31mDELETE FROM "companies";
+INSERT INTO "companies" ("id", "companyName", "companySymbol", "past", "pred") VALUES (980190962, 'MyString', 'MyString', NULL, NULL), (298486374, 'MyString', 'MyString', NULL, NULL)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "companies" ENABLE TRIGGER ALL[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Started GET "/welcome/index" for 127.0.0.1 at 2020-03-04 14:21:09 +0000
+  [1m[35m (15.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ test/controllers/welcome_controller_test.rb:5
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (15.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (14.7ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 671ms (Views: 596.4ms | ActiveRecord: 44.8ms)
+
+
+  [1m[35m (14.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (14.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+-------------------------------------------
+StocksControllerTest: test_should_get_index
+-------------------------------------------
+  [1m[35m (14.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/" for ::1 at 2020-03-04 14:22:55 +0000
+  [1m[35m (16.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (20.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (24.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (31.6ms)
+Started GET "/" for ::1 at 2020-03-04 14:23:00 +0000
+Completed 200 OK in 2805ms (Views: 2631.4ms | ActiveRecord: 115.2ms)
+
+
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (16.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (15.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 310ms (Views: 237.7ms | ActiveRecord: 47.2ms)
+
+
+  [1m[35m (17.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ test/test_helper.rb:3
+  [1m[35m (33.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (126.8ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "companies" DISABLE TRIGGER ALL[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (14.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (14.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFixtures Load (15.0ms)[0m  [1m[31mDELETE FROM "companies";
+INSERT INTO "companies" ("id", "companyName", "companySymbol", "past", "pred") VALUES (980190962, 'MyString', 'MyString', NULL, NULL), (298486374, 'MyString', 'MyString', NULL, NULL)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (14.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "companies" ENABLE TRIGGER ALL[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Started GET "/welcome/index" for 127.0.0.1 at 2020-03-04 14:33:40 +0000
+  [1m[35m (14.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ test/controllers/welcome_controller_test.rb:5
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (15.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (17.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 911ms (Views: 819.2ms | ActiveRecord: 48.9ms)
+
+
+  [1m[35m (14.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (14.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+-------------------------------------------
+StocksControllerTest: test_should_get_index
+-------------------------------------------
+  [1m[35m (16.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/" for ::1 at 2020-03-04 14:36:18 +0000
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (44.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (26.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (19.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8497596247489658400)[0m
+  ↳ bin/rails:4
+  [1m[35m (19.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateTableCompanies (20200210103037)
+  [1m[35m (19.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (25.2ms)[0m  [1m[35mCREATE TABLE "companies" ("id" bigserial primary key)[0m
+  ↳ db/migrate/20200210103037_create_table_companies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (19.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200210103037"]]
+  ↳ bin/rails:4
+  [1m[35m (19.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddColumnsToCompanies (20200210103105)
+  [1m[35m (19.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (22.7ms)[0m  [1m[35mALTER TABLE "companies" ADD "companyName" character varying[0m
+  ↳ db/migrate/20200210103105_add_columns_to_companies.rb:3
+  [1m[35m (19.7ms)[0m  [1m[35mALTER TABLE "companies" ADD "companySymbol" character varying[0m
+  ↳ db/migrate/20200210103105_add_columns_to_companies.rb:4
+  [1m[35m (21.6ms)[0m  [1m[35mALTER TABLE "companies" ADD "past" jsonb[0m
+  ↳ db/migrate/20200210103105_add_columns_to_companies.rb:5
+  [1m[35m (19.5ms)[0m  [1m[35mALTER TABLE "companies" ADD "pred" jsonb[0m
+  ↳ db/migrate/20200210103105_add_columns_to_companies.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (18.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200210103105"]]
+  ↳ bin/rails:4
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (19.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (19.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (19.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-04 14:36:40.801380"], ["updated_at", "2020-03-04 14:36:40.801380"]]
+  ↳ bin/rails:4
+  [1m[35m (19.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (19.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(8497596247489658400)[0m
+  ↳ bin/rails:4
+  [1m[35m (19.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2020-03-04 14:37:53 +0000
+  [1m[35m (19.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (20.8ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:5
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 796ms (Views: 653.8ms | ActiveRecord: 101.8ms)
+
+
+  [1m[35m (20.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (19.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mCompany Create (20.3ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Samsung"], ["companySymbol", "SMSN"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (89.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (19.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCompany Create (19.5ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Tesla"], ["companySymbol", "TSLA"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (20.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (19.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCompany Create (19.2ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Amazon"], ["companySymbol", "AMZN"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (19.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCompany Create (19.0ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Microsoft"], ["companySymbol", "MSFT"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (18.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCompany Create (20.5ms)[0m  [1m[32mINSERT INTO "companies" ("companyName", "companySymbol", "past", "pred") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["companyName", "Activision"], ["companySymbol", "ATVI"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (20.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+Started GET "/" for ::1 at 2020-03-04 14:38:39 +0000
+  [1m[35m (19.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (19.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (19.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 813ms (Views: 649.4ms | ActiveRecord: 119.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-04 14:39:22 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (19.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (19.5ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 235ms (Views: 149.7ms | ActiveRecord: 58.0ms)
 
 
 Started GET "/" for ::1 at 2020-02-29 14:24:29 +0000
