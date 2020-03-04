@@ -3,8 +3,12 @@ class WelcomeController < ApplicationController
     if params[:search].blank?
       @results = ["ome","doe","trese"]
     else
-      @parameter = params[:search]
-      @results = Company.where(companyName: @parameter).or(Company.where(companySymbol: @parameter))
+      if @results.nil?
+        @results = ["ome","doe","trese"]
+      else
+        @parameter = params[:search]
+        @results = Company.where(companyName: @parameter).or(Company.where(companySymbol: @parameter))
+      end
     end
   end
 end
