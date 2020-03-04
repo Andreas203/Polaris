@@ -22549,3 +22549,56 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 452ms (Views: 356.9ms | ActiveRecord: 82.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2020-03-04 13:40:10 +0000
+Started GET "/" for 127.0.0.1 at 2020-03-04 13:40:11 +0000
+  [1m[35m (15.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (12.9ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    47:                         </div>
+    48:                     </div>
+    49:                     <div class="container" style="margin-top: -160px !important; margin-bottom: 50px;">
+    50:                     <% @results.each do |result| %>
+    51:                     <div class="col-lg-12 mb-4">
+    52:                       <div class="card border-primary h-100 copyable" style="align-items: center !important;">
+    53:                           <div class="card-body d-flex flex-column align-items-start" style="align-items: center !important;">
+  
+app/views/welcome/index.html.erb:50:in `_app_views_welcome_index_html_erb__910541268_95607720'
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    47:                         </div>
+    48:                     </div>
+    49:                     <div class="container" style="margin-top: -160px !important; margin-bottom: 50px;">
+    50:                     <% @results.each do |result| %>
+    51:                     <div class="col-lg-12 mb-4">
+    52:                       <div class="card border-primary h-100 copyable" style="align-items: center !important;">
+    53:                           <div class="card-body d-flex flex-column align-items-start" style="align-items: center !important;">
+  
+app/views/welcome/index.html.erb:50:in `_app_views_welcome_index_html_erb__910541268_95607720'
+Started GET "/" for 127.0.0.1 at 2020-03-04 13:40:29 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 735ms (Views: 732.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?utf8=%E2%9C%93&search=jsj&commit=Search" for 127.0.0.1 at 2020-03-04 13:40:35 +0000
+Processing by WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"jsj", "commit"=>"Search"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 156ms (Views: 152.4ms | ActiveRecord: 0.0ms)
+
+
