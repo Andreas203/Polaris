@@ -4,8 +4,11 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-Company.create(companyName: 'Samsung', companySymbol: 'SMSN', past: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true}, pred: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true})
-Company.create(companyName: 'Tesla', companySymbol: 'TSLA', past: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true}, pred: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true})
-Company.create(companyName: 'Amazon', companySymbol: 'AMZN', past: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true}, pred: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true})
-Company.create(companyName: 'Microsoft', companySymbol: 'MSFT', past: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true}, pred: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true})
-Company.create(companyName: 'Activision', companySymbol: 'ATVI', past: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true}, pred: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true})
+
+require 'csv'
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'companies_symbols.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv.each do |row|
+  Company.create(companyName: row['Name'], companySymbol: row['Symbol'], past: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true}, pred: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true})  
+end
