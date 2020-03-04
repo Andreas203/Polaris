@@ -15,10 +15,10 @@
 postgresql_settings: &postgresql_settings
   adapter: postgresql
   encoding: unicode
-  username: postgres
-  password: JamesandAndy
-  socket: /cloudsql/polaris-analytics
-  database: postgres
+  username: wvybtafwuesjox
+  password: 4281f10d82eafab7f60f193fddb9b970c476af56b7b5c964f9faf952aeef0eb3
+  host: ec2-176-34-183-20.eu-west-1.compute.amazonaws.com
+  database: d24qbsm6qtd8vd
   pool: 5
 
 
