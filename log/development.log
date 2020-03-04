@@ -22679,3 +22679,99 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 211ms (Views: 176.1ms | ActiveRecord: 31.9ms)
 
 
+Started GET "/" for ::1 at 2020-03-04 14:19:24 +0000
+  [1m[35m (15.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (16.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (25.1ms)
+Started GET "/" for ::1 at 2020-03-04 14:19:27 +0000
+Completed 200 OK in 870ms (Views: 723.5ms | ActiveRecord: 102.5ms)
+
+
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (14.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (15.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 199ms (Views: 134.3ms | ActiveRecord: 43.1ms)
+
+
+  [1m[35m (16.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ test/test_helper.rb:3
+  [1m[35m (17.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (46.0ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "companies" DISABLE TRIGGER ALL[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (16.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFixtures Load (15.5ms)[0m  [1m[31mDELETE FROM "companies";
+INSERT INTO "companies" ("id", "companyName", "companySymbol", "past", "pred") VALUES (980190962, 'MyString', 'MyString', NULL, NULL), (298486374, 'MyString', 'MyString', NULL, NULL)[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "companies" ENABLE TRIGGER ALL[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Started GET "/welcome/index" for 127.0.0.1 at 2020-03-04 14:21:09 +0000
+  [1m[35m (15.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ test/controllers/welcome_controller_test.rb:5
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (15.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (14.7ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 671ms (Views: 596.4ms | ActiveRecord: 44.8ms)
+
+
+  [1m[35m (14.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (14.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+-------------------------------------------
+StocksControllerTest: test_should_get_index
+-------------------------------------------
+  [1m[35m (14.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/" for ::1 at 2020-03-04 14:22:55 +0000
+  [1m[35m (16.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (20.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (24.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (31.6ms)
+Started GET "/" for ::1 at 2020-03-04 14:23:00 +0000
+Completed 200 OK in 2805ms (Views: 2631.4ms | ActiveRecord: 115.2ms)
+
+
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (16.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (15.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 310ms (Views: 237.7ms | ActiveRecord: 47.2ms)
+
+
