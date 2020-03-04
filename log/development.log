@@ -22452,3 +22452,100 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 191ms (Views: 172.7ms | ActiveRecord: 15.1ms)
 
 
+Started GET "/" for ::1 at 2020-03-04 13:28:34 +0000
+  [1m[35m (16.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (128.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (199.4ms)
+Completed 500 Internal Server Error in 1483ms (ActiveRecord: 181.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `welcome_about_path' for #<#<Class:0x000000000b55e488>:0x000000000b566fc0>
+Did you mean?  welcome_index_path):
+    51:                 <%= link_to "Forecasts", root_path, :class => "nav-link" %>
+    52:             </li>
+    53:             <!-- <li class="nav-item">
+    54:                 <%= link_to "About us", welcome_about_path, :class => "nav-link" %>
+    55:             </li> -->
+    56:         </ul>
+    57:         </div>
+  
+app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb__489839328_95147100'
+Started GET "/" for ::1 at 2020-03-04 13:31:42 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (15.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (82.4ms)
+Completed 500 Internal Server Error in 733ms (ActiveRecord: 66.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `welcome_about_path' for #<#<Class:0x000000000e992b00>:0x000000000e9911d8>
+Did you mean?  welcome_index_path):
+    51:                 <%= link_to "Forecasts", root_path, :class => "nav-link" %>
+    52:             </li>
+    53:             <!-- <li class="nav-item">
+    54:                 <%= link_to "About us", welcome_about_path, :class => "nav-link" %>
+    55:             </li> -->
+    56:         </ul>
+    57:         </div>
+  
+app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb__489839328_122712040'
+Started GET "/" for ::1 at 2020-03-04 13:32:14 +0000
+  [1m[35m (16.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (16.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (88.6ms)
+Started GET "/" for ::1 at 2020-03-04 13:32:18 +0000
+Completed 500 Internal Server Error in 1578ms (ActiveRecord: 68.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `welcome_about_path' for #<#<Class:0x000000000b584980>:0x000000000b58d4b8>
+Did you mean?  welcome_index_path):
+    51:                 <%= link_to "Forecasts", root_path, :class => "nav-link" %>
+    52:             </li>
+    53:             <!-- <li class="nav-item">
+    54:                 <%= link_to "About us", welcome_about_path, :class => "nav-link" %>
+    55:             </li> -->
+    56:         </ul>
+    57:         </div>
+  
+app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb__705651226_95225580'
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (16.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (22.1ms)
+Completed 500 Internal Server Error in 660ms (ActiveRecord: 16.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `welcome_about_path' for #<#<Class:0x000000000b584980>:0x000000000e5c3330>
+Did you mean?  welcome_index_path):
+    51:                 <%= link_to "Forecasts", root_path, :class => "nav-link" %>
+    52:             </li>
+    53:             <!-- <li class="nav-item">
+    54:                 <%= link_to "About us", welcome_about_path, :class => "nav-link" %>
+    55:             </li> -->
+    56:         </ul>
+    57:         </div>
+  
+app/views/layouts/application.html.erb:54:in `_app_views_layouts_application_html_erb__705651226_120455220'
+Started GET "/" for ::1 at 2020-03-04 13:33:23 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (15.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:50
+  Rendered welcome/index.html.erb within layouts/application (99.0ms)
+Completed 200 OK in 452ms (Views: 356.9ms | ActiveRecord: 82.7ms)
+
+
