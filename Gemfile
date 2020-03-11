@@ -5,6 +5,11 @@ ruby '2.6.3'
 
 gem "chartkick"
 
+
+gem 'mail_form'
+gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
+gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'filterrific'
 
 gem "bootstrap_form", "~> 4.0"

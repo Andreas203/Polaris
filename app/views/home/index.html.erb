@@ -74,16 +74,18 @@ table {
     font-size: 100px;
 }
   </style>
-  <main">
+  <main>
+  <div class="container">
   <body data-target="#navbar1" style="margin-top: 5em; height: 1000px !important;">
         <div class="container" style="height: 1000px !important;">
-            <div class="row">
-                <div class="col-12">
+                <div class="col-sm">
                     <div class="text-center d-flex flex-column justify-content-center text-light">
+                      <div class="row" id="contact">
                         <h4 >Contact us</h4>
-                        <div id="contact">
-                          <%= render 'contact_form' %>
-                        </div>
+                      </div>
+                      <div class="row" id="contact">
+                        <%= render 'contact_form' %>
+                      </div>
                     </div>
                 </div>
             </div>

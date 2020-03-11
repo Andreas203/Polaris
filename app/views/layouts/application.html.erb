@@ -17,7 +17,7 @@
       /* font-family: 'Anonymous Pro', monospace; */
       font-size:12px;
     }
-    
+
     .c_dark_navbar {
       background-color: black;
     }
@@ -36,7 +36,7 @@
       <!-- <a class="navbar-brand mr-1 mb-1 mt-0" href=root></a> -->
       <!-- <img src="https://image.flaticon.com/icons/svg/1553/1553405.svg" width="30" height="30" alt=""> -->
       <%= link_to "Polaris Analytics", root_path, class:"navbar-brand mr-1 mb-1 mt-0" %>
-      
+
       <button class="navbar-toggler"type="button" data-toggle="collapse" data-target="#collapsingNavbar">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -50,25 +50,25 @@
                   <%= link_to "Forecasts", root_path, class:"nav-link", id:"forecasts"%>
               </li>
               <li class="nav-item">
-                  <%= link_to "About & Contact", welcome_about_path, class:"nav-link", id:"about_us"%>
+                  <%= link_to "About", welcome_about_path, class:"nav-link", id:"about_us"%>
               </li>
-              <!-- <li class="nav-item">
-                <%= link_to "Contact us", welcome_contact_path, class:"nav-link", id:"contact_us"%>
-            </li> -->
+              <li class="nav-item">
+                <%= link_to "Contact us", home_index_path, class:"nav-link", id:"contact_us"%>
+              </li>
           </ul>
       </div>
   </div>
-</nav> 
+</nav>
   <body>
     <%= yield %>
   </body>
   <footer class="c_footer">
       <p style="color: #3E38F2;">&copy; Polaris Analytics</p>
-      <p> 
+      <p>
         <%= link_to "Privacy and terms of use statement", welcome_privacy_path, class:"nav-link", id:"privacy"%>
         </p>
         <img src="https://image.flaticon.com/icons/svg/1553/1553405.svg" width="30" height="30" alt="">
     </footer>
 
-    
+
 </html>
