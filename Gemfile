@@ -7,6 +7,8 @@ gem "chartkick"
 
 gem 'contact_us'
 
+gem "mail_form"
+
 
 gem 'filterrific'
 

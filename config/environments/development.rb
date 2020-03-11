@@ -58,4 +58,20 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+    # Do not dump schema after migrations.
+    config.active_record.dump_schema_after_migration = false
+
+    config.action_mailer.default_url_options = { host: 'https://polarisanalytics.herokuapp.com/' }
+    config.action_mailer.delivery_method = :smtp
+  
+    ActionMailer::Base.smtp_settings = {
+    :user_name => ENV['JamesAndy'],
+    :password => ENV['ijklop123'],
+    :domain => 'heroku.com',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+    }
 end

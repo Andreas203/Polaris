@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  get 'contacts/new'
+  resources :contacts, only: [:new, :create]
+
+  get 'contact/new'
   get 'welcome/index'
   resources :companies
   root 'welcome#index'
@@ -8,6 +13,10 @@ Rails.application.routes.draw do
 
 
   get 'welcome/contact'
+
+  get 'contact/new'
+
+  
   
 
   
