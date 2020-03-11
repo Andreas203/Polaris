@@ -43,11 +43,11 @@ font-size: .8em;
 }
 </style>
 
-  <%= render 'flash' %>
+<%= render 'flash' %>
 <%= bootstrap_form_with(model: @contact, remote: true, url: home_index_path) do |f| %>
-  <%= f.text_field :name, placeholder: 'John Smith', required: true %>
-  <%= f.email_field :email, placeholder: 'john@email.com', required: true %>
-  <%= f.text_area :message, placeholder: 'Enter your message here', required: true %>
+  <%= f.text_field :name, placeholder: 'John Smith', required: true, label_as_placeholder: true %>
+  <%= f.email_field :email, placeholder: 'john@email.com', required: true,label_as_placeholder: true %>
+  <%= f.text_area :message, placeholder: 'Enter your message here', required: true,label_as_placeholder: true %>
   <%= f.submit 'Send Message', class: "btn btn-primary", style:"float:right;"%>
 <% end %>
 
