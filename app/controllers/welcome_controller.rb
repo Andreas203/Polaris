@@ -6,4 +6,11 @@ class WelcomeController < ApplicationController
       @results = ["two", "four", "tres"]
     end
   end
+
+  def new
+    @contact_form = ContactForm.new
+  end
+
+
+
 end

@@ -63,6 +63,7 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+<<<<<<< HEAD
 
     config.action_mailer.perform_deliveries = true
     config.action_mailer.raise_delivery_errors= true
@@ -75,4 +76,21 @@ Rails.application.configure do
       password:             ENV["GMAIL_PASSWORD"],
       authentication:       'plain',
       enable_starttls_auto: true  }
+=======
+    # Do not dump schema after migrations.
+    config.active_record.dump_schema_after_migration = false
+
+    config.action_mailer.default_url_options = { host: 'https://polarisanalytics.herokuapp.com/' }
+    config.action_mailer.delivery_method = :smtp
+  
+    ActionMailer::Base.smtp_settings = {
+    :user_name => ENV['JamesAndy'],
+    :password => ENV['ijklop123'],
+    :domain => 'heroku.com',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+    }
+>>>>>>> 80cca31d894833b8ae9857b9f180540951dff505
 end
