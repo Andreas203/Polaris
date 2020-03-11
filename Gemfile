@@ -5,17 +5,10 @@ ruby '2.6.3'
 
 gem "chartkick"
 
-<<<<<<< HEAD
 
 gem 'mail_form'
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 gem 'dotenv-rails', groups: [:development, :test]
-=======
-gem 'contact_us'
-
-gem "mail_form"
-
->>>>>>> 80cca31d894833b8ae9857b9f180540951dff505
 
 gem 'filterrific'
 
