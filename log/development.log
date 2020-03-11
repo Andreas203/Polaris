@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2020-01-14 09:26:15 +0000
   
 PG::ConnectionBad (FATAL:  password authentication failed for user "postgres"
@@ -64815,3 +64816,5 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+=======
+>>>>>>> 1a7cd518b1c5442a518cc87bac3417d4508dc694

@@ -7,8 +7,10 @@
 
 require 'csv'
 
+Company.delete_all
+
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'companies_symbols.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
-  Company.create(companyName: row['Name'], companySymbol: row['Symbol'], past: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true}, pred: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true})  
+  Company.create(companyName: row['Name'], companySymbol: row['Symbol'], past: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true}, pred: {"name": "Paint house", "tags": ["Improvements", "Office"], "finished": true})
 end
