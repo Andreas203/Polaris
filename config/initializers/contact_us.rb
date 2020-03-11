@@ -25,7 +25,7 @@ ContactUs.setup do |config|
   config.form_gem = nil
 
   # Configure the redirect URL after a successful submission
-  config.success_redirect = '/'
+  config.success_redirect = nil
 
   # Configure the parent action mailer
   # Example:
