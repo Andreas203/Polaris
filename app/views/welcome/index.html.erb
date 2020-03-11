@@ -1,116 +1,17 @@
-<html>
-<head>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+  div.container4 {
+    height: 10em;
+    position: relative }
+div.container4 p {
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+</style>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <style>
-
-        body {
-            padding: 3em;
-        }
-        #myInput {
-  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 100%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
-}
-
-#myTable {
-  border-collapse: collapse; /* Collapse borders */
-  width: 100%; /* Full-width */
-  border: 1px solid #ddd; /* Add a grey border */
-  font-size: 14px;
-}
-
-#myTable th, #myTable td {
-  text-align: left; /* Left-align text */
-  padding: 12px; /* Add padding */
-}
-
-#myTable tr {
-  /* Add a bottom border to all table rows */
-  border-bottom: 1px solid #ddd;
-}
-
-#myTable tr.header, #myTable tr:hover {
-  /* Add a grey background color to the table header and on hover */
-  background-color: #ddd;
-}
-
-.forecast {
-    color: #5E8B55 !important;
-}
-    </style>
-</head>
-<body>
-    <div class="container-fluid" >
-        <div class="row">
-            <div class="col-md-12">
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for company name or symbol">
-
-
-
-<table class="table" id="myTable">
-  <thead class="thead-light">
-    <th style="width:60%;">Name</th>
-    <th style="width:20%;">Symbol</th>
-    <th style="width:20%;">7 day forecast</th>
-  </tr>
-  <% @results.each do |result| %>
-  <tr>
-    <td><%= result.companyName %></td>
-    <td><%= result.companySymbol %></td>
-    <td style="color: #5E8B55;">+0.0%</td>
-  </tr> 
-  <% end %>
-
-
-</table>
-
-
-        </div>
-    </div>
-</body>
-<script>
-function myFunction() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    td2 = tr[i].getElementsByTagName("td")[1];
-    if (td || td2) {
-      txtValue = td.textContent || td.innerText;
-      txtValue2 = td2.textContent || td2.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      }
-      else if (txtValue2.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      }
-      else {
-        tr[i].style.display = "none";
-      }
-    }
-    
-  }
-}
-</script>
-</html>
+<div class=container4>
+  <p>New website coming soon.
+</div>

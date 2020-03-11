@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>Polaris Analytics</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'favicon.ico' %>
 
     <style>
       /* Background colour for nav bar */
@@ -37,23 +39,9 @@
 
   </head>
 
+  
+
   <body>
-    <!-- Navigation
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar1">
-    <div class="container">
-        <%= link_to "Polaris Analytics", root_path, :class => "navbar-brand mr-1 mb-1 mt-0" %>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <%= link_to "Forecasts", root_path, :class => "nav-link" %>
-            </li>
-        </ul>
-        </div>
-    </div>
-</nav>  -->
     <%= yield %>
   </body>
 </html>
