@@ -70,38 +70,20 @@ table {
     width: 200px;
 }
 
-#forecats{ 
+#forecats { 
     font-size: 100px;
 }
   </style>
   <main">
-  <body data-target="#navbar1" style="margin-top: 5em; height: 1000px;">
-        <div class="container" style="height: 1000px;">
+  <body data-target="#navbar1" style="margin-top: 5em; height: 1000px !important;">
+        <div class="container" style="height: 1000px !important;">
             <div class="row">
                 <div class="col-12">
                     <div class="text-center d-flex flex-column justify-content-center text-light">
-                        <h4 >Top 20 Global Technology Stocks</h4>
-                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for company name or symbol">
-                        <div class="row" style="margin-top:0.5em">
-                            <div class="col-lg-12 col-sm-12 mx-auto">
-                                    <table class="table-striped table c_dark_table table-borderless" id="myTable">
-                                        <thead style="border-top: 1px solid grey; border-bottom: 1px solid grey;">
-                                          <th style="width: 30%; font-weight: bold !important;"><b>Company name</b></th>
-                                          <th style="width: 30%;">Ticker symbol</th>
-                                          <th style="width: 30%;">7 day forecast</th>
-                                        </thead>
+                        <h4 >Contact us</h4>
+                        <p>
 
-                                        <% @results.each do |result| %>
-                                        <tr style="border-collapse:collapse !important;">
-                                          <td><%= result.companyName %></td>
-                                          <td><%= result.companySymbol %></td>
-                                          <td style="color: #2CEB38;">+0.0%</td>
-                                        </tr> 
-                                        <% end %>
-                                      </table>
-                                  </table>
-                            </div>
-                        </div>
+                            </p>
                     </div>
                 </div>
             </div>
@@ -112,37 +94,9 @@ table {
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
     <script>
-        function myFunction() {
-          // Declare variables
-          var input, filter, table, tr, td, i, txtValue;
-          input = document.getElementById("myInput");
-          filter = input.value.toUpperCase();
-          table = document.getElementById("myTable");
-          tr = table.getElementsByTagName("tr");
-        
-          // Loop through all table rows, and hide those who don't match the search query
-          for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[0];
-            td2 = tr[i].getElementsByTagName("td")[1];
-            if (td || td2) {
-              txtValue = td.textContent || td.innerText;
-              txtValue2 = td2.textContent || td2.innerText;
-              if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-              }
-              else if (txtValue2.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-              }
-              else {
-                tr[i].style.display = "none";
-              }
-            }
-            
-          }
-        
-        }
-        document.getElementById("forecasts").style.color = "white";
-        document.getElementById("forecasts").style.textDecoration = "underline";
+       
+        document.getElementById("contact_us").style.color = "white";
+        document.getElementById("contact_us").style.textDecoration = "underline";
         </script>
 </body>
 </html>

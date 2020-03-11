@@ -3,45 +3,72 @@
   <head>
 
     <title>Polaris Analytics</title>
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Nanum+Gothic+Coding|Share+Tech+Mono|Source+Code+Pro&display=swap" rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag 'favicon.ico' %>
+  </head>
+  <style>
+    * {
+      font-family: 'Source Code Pro', monospace !important;
+      /* font-family: 'Anonymous Pro', monospace; */
+      font-size:12px;
+    }
+    
+    .c_dark_navbar {
+      background-color: black;
+    }
 
-    <style>
-      /* Background colour for nav bar */
-      .bg-dark-green {
-        /* background-color: #284678; */
-      }
 
-      /* Shrink text in footer */
-      .small-main-footer-font {
-        font-size: 0.6em;
-      }
-      /* Align footer container text */
-      .center-container-content {
-        text-align: center;
-      }
-
-      /* Apply font style to every element */
-      * {
-        font-family: 'Josefin Sans', sans-serif;
-      }
-
-      footer-dark-blue {
-        color: #034AA6 !important;
-      }
-
+    .c_footer {
+      text-align: center;
+      border-top: 1px solid #101319 !important;
+      padding: 2.5rem 0;
+    }
 
     </style>
 
-  </head>
-
-  
-
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary" id="navbar1" style="background-color: #3856FF !important;">
+  <div class="container">
+      <!-- <a class="navbar-brand mr-1 mb-1 mt-0" href=root></a> -->
+      <!-- <img src="https://image.flaticon.com/icons/svg/1553/1553405.svg" width="30" height="30" alt=""> -->
+      <%= link_to "Polaris Analytics", root_path, class:"navbar-brand mr-1 mb-1 mt-0" %>
+      
+      <button class="navbar-toggler"type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
+          <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+              </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <%= link_to "Forecasts", root_path, class:"nav-link", id:"forecasts"%>
+              </li>
+              <li class="nav-item">
+                  <%= link_to "About & Contact", welcome_about_path, class:"nav-link", id:"about_us"%>
+              </li>
+              <!-- <li class="nav-item">
+                <%= link_to "Contact us", welcome_contact_path, class:"nav-link", id:"contact_us"%>
+            </li> -->
+          </ul>
+      </div>
+  </div>
+</nav> 
   <body>
     <%= yield %>
   </body>
+  <footer class="c_footer">
+      <p style="color: #3E38F2;">&copy; Polaris Analytics</p>
+      <p> 
+        <%= link_to "Privacy and terms of use statement", welcome_privacy_path, class:"nav-link", id:"privacy"%>
+        </p>
+        <img src="https://image.flaticon.com/icons/svg/1553/1553405.svg" width="30" height="30" alt="">
+    </footer>
+
+    
 </html>

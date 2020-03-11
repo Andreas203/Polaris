@@ -6,4 +6,8 @@ Rails.application.routes.draw do
 
   get 'welcome/about'
 
+  get 'welcome/privacy'
+
+  get 'welcome/contact'
+
 end

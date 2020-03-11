@@ -4,101 +4,104 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polaris Analytics</title>
-    <meta name="description" content="Electro is a free, open source Bootstrap 4 theme" />
+    <title>Deeply Bootstrap 4 Theme Full Screen</title>
+    <meta name="description" content="Deeply is a free, open source Bootstrap 4 theme" />
     <meta name="generator" content="Themestr.app">
     <link rel="icon" href="http://themes.guide/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="http://themes.guide/favicon.ico" type="image/x-icon" />
-    <meta property="og:image" name="twitter:image" content="http://bootstrap.themes.guide/assets/ss_electro.png">
+    <meta property="og:image" name="twitter:image" content="http://bootstrap.themes.guide/assets/ss_deeply.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@ThemesGuide">
     <meta name="twitter:creator" content="@ThemesGuide">
     <meta name="twitter:title" content="Open-source Bootstrap 4 Themes">
-    <meta name="twitter:description" content="Download Electro - free, open source Bootstrap 4 theme by Themes.guide">
+    <meta name="twitter:description" content="Download Deeply - free, open source Bootstrap 4 theme by Themes.guide">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/3.0.0/css/ionicons.css" rel="stylesheet">
-    <link href="/assets/template.scss" rel="stylesheet">
-    <link href="/assets/blue.scss" media="screen" rel="stylesheet" />
+    <link href="https://themesguide.github.io/top-hat/dist/deeply/theme.css" rel="stylesheet">
+    <link href="https://themesguide.github.io/top-hat/dist/deeply/template.css" rel="stylesheet">
   </head>
   
-  <body data-spy="scroll" data-target="#navbar1" data-offset="60">
-    <main>
-        <section class="container">
-            <div class="row vh-100">
-                <div class="col-12 my-auto">
-                    <div class="row text-center">
-                        <div class="col-lg-4 mb-4">
-                            <div class="card h-100 copyable">
-                                <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                    <h1 class="display-2 text-primary"><span class="ion ion-ios-snow-outline"></span></h1>
-                                    <h4 class="card-title text-primary">Unique</h4>
-                                    <p class="card-text">Don't like that typical Bootstrap look? Each theme has a custom look-and-feel, while maximizing use of Bootstrap without extensive additional CSS &amp; JS.</p>
-                                    <a href="#" class="btn btn-primary mt-auto copyable">Button<a href="" class="copyable-trigger" data-original-title="" title="">&lt;&gt;</a></a>
-                                </div>
-                            <a href="" class="copyable-trigger" data-original-title="" title="">&lt;&gt;</a></div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-                            <div class="card h-100 copyable">
-                                <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                    <h1 class="display-2 text-primary"><span class="ion ion-ios-tablet-portrait-outline"></span></h1>
-                                    <h4 class="card-title text-primary">Responsive</h4>
-                                    <p class="card-text">Based on mobile-first Bootstrap 4, all themes are 100% responsive and designed to look great on everything from smartphones to tablets to desktops..</p>
-                                    <a href="#" class="btn btn-primary mt-auto copyable">Button<a href="" class="copyable-trigger" data-original-title="" title="">&lt;&gt;</a></a>
-                                </div>
-                            <a href="" class="copyable-trigger" data-original-title="" title="">&lt;&gt;</a></div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-                            <div class="card h-100 copyable">
-                                <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                    <h1 class="display-2 text-primary"><span class="ion ion-ios-checkmark-circle-outline"></span></h1>
-                                    <h4 class="card-title text-primary">Consistent</h4>
-                                    <p class="card-text">Themes are crafted with care for design and performance. All themes are built on modern HTML5 &amp; CSS3 standards to ensure consistency and cross-browser support.</p>
-                                    <a href="#" class="btn btn-primary mt-auto copyable">Button<a href="" class="copyable-trigger" data-original-title="" title="">&lt;&gt;</a></a>
-                                </div>
-                            <a href="" class="copyable-trigger" data-original-title="" title="">&lt;&gt;</a></div>
-                        </div>
+  <style>
+      .c_dark_table {
+          background-color: black; 
+          color: white;
+      }
+
+      .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #101319;
+      }
+
+   #myInput {
+       padding: 10px;
+       background-color: #101319;
+       border-color: #2C2E3D;
+       border-radius: 2px;
+       border-style: solid;
+       border-width: 0.5px;
+       color:white;
+       margin: 20px;
+   }
+
+   ::placeholder {
+       color:white;
+   }
+   /* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+table {
+    table-layout: fixed;
+    width: 200px;
+}
+
+#forecats{ 
+    font-size: 100px;
+}
+  </style>
+  <main">
+  <body data-target="#navbar1" style="margin-top: 5em; height: 1000px !important;">
+        <div class="container" style="height: 1000px !important;">
+            <div class="row">
+                <div class="col-12">
+                    <div class=" d-flex flex-column justify-content-center text-light">
+                        <h3 >About Polaris Analytics</h3>
+                        <p>
+                            Polaris Analytics is a machine learning based forecasting platform for stocks in the technology market. Our mission is to provide one powerful environment to forecast stock prices.
+                            Polaris Analytics was founded in 2019 by James Evans and Andreas Papaconstatninu. 
+                            </p>
+                            <h4> What do we do</h4>
+                            Since completing dissertation work on stock forecasting we decided to take the project further and created Polaris Analytics. We originally started off using machine learning methods to conduct the forecasts and have since moved onto more exicitng techniques. All of the work is completed by the two of us and we self-teach everything.
+                            <hr>
+                            <h3 >Contact us</h3>
                     </div>
                 </div>
             </div>
-        </section>
-        
-    </main>
-        <footer id="footer" class="bg-dark text-light py-5">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-6 col-md-6 col-lg-3 mb-2">
-                    <h6 class="text-uppercase">Tools</h6>
-                    <ul class="nav flex-column">
-                        <li><a class="text-white" target="ext" rel="nofollow" href="https://themestr.app/" title="Bootstrap theme builder">Themestr.app</a></li>
-                        <li><a class="text-white" target="ext" rel="nofollow" href="http://themes.guide" title="Bootstrap free and pro themes">Themes.guide</a></li>
-                        <li><a class="text-white" target="ext" rel="nofollow" href="http://codeply.com" title="Prototype and edit code for Bootstrap and other responsive frameworks">Codeply</a></li>
-                        <li><a class="text-white" target="ext" rel="nofollow" href="http://bootply.com">Bootply</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-6 col-lg-3 mb-2">
-                    <h6 class="text-uppercase">More</h6>
-                    <ul class="nav flex-column">
-                        <li><a class="text-white" target="_new" href="http://wdstack.com" title="The top projects, tools and apps for Web developers">WDStack</a></li>
-                        <li><a class="text-white" target="_new" href="http://theme.cards">Theme.cards</a></li>
-                        <li><a class="text-white" target="_new" href="http://icodedis.tool.cards">I Code Dis</a></li>
-                        <li><a class="text-white" target="_new" title="Learn about Bootstrap 4 using this free theme" href="http://bootstrap4.guide">Bootstrap4.guide</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-12 col-lg-6 mb-2 text-right">
-                    <h6 class="text-uppercase">Follow</h6>
-                    <ul class="nav float-right">
-                        <li><a class="text-white mr-2" rel="nofollow" href="http://twitter.com/ThemesGuide" title="Follow on Twitter"><i class="h1 fa fa-fw fa-twitter fa-2x ion-logo-twitter"></i></a></li>
-                        <li><a class="text-white mr-2" rel="nofollow" href="https://www.facebook.com/codeply" title="Follow on Facebook"><i class="h1 fa fa-fw fa-facebook fa-2x ion-logo-facebook"></i></a></li>
-                        <li><a class="text-white mr" rel="nofollow" href="https://github.com/ThemesGuide/bootstrap-themes" title="Follow on GitHub"><i class="h1 fa fa-fw fa-facebook fa-2x ion-logo-github"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!--/row-->
         </div>
-    </footer>
+    </main>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/umd/popper.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
+    <script>
+       
+        document.getElementById("about_us").style.color = "white";
+        document.getElementById("about_us").style.textDecoration = "underline";
+        </script>
 </body>
 </html>
