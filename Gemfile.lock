@@ -83,8 +83,6 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
-    contact_us (1.2.0)
-      rails (>= 4.2.0)
     crass (1.0.4)
     dotenv (2.7.5)
     dotenv-rails (2.7.5)
@@ -232,6 +230,10 @@ DEPENDENCIES
   chartkick
   chromedriver-helper
   coffee-rails (~> 4.2)
+  dotenv-rails
+  filterrific
+  jbuilder (~> 2.5)
+  jquery-rails (~> 4.1, >= 4.1.1)
   mail_form
   pg
   puma (~> 3.11)
