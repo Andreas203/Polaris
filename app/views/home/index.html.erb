@@ -73,28 +73,42 @@ table {
 #forecats {
     font-size: 100px;
 }
+
+.hidden { display: none; }
+  .james {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
   </style>
-  <main>
-  <div class="container">
-  <body data-target="#navbar1" style="margin-top: 5em; height: 1000px !important;">
-        <div class="container" style="height: 1000px !important;">
-                <div class="col-sm">
-                    <div class="text-center d-flex flex-column justify-content-center text-light">
-                      <div class="row" id="contact">
-                        <h4 >Contact us</h4>
-                      </div>
-                      <div class="row" id="contact">
-                        <%= render 'contact_form' %>
-                      </div>
+
+      <body data-target="#navbar1" style="margin-top: 5em; height: 600px !important;">
+            <div class="container" style="height: 600px !important;">
+                <div class="row">
+                    <div class="col-12">
+                        <div class=" d-flex flex-column justify-content-center text-light">
+                          <h3 >Contact us</h3>
+                          <%= render 'contact_form' %>
+                        </div>
                     </div>
+    
+    
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/umd/popper.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="scripts.js"></script>
+    
     <script>
 
         document.getElementById("contact_us").style.color = "white";
