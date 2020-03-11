@@ -5,6 +5,9 @@ ruby '2.6.3'
 
 gem "chartkick"
 
+gem 'contact_us'
+
+
 gem 'filterrific'
 
 gem "bootstrap_form", "~> 4.0"

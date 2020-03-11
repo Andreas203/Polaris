@@ -4,17 +4,24 @@
 
     <title>Polaris Analytics</title>
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Nanum+Gothic+Coding|Share+Tech+Mono|Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code|Space+Mono&display=swap" rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag 'favicon.ico' %>
+    <link rel="stylesheet" href="/assets/theme.scss">
+    <link rel="stylesheet" href="/assets/template.scss">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <style>
     * {
-      font-family: 'Source Code Pro', monospace !important;
+      /* font-family: 'Source Code Pro', monospace !important; */
       /* font-family: 'Anonymous Pro', monospace; */
+      /* font-family: 'Space Mono', monospace; */
+      font-family: 'Fira Code', monospace;
       font-size:12px;
     }
     
@@ -27,14 +34,18 @@
       text-align: center;
       border-top: 1px solid #101319 !important;
       padding: 2.5rem 0;
+      
+    }
+
+    .c_footer a {
+      font-size: 8px;
     }
 
     </style>
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary" id="navbar1" style="background-color: #3856FF !important;">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary" id="navbar1" style="background-color: #020F59 !important;">
   <div class="container">
-      <!-- <a class="navbar-brand mr-1 mb-1 mt-0" href=root></a> -->
-      <!-- <img src="https://image.flaticon.com/icons/svg/1553/1553405.svg" width="30" height="30" alt=""> -->
+    
       <%= link_to "Polaris Analytics", root_path, class:"navbar-brand mr-1 mb-1 mt-0" %>
       
       <button class="navbar-toggler"type="button" data-toggle="collapse" data-target="#collapsingNavbar">
@@ -50,8 +61,11 @@
                   <%= link_to "Forecasts", root_path, class:"nav-link", id:"forecasts"%>
               </li>
               <li class="nav-item">
-                  <%= link_to "About & Contact", welcome_about_path, class:"nav-link", id:"about_us"%>
+                  <%= link_to "About & Contact", about_url, class:"nav-link", id:"about_us"%>
               </li>
+              <li class="nav-item">
+                <%= link_to "Careers", careers_url, class:"nav-link", id:"careers"%>
+            </li>
               <!-- <li class="nav-item">
                 <%= link_to "Contact us", welcome_contact_path, class:"nav-link", id:"contact_us"%>
             </li> -->
@@ -63,11 +77,13 @@
     <%= yield %>
   </body>
   <footer class="c_footer">
-      <p style="color: #3E38F2;">&copy; Polaris Analytics</p>
+      <p style="color:yellow;">&copy; Polaris Analytics</p>
       <p> 
-        <%= link_to "Privacy and terms of use statement", welcome_privacy_path, class:"nav-link", id:"privacy"%>
+        
+        <%= link_to "Forecasts", root_path%> . <%= link_to "About", about_url%> . <%= link_to "Careers", careers_url%> . <%= link_to "Privacy & terms", privacy_url%>
         </p>
-        <img src="https://image.flaticon.com/icons/svg/1553/1553405.svg" width="30" height="30" alt="">
+        <%= image_tag("/assets/logo.svg", :alt => "logo", :height => "30", :width => "30") %>
+        
     </footer>
 
     

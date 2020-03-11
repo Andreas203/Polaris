@@ -4,10 +4,21 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
 
-  get 'welcome/about'
 
-  get 'welcome/privacy'
+
 
   get 'welcome/contact'
+  
+
+  
+
+  get 'careers', :to => 'welcome#careers', :as => :careers
+  get 'about', :to => 'welcome#about', :as => :about
+  get 'forecasts', :to => 'welcome#index', :as => :forecasts
+  get 'privacy', :to => 'welcome#privacy', :as => :privacy
+
+  
+
+  
 
 end
