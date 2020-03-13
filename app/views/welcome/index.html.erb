@@ -109,15 +109,19 @@ table {
                                         <thead style="border-top: 1px solid grey; border-bottom: 1px solid grey;">
                                           <th style="width: 30%; font-weight: bold !important;"><b>Company name</b></th>
                                           <th style="width: 30%;">Ticker symbol</th>
-                                          <th style="width: 30%;">7 day forecast</th>
+                                          <th style="width: 30%;">Close on 20/03/20</th>
                                         </thead>
 
                                         <% @results.each do |result| %>
                                         <tr style="border-collapse:collapse !important;">
                                           <td><%= result.companyName %></td>
                                           <td><%= result.companySymbol %></td>
+
                                           <% color = result.change >= 0 ? "pos" : "neg" %>
-                                          <td class="<%= color %>"><%= result.change  %>%</td>
+                                          <td class="<%= color %>">
+                                            
+                                            
+                                            <%= result.change  %>%</td>
 
                                         </tr>
                                         <% end %>
