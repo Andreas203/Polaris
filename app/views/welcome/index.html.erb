@@ -5,10 +5,10 @@
     <script src="https://kit.fontawesome.com/5a2a5f70f2.js" crossorigin="anonymous"></script>
 
   </head>
-  
+
   <style>
       .c_dark_table {
-          background-color: black; 
+          background-color: black;
           color: white;
       }
 
@@ -17,7 +17,7 @@
       }
 
    #myInput {
-       
+
        background-color: #101319;
        border-color: #2C2E3D;
        border-radius: 5px;
@@ -33,8 +33,8 @@
        color:white;
    }
    /* enable absolute positioning */
-.inner-addon { 
-    position: relative; 
+.inner-addon {
+    position: relative;
 }
 
 /* style icon */
@@ -57,7 +57,7 @@ table {
     width: 200px;
 }
 
-#forecats{ 
+#forecats{
     font-size: 100px;
 }
 
@@ -86,7 +86,7 @@ table {
                     <div class="text-center d-flex flex-column justify-content-center text-light">
                         <h5>Top 20 Global Technology Stocks</h5>
 
-                        
+
                         <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for company name or symbol"> -->
 
                         <div class="form-group has-search" style="margin-top: 1em; margin-bottom:1em; padding: 10px;">
@@ -109,11 +109,11 @@ table {
                                         <tr style="border-collapse:collapse !important;">
                                           <td><%= result.companyName %></td>
                                           <td><%= result.companySymbol %></td>
-                                          <td style="color: #2CEB38;">+0.0%</td>
-                                        </tr> 
+                                          <%= if(result.change<0)then @color="#FF0000" else @color = "#2CEB38" end%>
+                                          <td style=<%= "color:" + @color + " ;"%>><%=result.change%>%</td>
+                                        </tr>
                                         <% end %>
                                       </table>
-                                  </table>
                             </div>
                         </div>
                     </div>
@@ -134,7 +134,7 @@ table {
           filter = input.value.toUpperCase();
           table = document.getElementById("myTable");
           tr = table.getElementsByTagName("tr");
-        
+
           // Loop through all table rows, and hide those who don't match the search query
           for (i = 0; i < tr.length; i++) {
             td = tr[i].getElementsByTagName("td")[0];
@@ -152,9 +152,9 @@ table {
                 tr[i].style.display = "none";
               }
             }
-            
+
           }
-        
+
         }
         document.getElementById("forecasts").style.color = "white";
         document.getElementById("forecasts").style.textDecoration = "underline";

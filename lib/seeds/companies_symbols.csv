@@ -1,21 +1,21 @@
-Name,Symbol
-Alibaba,BABA
-Alphabet,GOOGL
-Amazon,AMZN
-Apple,AAPL
-Baidu,BIDU
-Cisco Systems,CSCO
-Facebook,FB:US
-IBM,IBM
-Intel,INTC
-Microsoft,MSFT
-Netflix,NFLX
-Oracle,ORCL
-PayPal,PYP
-salesforce.com,CRM
-Samsung Electronics,LON: BC94
-SAP SE,SAP
-SoftBank,TYO: 9984
-Tencent Holdings,HKG: 0700
-Tesla Motors,TSLA
-Twitter,TWTR
+Name,Symbol,Change
+Alibaba,BABA,-2.76%
+Alphabet,GOOGL,-1.22%
+Amazon,AMZN,6.50%
+Apple,AAPL,8.82%
+Baidu,BIDU,0.93%
+Cisco Systems,CSCO,304.48%
+Facebook,FB,5.18%
+IBM,IBM,4.13%
+Intel,INTC,3.28%
+Microsoft,MSFT,-9.97%
+Netflix,NFLX,2.32%
+Oracle,ORCL,-1.44%
+PayPal,PYP,3.83%
+salesforce.com,CRM,-1.06%
+Samsung Electronics,SSNLF,-3.28%
+SAP SE,SAP,0.18%
+SoftBank,SFTBY,-13.55%
+Tencent Holdings,TCEHY,6.69%
+Tesla Motors,TSLA,-44.12%
+Twitter,TWTR,3.18%
