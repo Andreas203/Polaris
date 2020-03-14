@@ -1,101 +1,150 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
+    <script src="https://kit.fontawesome.com/5a2a5f70f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/main.scss">
+    <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<style>
+
+    #myInput {
+      
+    }
     
+    ::placeholder {
+        font-style: italic;
+        color: white;
+    }
+    /* enable absolute positioning */
+    
+    .inner-addon {
+        position: relative;
+    }
+    /* style icon */
+    
+    .inner-addon .glyphicon {
+        position: absolute;
+        padding: 10px;
+        pointer-events: none;
+    }
+    /* align icon */
+    
+    .left-addon .glyphicon {
+        left: 0px;
+    }
+    
+    .right-addon .glyphicon {
+        right: 0px;
+    }
+    /* add padding  */
+    
+    .left-addon input {
+        padding-left: 30px;
+    }
+    
+    .right-addon input {
+        padding-right: 30px;
+    }
+    
+    table {
+        table-layout: fixed;
+        width: 200px;
+    }
+    
+    #forecats {
+        font-size: 100px;
+    }
+    
+    .has-search .form-control {
+        padding-left: 2.375rem;
+    }
+    
+    .pos {
+        color: green;
+    }
+    
+    .neg {
+        color: red;
+    }
+    
+    .has-search .form-control-feedback {
+        position: absolute;
+        z-index: 2;
+        display: block;
+        width: 2.375rem;
+        height: 2.375rem;
+        line-height: 2.6rem;
+        text-align: center;
+        pointer-events: none;
+        color: #aaa;
+        font-size: 15px;
+    }
+
+    .main-card-top {
+      margin-top: 2em;
+    }
+
+    .table {
+      margin-bottom: 0px !important;
+    }
 
 
-  </head>
-  
-  <style>
-      .c_dark_table {
-          background-color: black; 
-          color: white;
-      }
+    main {
+      height: 1000px;
+    }
 
-      * {
-        font-family: 'Fira Code', monospace !important;
-      }
+</style>
+<main>
 
-      .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-   background-color: #101319;
-      }
-
-   #myInput {
-       padding: 10px;
-       background-color: #101319;
-       border-color: #2C2E3D;
-       border-radius: 2px;
-       border-style: solid;
-       border-width: 0.5px;
-       color:white;
-       margin: 20px;
-   }
-
-   ::placeholder {
-       color:white;
-   }
-   /* enable absolute positioning */
-.inner-addon { 
-    position: relative; 
-}
-
-/* style icon */
-.inner-addon .glyphicon {
-  position: absolute;
-  padding: 10px;
-  pointer-events: none;
-}
-
-/* align icon */
-.left-addon .glyphicon  { left:  0px;}
-.right-addon .glyphicon { right: 0px;}
-
-/* add padding  */
-.left-addon input  { padding-left:  30px; }
-.right-addon input { padding-right: 30px; }
-
-table {
-    table-layout: fixed;
-    width: 200px;
-}
-
-#forecats{ 
-    font-size: 100px;
-}
-  </style>
-  <main>
-  <body data-target="#navbar1" style="margin-top: 5em; height: 600px !important;">
-        <div class="container" style="height: 600px !important;">
+  <body>
+    <div class="container main-card-top">
+      <div class="card">
+        <div class="card-body">
+          <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
-                    <div class=" d-flex flex-column justify-content-center text-light">
-                        <h3 >About Polaris Analytics</h3>
-                        <p>
-                            Polaris Analytics is a machine learning based forecasting platform for stocks in the technology market. Our mission is to provide one powerful environment to forecast stock prices.
-                            Polaris Analytics was founded in 2019 by James Evans and Andreas Papaconstatninu. 
-                            </p>
-                            <h4> What do we do?</h4>
-                            Since completing dissertation work on stock forecasting we decided to take the project further and created Polaris Analytics. We originally started off using machine learning methods to conduct the forecasts and have since moved onto more exicitng techniques. All of the work is completed by the two of us and we self-teach everything.
-                            We use open source financial data from a variety of resources as we have a limited budget. We process the data and use it as input for various algorithms. From here we obtain the anticipated stock movement direction. Now we have a direction we devise a strategy based on the forecast. Anything to beat a simple buy/short strategy.
-                            <hr>
-                            <h4> Who are we? </h4>
-                            We are two university students with a strong interest in financial markets.
-                    </div>
+              <div class="col-md-12 p-2">
+                <div class="container">
+                <h5 class="accent-color" style="display:contents"><i class="fas fa-info-circle"></i> About Polaris Analytics </h5>
+                <hr>
+                <ul>
+                    <li>
+                        <h6><u>What do we do?</u></h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non condimentum diam. Mauris in justo tempus arcu accumsan eleifend vel ut augue. Maecenas ac blandit lectus. Duis sit amet pharetra sapien, vel lacinia erat. Integer hendrerit ligula sed ultricies fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis nulla ornare mollis aliquet. Maecenas laoreet mollis nisi, sed luctus magna egestas ut. Aliquam ac semper enim. Sed id est sed nunc posuere pretium. Curabitur dui magna, tempus quis dui quis, imperdiet elementum elit. Proin arcu velit, egestas non dolor tempor, hendrerit mollis erat. Fusce vehicula vel ligula a consectetur. Duis placerat fringilla finibus. Integer posuere semper libero scelerisque imperdiet. Aenean diam eros, placerat vel est sit amet, congue sagittis orci.</p>
+                    </li>
+                    <li>
+                        <h6><u>Who are we?</u></h6>
+                        <p>Nunc quis justo vel est aliquam rhoncus feugiat at erat. Quisque in congue enim. Integer egestas tortor rutrum orci viverra, at posuere sapien sodales. Ut lacus nulla, aliquam eget euismod ac, venenatis ac leo. Mauris purus metus, feugiat ut libero eget, suscipit euismod justo. Donec ultricies leo elit, et varius arcu elementum sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed at est scelerisque, dictum ligula at, consequat sapien.</p>
+                        
+                    </li>
+                
+
+                <div class="p-2">
+                                       
                 </div>
-
-
+              </div>
             </div>
+            </div>
+          </div>          
         </div>
-    </main>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/umd/popper.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="scripts.js"></script>
-    <script>
-       
-        document.getElementById("about_us").style.color = "white";
-        document.getElementById("about_us").style.textDecoration = "underline";
-        </script>
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 mx-auto">
+            </div>
+      </div>
+      </div>
+      
+    </div>
+
+  </body>
+
+</main>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/umd/popper.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById("about").className += " active";
+  </script>
 </body>
+
 </html>

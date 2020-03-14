@@ -9,6 +9,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+ .accent-color *{
+   color:#CCA032 !important;
+ }
+
 :root {
   --blue:#007bff;
   --indigo:#6610f2;
@@ -73,7 +77,6 @@ body {
   line-height: 1.5;
   color: #cccccc;
   text-align: left;
-  background-color: #000;
 }
 
 [tabindex="-1"]:focus {

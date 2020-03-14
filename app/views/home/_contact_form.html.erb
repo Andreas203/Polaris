@@ -3,52 +3,49 @@
 <html>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/3.0.0/css/ionicons.css" rel="stylesheet">
-  <link href="https://themesguide.github.io/top-hat/dist/deeply/theme.css" rel="stylesheet">
-  <link href="https://themesguide.github.io/top-hat/dist/deeply/template.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.scss">
+
 </html>
 <style>
 .alert-error {
-background-color: #f2dede;
-border-color: #eed3d7;
+background-color: #CCA032;
+border-color: black;
 color: #b94a48;
 text-align: left;
 font-size: .8em;
 }
 
 .alert-alert {
-background-color: #f2dede;
-border-color: #eed3d7;
-color: #b94a48;
+background-color: #CCA032;
+border-color: black;
+color: black;
 text-align: left;
 font-size: .8em;
 }
 
-.alert-success {
-background-color: #dff0d8;
-border-color: #d6e9c6;
-color: #468847;
-text-align: center;
-font-size: .8em;
-}
-
-.alert-notice {
-background-color: #dff0d8;
-border-color: #d6e9c6;
-color: #468847;
-text-align: left;
-font-size: .8em;
-}
 ::placeholder {
        color:black;
 }
 </style>
 
 <%= render 'flash' %>
-<%= bootstrap_form_with(model: @contact, remote: true, url: home_index_path) do |f| %>
-  <%= f.text_field :name, placeholder: 'John Smith', required: true, label_as_placeholder: true %>
-  <%= f.email_field :email, placeholder: 'john@email.com', required: true,label_as_placeholder: true %>
-  <%= f.text_area :message, placeholder: 'Enter your message here', required: true,label_as_placeholder: true %>
-  <%= f.submit 'Send Message', class: "btn btn-primary", style:"float:right;"%>
+<%= bootstrap_form_with(model: @contact, remote: true, url: home_index_path, class:"form") do |f| %>
+  <div class="form-row">
+  <div class="form-group col-md-6">
+  <%= f.text_field :name, class: "form-control", placeholder: 'John Smith', required: true, label_as_placeholder: true %>
+  </div>
+  <div class="form-group col-md-6">
+  <%= f.email_field :email, class: "form-control", placeholder: 'john@email.com', required: true,label_as_placeholder: true %>
+  </div>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :message, class:"form-control", placeholder: 'Enter your message here', required: true,label_as_placeholder: true %>
+  </div>
+  
+  
+  <%= f.submit 'Send Message', class: "btn btn-accent-color", style:"float:right;"%>
 <% end %>
+
+
 
 

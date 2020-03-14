@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 470 470" style="enable-background:new 0 0 470 470;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st2{display:inline;fill:#961A1A;stroke:#000000;stroke-width:11;stroke-miterlimit:10;}
+	.st3{display:inline;fill:#62A5F4;}
+	.st4{display:inline;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+	.st5{fill:#FFD34E;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<g id="Capa_1" class="st0">
+	<rect class="st1" width="470" height="470"/>
+	<circle class="st2" cx="235" cy="244.2" r="165.7"/>
+	<polyline class="st3" points="196.7,283.9 283.9,196.7 432.4,235 283.9,273.3 	"/>
+	<polygon class="st3" points="432.4,235 236.4,235 283.9,196.7 	"/>
+	<polyline class="st3" points="235,432.4 196.7,283.9 276.1,273.3 	"/>
+	<path class="st4" d="M464.4,227.7l-137.7-35.5l55.7-94.4c1.7-2.9,1.3-6.7-1.2-9.1s-6.2-2.9-9.1-1.2l-94.4,55.7L242.3,5.6
+		C241.4,2.3,238.4,0,235,0s-6.4,2.3-7.3,5.6l-35.5,137.7L97.9,87.6c-2.9-1.7-6.7-1.3-9.1,1.2c-2.4,2.4-2.9,6.2-1.2,9.1l55.7,94.4
+		L5.6,227.7C2.3,228.6,0,231.6,0,235s2.3,6.4,5.6,7.3l137.7,35.5l-55.7,94.4c-1.7,2.9-1.3,6.7,1.2,9.1c1.4,1.4,3.4,2.2,5.3,2.2
+		c1.3,0,2.6-0.3,3.8-1l94.4-55.7l35.5,137.7c0.9,3.3,3.8,5.6,7.3,5.6s6.4-2.3,7.3-5.6l35.5-137.7l94.4,55.7c1.2,0.7,2.5,1,3.8,1
+		c1.9,0,3.9-0.8,5.3-2.2c2.4-2.4,2.9-6.2,1.2-9.1l-55.7-94.4l137.7-35.5c3.3-0.9,5.6-3.8,5.6-7.3S467.7,228.6,464.4,227.7z
+		 M287.7,287.7l23.8-6.1l43.1,73.1l-73.1-43.1L287.7,287.7z M313.4,265.6h-0.1l-29.5,7.6l-22.3-22.3c-2.9-2.9-7.7-2.9-10.6,0
+		c-2.9,2.9-2.9,7.7,0,10.6l22.3,22.3l-7.6,29.5v0.1l-30.6,119l-30.6-119l-7.6-29.6l87.1-87.1l29.3,7.5l119.3,30.7L313.4,265.6z
+		 M287.7,182.3l-6.1-23.8l73.1-43.1l-43.1,73.1L287.7,182.3z M265.6,156.6l7.6,29.6L235,224.4l-38.3-38.3l7.6-29.5v-0.1l30.6-119
+		L265.6,156.6z M182.3,182.3l-23.8,6.1l-43.1-73.1l73.1,43.1L182.3,182.3z M186.1,196.7l38.3,38.3l-38.3,38.3L37.6,235L186.1,196.7z
+		 M182.3,287.7l6.1,23.8l-73.1,43.1l43.1-73.1L182.3,287.7z"/>
+	<polygon class="st3" points="235,37.6 196.7,186.1 235,224.4 273.3,186.1 	"/>
+	<polygon class="st3" points="224.4,235 186.1,273.3 37.6,235 186.1,196.7 	"/>
+	<polygon class="st3" points="115.3,354.7 158.5,281.6 182.3,287.7 188.4,311.5 	"/>
+	<polygon class="st3" points="158.5,188.4 115.3,115.3 188.4,158.5 182.3,182.3 	"/>
+	<polygon class="st3" points="281.6,158.5 287.7,182.3 311.5,188.4 354.7,115.3 	"/>
+	<polygon class="st3" points="281.6,311.5 287.7,287.7 311.5,281.6 354.7,354.7 	"/>
+	<polygon class="st3" points="235,37.6 235,224.4 196.7,186.1 	"/>
+	<polygon class="st3" points="186.1,196.7 37.6,235 224.4,235 	"/>
+	<polygon class="st3" points="235,432.4 236.4,244.2 196.7,283.9 	"/>
+</g>
+<g id="Layer_2">
+	<circle class="st5" cx="235" cy="235" r="219.1"/>
+</g>
+</svg>
