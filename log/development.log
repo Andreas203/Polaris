@@ -6823,3 +6823,1264 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 85ms (Views: 43.6ms | ActiveRecord: 39.3ms)
 
 
+Started GET "/" for ::1 at 2020-03-14 14:55:22 +0000
+  [1m[35m (27.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rubyonrails/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (29.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (20.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 486ms (Views: 266.4ms | ActiveRecord: 185.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 14:55:53 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (19.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (20.5ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 980ms (Views: 49.1ms | ActiveRecord: 896.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 14:56:12 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (34.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (31.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (33.0ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 65.8ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting end
+...o 'Polaris Analytics' root_path class:"navbar-brand pa_heade...
+...                      ^~~~~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:34: syntax error, unexpected do (for block), expecting '.' or &. or :: or '['
+...ass:"navbar-brand pa_header" do @output_buffer.safe_append='
+...                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:75: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/layouts/application.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/layouts/application.html.erb:34: syntax error, unexpected do (for block), expecting '.' or &. or :: or '['
+app/views/layouts/application.html.erb:75: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/" for ::1 at 2020-03-14 14:56:19 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.8ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (21.5ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (23.3ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 40.3ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:34: syntax error, unexpected tLABEL, expecting do or '{' or '('
+...is Analytics', root_path class:"navbar-brand pa_header" do @...
+...                         ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:34: syntax error, unexpected do (for block), expecting end
+...ass:"navbar-brand pa_header" do @output_buffer.safe_append='
+...                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:75: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/layouts/application.html.erb:34: syntax error, unexpected tLABEL, expecting do or '{' or '('
+app/views/layouts/application.html.erb:34: syntax error, unexpected do (for block), expecting end
+app/views/layouts/application.html.erb:75: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/" for ::1 at 2020-03-14 14:56:26 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (22.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (21.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (23.7ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 44.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/":String):
+    31:     }
+    32:   </style>
+    33:   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    34:     <%= link_to 'Polaris Analytics', root_path, class:"navbar-brand pa_header" do %>
+    35:       <%= image_tag("/assets/polaris.svg", :class => "d-inline-block align-top", :alt => "logo", :height => "30", :width => "30") %>
+    36:       
+    37:    <% end %>
+  
+app/views/layouts/application.html.erb:34:in `_app_views_layouts_application_html_erb__2207900389844203248_70148795983520'
+Started GET "/" for ::1 at 2020-03-14 14:56:38 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (19.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (18.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 38.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/":String):
+    31:     }
+    32:   </style>
+    33:   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    34:     <%= link_to 'Polaris Analytics', root_path, class:"navbar-brand pa_header" do %>
+    35:       <%= image_tag("/assets/polaris.svg", :class => "d-inline-block align-top", :alt => "logo", :height => "30", :width => "30") %>
+    36:    <% end %>
+    37: 
+  
+app/views/layouts/application.html.erb:34:in `_app_views_layouts_application_html_erb__2207900389844203248_70148795795160'
+Started GET "/" for ::1 at 2020-03-14 14:57:00 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (20.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (41.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (44.2ms)
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 62.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/":String):
+    31:     }
+    32:   </style>
+    33:   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    34:     <%= link_to 'Polaris Analytics', root_path, class:"navbar-brand pa_header" do %>
+    35:       <%= image_tag("/assets/polaris.svg", :class => "d-inline-block align-top", :alt => "logo", :height => "30", :width => "30") %>
+    36:    <% end %>
+    37: 
+  
+app/views/layouts/application.html.erb:34:in `_app_views_layouts_application_html_erb__2207900389844203248_70148803772980'
+Started GET "/" for ::1 at 2020-03-14 14:57:42 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (20.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 85ms (Views: 44.6ms | ActiveRecord: 38.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 14:57:43 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (19.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (20.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 73ms (Views: 30.1ms | ActiveRecord: 39.9ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 14:59:50 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (19.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (19.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (21.9ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 39.2ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:38: syntax error, unexpected tSTRING_DEND, expecting ')'
+...mage_tag("/assets/polaris.svg"}".html_safe, "link_path" );@o...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...is.svg"}".html_safe, "link_path" );@output_buffer.safe_appen...
+...                      ^~~~~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+    <button class="navbar-toggler" type="button" data-...
+                   ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+... <button class="navbar-toggler" type="button" data-toggle="c...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...s="navbar-toggler" type="button" data-toggle="collapse" data...
+...                         ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...="button" data-toggle="collapse" data-target="#navbarNav" ar...
+...                       ^~~~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:42: syntax error, unexpected '<', expecting tSTRING_DEND
+      <span class="navbar-toggler-ic...
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+...n class="navbar-toggler-icon"></span>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:43: unknown regexp options - btt
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+    <div class="collapse navbar-co...
+    ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...s="collapse navbar-collapse" id="navbarNav">
+...                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:45: syntax error, unexpected '<'
+      <ul class="navbar-nav">
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:46: syntax error, unexpected '<'
+        <li class="nav-item" id="forec...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="forecasts">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:47: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-chart-line"></i> For...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:47: syntax error, unexpected '<'
+...'<i class="fas fa-chart-line"></i> Forecasts'.html_safe, roo...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:48: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:48: unmatched close parenthesis: /i> Forecasts'.html_safe, root_path, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+        <li class="nav-item" id="about...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:49: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="about">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:50: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-info-circle"></i> Ab...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:50: syntax error, unexpected '<'
+...<i class="fas fa-info-circle"></i> About'.html_safe, about_u...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:51: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:51: unmatched close parenthesis: /i> About'.html_safe, about_url, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:52: syntax error, unexpected '<'
+        <li class="nav-item" id="conta...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:52: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="contact">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:53: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-envelope"></i> Conta...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+...o '<i class="fas fa-envelope"></i> Contact'.html_safe, conta...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:54: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:54: unmatched close parenthesis: /i> Contact'.html_safe, contact_url, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:55: syntax error, unexpected '<'
+      </ul>
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:56: unknown regexp options - dv
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:57: syntax error, unexpected '<'
+  </nav>
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:61: unknown regexp options - bdy
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:63: syntax error, unexpected '<'
+  <footer class="my-5 pt-5 text-...
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected '<'
+    <p class="mb-1">© 2019-2020 P...
+    ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+    <p class="mb-1">© 2019-2020 Polaris Analytics</p>
+                       ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected tCONSTANT, expecting tSTRING_DEND
+...ass="mb-1">© 2019-2020 Polaris Analytics</p>
+...                        ^~~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:66: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:66: syntax error, unexpected '<'
+...olor "><a href="#">Privacy</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:67: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:67: syntax error, unexpected '<'
+...-color "><a href="#">Terms</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:68: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+...olor "><a href="#">Support</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:69: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:71: syntax error, unexpected '<', expecting tSTRING_DEND
+  </footer>
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:73: unknown regexp options - htl
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:79: unterminated string meets end of file
+          end
+              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:79: syntax error, unexpected end-of-input, expecting tSTRING_DEND):
+  
+app/views/layouts/application.html.erb:38: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/layouts/application.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:41: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:42: syntax error, unexpected '<', expecting tSTRING_DEND
+app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:43: unknown regexp options - btt
+app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:45: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:46: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:47: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:47: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:48: unknown regexp option - l
+app/views/layouts/application.html.erb:48: unmatched close parenthesis: /i> Forecasts'.html_safe, root_path, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:49: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:50: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:50: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:51: unknown regexp option - l
+app/views/layouts/application.html.erb:51: unmatched close parenthesis: /i> About'.html_safe, about_url, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:52: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:52: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:53: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:54: unknown regexp option - l
+app/views/layouts/application.html.erb:54: unmatched close parenthesis: /i> Contact'.html_safe, contact_url, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:55: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:56: unknown regexp options - dv
+app/views/layouts/application.html.erb:57: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:61: unknown regexp options - bdy
+app/views/layouts/application.html.erb:63: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:64: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:64: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/layouts/application.html.erb:64: syntax error, unexpected tCONSTANT, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:66: unknown regexp option - a
+app/views/layouts/application.html.erb:66: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:67: unknown regexp option - a
+app/views/layouts/application.html.erb:67: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:68: unknown regexp option - a
+app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:69: unknown regexp option - l
+app/views/layouts/application.html.erb:71: syntax error, unexpected '<', expecting tSTRING_DEND
+app/views/layouts/application.html.erb:73: unknown regexp options - htl
+app/views/layouts/application.html.erb:79: unterminated string meets end of file
+app/views/layouts/application.html.erb:79: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+Started GET "/" for ::1 at 2020-03-14 14:59:52 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.8ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (19.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 38.1ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:38: syntax error, unexpected tSTRING_DEND, expecting ')'
+...mage_tag("/assets/polaris.svg"}".html_safe, "link_path" );@o...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...is.svg"}".html_safe, "link_path" );@output_buffer.safe_appen...
+...                      ^~~~~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+    <button class="navbar-toggler" type="button" data-...
+                   ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+... <button class="navbar-toggler" type="button" data-toggle="c...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...s="navbar-toggler" type="button" data-toggle="collapse" data...
+...                         ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...="button" data-toggle="collapse" data-target="#navbarNav" ar...
+...                       ^~~~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:42: syntax error, unexpected '<', expecting tSTRING_DEND
+      <span class="navbar-toggler-ic...
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+...n class="navbar-toggler-icon"></span>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:43: unknown regexp options - btt
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+    <div class="collapse navbar-co...
+    ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...s="collapse navbar-collapse" id="navbarNav">
+...                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:45: syntax error, unexpected '<'
+      <ul class="navbar-nav">
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:46: syntax error, unexpected '<'
+        <li class="nav-item" id="forec...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="forecasts">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:47: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-chart-line"></i> For...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:47: syntax error, unexpected '<'
+...'<i class="fas fa-chart-line"></i> Forecasts'.html_safe, roo...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:48: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:48: unmatched close parenthesis: /i> Forecasts'.html_safe, root_path, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+        <li class="nav-item" id="about...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:49: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="about">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:50: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-info-circle"></i> Ab...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:50: syntax error, unexpected '<'
+...<i class="fas fa-info-circle"></i> About'.html_safe, about_u...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:51: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:51: unmatched close parenthesis: /i> About'.html_safe, about_url, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:52: syntax error, unexpected '<'
+        <li class="nav-item" id="conta...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:52: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="contact">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:53: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-envelope"></i> Conta...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+...o '<i class="fas fa-envelope"></i> Contact'.html_safe, conta...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:54: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:54: unmatched close parenthesis: /i> Contact'.html_safe, contact_url, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:55: syntax error, unexpected '<'
+      </ul>
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:56: unknown regexp options - dv
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:57: syntax error, unexpected '<'
+  </nav>
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:61: unknown regexp options - bdy
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:63: syntax error, unexpected '<'
+  <footer class="my-5 pt-5 text-...
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected '<'
+    <p class="mb-1">© 2019-2020 P...
+    ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+    <p class="mb-1">© 2019-2020 Polaris Analytics</p>
+                       ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected tCONSTANT, expecting tSTRING_DEND
+...ass="mb-1">© 2019-2020 Polaris Analytics</p>
+...                        ^~~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:66: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:66: syntax error, unexpected '<'
+...olor "><a href="#">Privacy</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:67: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:67: syntax error, unexpected '<'
+...-color "><a href="#">Terms</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:68: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+...olor "><a href="#">Support</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:69: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:71: syntax error, unexpected '<', expecting tSTRING_DEND
+  </footer>
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:73: unknown regexp options - htl
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:79: unterminated string meets end of file
+          end
+              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:79: syntax error, unexpected end-of-input, expecting tSTRING_DEND):
+  
+app/views/layouts/application.html.erb:38: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/layouts/application.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:41: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:42: syntax error, unexpected '<', expecting tSTRING_DEND
+app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:43: unknown regexp options - btt
+app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:45: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:46: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:47: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:47: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:48: unknown regexp option - l
+app/views/layouts/application.html.erb:48: unmatched close parenthesis: /i> Forecasts'.html_safe, root_path, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:49: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:50: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:50: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:51: unknown regexp option - l
+app/views/layouts/application.html.erb:51: unmatched close parenthesis: /i> About'.html_safe, about_url, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:52: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:52: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:53: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:54: unknown regexp option - l
+app/views/layouts/application.html.erb:54: unmatched close parenthesis: /i> Contact'.html_safe, contact_url, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:55: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:56: unknown regexp options - dv
+app/views/layouts/application.html.erb:57: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:61: unknown regexp options - bdy
+app/views/layouts/application.html.erb:63: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:64: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:64: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/layouts/application.html.erb:64: syntax error, unexpected tCONSTANT, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:66: unknown regexp option - a
+app/views/layouts/application.html.erb:66: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:67: unknown regexp option - a
+app/views/layouts/application.html.erb:67: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:68: unknown regexp option - a
+app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:69: unknown regexp option - l
+app/views/layouts/application.html.erb:71: syntax error, unexpected '<', expecting tSTRING_DEND
+app/views/layouts/application.html.erb:73: unknown regexp options - htl
+app/views/layouts/application.html.erb:79: unterminated string meets end of file
+app/views/layouts/application.html.erb:79: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+Started GET "/" for ::1 at 2020-03-14 15:00:09 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (19.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (20.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (22.2ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 40.0ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:38: syntax error, unexpected tSTRING_DEND, expecting ')'
+...mage_tag("/assets/polaris.svg"}".html_safe, root_path );@out...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+    <button class="navbar-toggler" type="button" data-...
+                   ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+... <button class="navbar-toggler" type="button" data-toggle="c...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...s="navbar-toggler" type="button" data-toggle="collapse" data...
+...                         ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...="button" data-toggle="collapse" data-target="#navbarNav" ar...
+...                       ^~~~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:42: syntax error, unexpected '<', expecting tSTRING_DEND
+      <span class="navbar-toggler-ic...
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+...n class="navbar-toggler-icon"></span>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:43: unknown regexp options - btt
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+    <div class="collapse navbar-co...
+    ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...s="collapse navbar-collapse" id="navbarNav">
+...                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:45: syntax error, unexpected '<'
+      <ul class="navbar-nav">
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:46: syntax error, unexpected '<'
+        <li class="nav-item" id="forec...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="forecasts">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:47: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-chart-line"></i> For...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:47: syntax error, unexpected '<'
+...'<i class="fas fa-chart-line"></i> Forecasts'.html_safe, roo...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:48: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:48: unmatched close parenthesis: /i> Forecasts'.html_safe, root_path, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+        <li class="nav-item" id="about...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:49: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="about">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:50: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-info-circle"></i> Ab...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:50: syntax error, unexpected '<'
+...<i class="fas fa-info-circle"></i> About'.html_safe, about_u...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:51: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:51: unmatched close parenthesis: /i> About'.html_safe, about_url, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:52: syntax error, unexpected '<'
+        <li class="nav-item" id="conta...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:52: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="contact">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:53: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-envelope"></i> Conta...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+...o '<i class="fas fa-envelope"></i> Contact'.html_safe, conta...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:54: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:54: unmatched close parenthesis: /i> Contact'.html_safe, contact_url, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:55: syntax error, unexpected '<'
+      </ul>
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:56: unknown regexp options - dv
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:57: syntax error, unexpected '<'
+  </nav>
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:61: unknown regexp options - bdy
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:63: syntax error, unexpected '<'
+  <footer class="my-5 pt-5 text-...
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected '<'
+    <p class="mb-1">© 2019-2020 P...
+    ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+    <p class="mb-1">© 2019-2020 Polaris Analytics</p>
+                       ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected tCONSTANT, expecting tSTRING_DEND
+...ass="mb-1">© 2019-2020 Polaris Analytics</p>
+...                        ^~~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:66: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:66: syntax error, unexpected '<'
+...olor "><a href="#">Privacy</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:67: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:67: syntax error, unexpected '<'
+...-color "><a href="#">Terms</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:68: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+...olor "><a href="#">Support</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:69: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:71: syntax error, unexpected '<', expecting tSTRING_DEND
+  </footer>
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:73: unknown regexp options - htl
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:79: unterminated string meets end of file
+          end
+              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:79: syntax error, unexpected end-of-input, expecting tSTRING_DEND):
+  
+app/views/layouts/application.html.erb:38: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:41: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:42: syntax error, unexpected '<', expecting tSTRING_DEND
+app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:43: unknown regexp options - btt
+app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:45: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:46: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:47: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:47: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:48: unknown regexp option - l
+app/views/layouts/application.html.erb:48: unmatched close parenthesis: /i> Forecasts'.html_safe, root_path, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:49: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:50: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:50: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:51: unknown regexp option - l
+app/views/layouts/application.html.erb:51: unmatched close parenthesis: /i> About'.html_safe, about_url, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:52: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:52: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:53: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:54: unknown regexp option - l
+app/views/layouts/application.html.erb:54: unmatched close parenthesis: /i> Contact'.html_safe, contact_url, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:55: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:56: unknown regexp options - dv
+app/views/layouts/application.html.erb:57: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:61: unknown regexp options - bdy
+app/views/layouts/application.html.erb:63: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:64: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:64: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/layouts/application.html.erb:64: syntax error, unexpected tCONSTANT, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:66: unknown regexp option - a
+app/views/layouts/application.html.erb:66: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:67: unknown regexp option - a
+app/views/layouts/application.html.erb:67: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:68: unknown regexp option - a
+app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:69: unknown regexp option - l
+app/views/layouts/application.html.erb:71: syntax error, unexpected '<', expecting tSTRING_DEND
+app/views/layouts/application.html.erb:73: unknown regexp options - htl
+app/views/layouts/application.html.erb:79: unterminated string meets end of file
+app/views/layouts/application.html.erb:79: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+Started GET "/" for ::1 at 2020-03-14 15:00:25 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (20.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (22.5ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 39.1ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:38: unknown regexp options - plar
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:38: syntax error, unexpected tSTRING_DEND, expecting ')'
+...{image_tag(/assets/polaris.svg}".html_safe, root_path );@out...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+    <button class="navbar-toggler" type="button" data-...
+                   ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+... <button class="navbar-toggler" type="button" data-toggle="c...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...s="navbar-toggler" type="button" data-toggle="collapse" data...
+...                         ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...="button" data-toggle="collapse" data-target="#navbarNav" ar...
+...                       ^~~~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:42: syntax error, unexpected '<', expecting tSTRING_DEND
+      <span class="navbar-toggler-ic...
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+...n class="navbar-toggler-icon"></span>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:43: unknown regexp options - btt
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+    <div class="collapse navbar-co...
+    ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...s="collapse navbar-collapse" id="navbarNav">
+...                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:45: syntax error, unexpected '<'
+      <ul class="navbar-nav">
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:46: syntax error, unexpected '<'
+        <li class="nav-item" id="forec...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="forecasts">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:47: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-chart-line"></i> For...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:47: syntax error, unexpected '<'
+...'<i class="fas fa-chart-line"></i> Forecasts'.html_safe, roo...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:48: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:48: unmatched close parenthesis: /i> Forecasts'.html_safe, root_path, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+        <li class="nav-item" id="about...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:49: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="about">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:50: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-info-circle"></i> Ab...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:50: syntax error, unexpected '<'
+...<i class="fas fa-info-circle"></i> About'.html_safe, about_u...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:51: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:51: unmatched close parenthesis: /i> About'.html_safe, about_url, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:52: syntax error, unexpected '<'
+        <li class="nav-item" id="conta...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:52: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="contact">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:53: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-envelope"></i> Conta...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+...o '<i class="fas fa-envelope"></i> Contact'.html_safe, conta...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:54: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:54: unmatched close parenthesis: /i> Contact'.html_safe, contact_url, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:55: syntax error, unexpected '<'
+      </ul>
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:56: unknown regexp options - dv
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:57: syntax error, unexpected '<'
+  </nav>
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:61: unknown regexp options - bdy
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:63: syntax error, unexpected '<'
+  <footer class="my-5 pt-5 text-...
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected '<'
+    <p class="mb-1">© 2019-2020 P...
+    ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+    <p class="mb-1">© 2019-2020 Polaris Analytics</p>
+                       ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected tCONSTANT, expecting tSTRING_DEND
+...ass="mb-1">© 2019-2020 Polaris Analytics</p>
+...                        ^~~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:66: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:66: syntax error, unexpected '<'
+...olor "><a href="#">Privacy</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:67: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:67: syntax error, unexpected '<'
+...-color "><a href="#">Terms</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:68: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+...olor "><a href="#">Support</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:69: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:71: syntax error, unexpected '<', expecting tSTRING_DEND
+  </footer>
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:73: unknown regexp options - htl
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:79: unterminated string meets end of file
+          end
+              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:79: syntax error, unexpected end-of-input, expecting tSTRING_DEND):
+  
+app/views/layouts/application.html.erb:38: unknown regexp options - plar
+app/views/layouts/application.html.erb:38: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:41: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:42: syntax error, unexpected '<', expecting tSTRING_DEND
+app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:43: unknown regexp options - btt
+app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:45: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:46: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:47: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:47: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:48: unknown regexp option - l
+app/views/layouts/application.html.erb:48: unmatched close parenthesis: /i> Forecasts'.html_safe, root_path, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:49: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:50: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:50: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:51: unknown regexp option - l
+app/views/layouts/application.html.erb:51: unmatched close parenthesis: /i> About'.html_safe, about_url, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:52: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:52: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:53: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:54: unknown regexp option - l
+app/views/layouts/application.html.erb:54: unmatched close parenthesis: /i> Contact'.html_safe, contact_url, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:55: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:56: unknown regexp options - dv
+app/views/layouts/application.html.erb:57: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:61: unknown regexp options - bdy
+app/views/layouts/application.html.erb:63: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:64: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:64: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/layouts/application.html.erb:64: syntax error, unexpected tCONSTANT, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:66: unknown regexp option - a
+app/views/layouts/application.html.erb:66: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:67: unknown regexp option - a
+app/views/layouts/application.html.erb:67: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:68: unknown regexp option - a
+app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:69: unknown regexp option - l
+app/views/layouts/application.html.erb:71: syntax error, unexpected '<', expecting tSTRING_DEND
+app/views/layouts/application.html.erb:73: unknown regexp options - htl
+app/views/layouts/application.html.erb:79: unterminated string meets end of file
+app/views/layouts/application.html.erb:79: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+Started GET "/" for ::1 at 2020-03-14 15:00:50 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (19.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (20.5ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 71ms (Views: 30.1ms | ActiveRecord: 39.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 15:01:03 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (19.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 69ms (Views: 28.6ms | ActiveRecord: 37.9ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 15:01:17 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (19.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 38.0ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:38: syntax error, unexpected ':', expecting tSTRING_DEND
+...ge_tag('/assets/polaris.svg') :height=>"30"} Polaris Analyti...
+...                              ^):
+  
+app/views/layouts/application.html.erb:38: syntax error, unexpected ':', expecting tSTRING_DEND
+Started GET "/" for ::1 at 2020-03-14 15:01:20 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (19.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (19.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (21.5ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 38.2ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:38: syntax error, unexpected ',', expecting tSTRING_DEND
+...age_tag('/assets/polaris.svg'), :height=>"30"} Polaris Analy...
+...                              ^):
+  
+app/views/layouts/application.html.erb:38: syntax error, unexpected ',', expecting tSTRING_DEND
+Started GET "/" for ::1 at 2020-03-14 15:01:28 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (19.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (20.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (22.1ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 40.3ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:38: syntax error, unexpected ':', expecting ')'
+...age_tag('/assets/polaris.svg' :height=>"30")} Polaris Analyt...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:38: syntax error, unexpected ')', expecting tSTRING_DEND
+...ets/polaris.svg' :height=>"30")} Polaris Analytics".html_saf...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...nalytics".html_safe, "link_path" );@output_buffer.safe_appen...
+...                      ^~~~~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+    <button class="navbar-toggler" type="button" data-...
+                   ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+... <button class="navbar-toggler" type="button" data-toggle="c...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...s="navbar-toggler" type="button" data-toggle="collapse" data...
+...                         ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...="button" data-toggle="collapse" data-target="#navbarNav" ar...
+...                       ^~~~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:42: syntax error, unexpected '<', expecting tSTRING_DEND
+      <span class="navbar-toggler-ic...
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+...n class="navbar-toggler-icon"></span>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:43: unknown regexp options - btt
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+    <div class="collapse navbar-co...
+    ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...s="collapse navbar-collapse" id="navbarNav">
+...                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:45: syntax error, unexpected '<'
+      <ul class="navbar-nav">
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:46: syntax error, unexpected '<'
+        <li class="nav-item" id="forec...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="forecasts">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:47: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-chart-line"></i> For...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:47: syntax error, unexpected '<'
+...'<i class="fas fa-chart-line"></i> Forecasts'.html_safe, roo...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:48: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:48: unmatched close parenthesis: /i> Forecasts'.html_safe, root_path, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+        <li class="nav-item" id="about...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:49: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="about">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:50: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-info-circle"></i> Ab...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:50: syntax error, unexpected '<'
+...<i class="fas fa-info-circle"></i> About'.html_safe, about_u...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:51: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:51: unmatched close parenthesis: /i> About'.html_safe, about_url, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:52: syntax error, unexpected '<'
+        <li class="nav-item" id="conta...
+        ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:52: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+        <li class="nav-item" id="contact">
+                             ^~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:53: syntax error, unexpected class, expecting do or '{' or '('
+...ffer.append=( link_to '<i class="fas fa-envelope"></i> Conta...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+...o '<i class="fas fa-envelope"></i> Contact'.html_safe, conta...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:54: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:54: unmatched close parenthesis: /i> Contact'.html_safe, contact_url, class:"nav-link" );@output_buffer.safe_append='
+        </i
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:55: syntax error, unexpected '<'
+      </ul>
+      ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:56: unknown regexp options - dv
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:57: syntax error, unexpected '<'
+  </nav>
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:61: unknown regexp options - bdy
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:63: syntax error, unexpected '<'
+  <footer class="my-5 pt-5 text-...
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected '<'
+    <p class="mb-1">© 2019-2020 P...
+    ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+    <p class="mb-1">© 2019-2020 Polaris Analytics</p>
+                       ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:64: syntax error, unexpected tCONSTANT, expecting tSTRING_DEND
+...ass="mb-1">© 2019-2020 Polaris Analytics</p>
+...                        ^~~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:66: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:66: syntax error, unexpected '<'
+...olor "><a href="#">Privacy</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:67: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:67: syntax error, unexpected '<'
+...-color "><a href="#">Terms</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:68: unknown regexp option - a
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+...olor "><a href="#">Support</a></li>
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:69: unknown regexp option - l
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:71: syntax error, unexpected '<', expecting tSTRING_DEND
+  </footer>
+  ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:73: unknown regexp options - htl
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:79: unterminated string meets end of file
+          end
+              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/layouts/application.html.erb:79: syntax error, unexpected end-of-input, expecting tSTRING_DEND):
+  
+app/views/layouts/application.html.erb:38: syntax error, unexpected ':', expecting ')'
+app/views/layouts/application.html.erb:38: syntax error, unexpected ')', expecting tSTRING_DEND
+app/views/layouts/application.html.erb:38: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:41: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:42: syntax error, unexpected '<', expecting tSTRING_DEND
+app/views/layouts/application.html.erb:42: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:43: unknown regexp options - btt
+app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:44: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:45: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:46: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:47: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:47: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:48: unknown regexp option - l
+app/views/layouts/application.html.erb:48: unmatched close parenthesis: /i> Forecasts'.html_safe, root_path, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:49: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:50: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:50: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:51: unknown regexp option - l
+app/views/layouts/application.html.erb:51: unmatched close parenthesis: /i> About'.html_safe, about_url, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:52: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:52: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:53: syntax error, unexpected class, expecting do or '{' or '('
+app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:54: unknown regexp option - l
+app/views/layouts/application.html.erb:54: unmatched close parenthesis: /i> Contact'.html_safe, contact_url, class:"nav-link" );@output_buffer.safe_append='
+app/views/layouts/application.html.erb:55: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:56: unknown regexp options - dv
+app/views/layouts/application.html.erb:57: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:61: unknown regexp options - bdy
+app/views/layouts/application.html.erb:63: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:64: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:64: syntax error, unexpected tINTEGER, expecting do or '{' or '('
+app/views/layouts/application.html.erb:64: syntax error, unexpected tCONSTANT, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:66: unknown regexp option - a
+app/views/layouts/application.html.erb:66: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:67: unknown regexp option - a
+app/views/layouts/application.html.erb:67: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:68: unknown regexp option - a
+app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:69: unknown regexp option - l
+app/views/layouts/application.html.erb:71: syntax error, unexpected '<', expecting tSTRING_DEND
+app/views/layouts/application.html.erb:73: unknown regexp options - htl
+app/views/layouts/application.html.erb:79: unterminated string meets end of file
+app/views/layouts/application.html.erb:79: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+Started GET "/" for ::1 at 2020-03-14 15:01:33 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.8ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (19.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 70ms (Views: 29.2ms | ActiveRecord: 38.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 15:01:42 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (18.7ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 67ms (Views: 28.0ms | ActiveRecord: 36.9ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 15:01:56 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (19.7ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 82ms (Views: 41.9ms | ActiveRecord: 38.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 15:02:10 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (23.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (25.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 82ms (Views: 30.3ms | ActiveRecord: 49.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 15:02:20 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (20.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 70ms (Views: 28.7ms | ActiveRecord: 38.9ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 15:02:21 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (19.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (21.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 83ms (Views: 40.3ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 15:02:53 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (19.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 70ms (Views: 29.2ms | ActiveRecord: 38.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 15:02:54 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (19.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (20.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 72ms (Views: 29.8ms | ActiveRecord: 39.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 15:02:55 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (19.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 83ms (Views: 42.7ms | ActiveRecord: 37.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 15:02:56 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (18.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 65ms (Views: 26.1ms | ActiveRecord: 37.1ms)
+
+
+Started GET "/about" for ::1 at 2020-03-14 15:02:56 +0000
+Processing by WelcomeController#about as HTML
+  Rendering welcome/about.html.erb within layouts/application
+  Rendered welcome/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-14 15:02:57 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (18.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (19.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:157
+  Rendered welcome/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 72ms (Views: 29.9ms | ActiveRecord: 38.4ms)
+
+
+Started GET "/about" for ::1 at 2020-03-14 15:03:01 +0000
+Processing by WelcomeController#about as HTML
+  Rendering welcome/about.html.erb within layouts/application
+  Rendered welcome/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
