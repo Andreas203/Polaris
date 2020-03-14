@@ -25,6 +25,10 @@
       font-size:12px;
     }
 
+    h5 {
+      font-family: 'Fira Code', monospace;
+    }
+
     .c_dark_navbar {
       background-color: black;
     }
@@ -46,7 +50,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary" id="navbar1" style="background-color: #020F59 !important;">
   <div class="container">
 
-      <%= link_to "Polaris Analytics", root_path, class:"navbar-brand mr-1 mb-1 mt-0" %>
+  <%= image_tag("/assets/logo.svg", :alt => "logo", :height => "30", :width => "30") %><%= link_to "Polaris Analytics", root_path, class:"navbar-brand mr-1 mb-1 mt-0" %>
 
       <button class="navbar-toggler"type="button" data-toggle="collapse" data-target="#collapsingNavbar">
           <span class="navbar-toggler-icon"></span>
