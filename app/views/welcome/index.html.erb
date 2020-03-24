@@ -102,6 +102,8 @@
     }
 
 
+
+
     main {
       height: 100%;
     }
@@ -141,6 +143,7 @@
         <div class="card-text"><h6>Track your favourite stocks, anticipate future movements, and watch the price evolve over time.</h6></div>
       </div>
     </div>
+
     <hr>
     <div class="container main-card-top pb-2">
       <div class="card">
@@ -170,47 +173,41 @@
           <div class="col-lg-12 col-sm-12 mx-auto">
             <table class="table table c_dark_table table-borderless" id="myTable">
               <thead style="border-top: 1px solid lightgrey;">
-                <th style="width: 40%; font-weight: bold !important;"><b>Name</b></th>
-                <th style="width: 30%;">Symbol</th>
-                <th style="width: 30%;text-align: right;">7D price change</th>
-              </thead>
+                <th style="width: 50%; font-weight: bold !important;"><b>Name</b></th>
+                <th style="width: 25%;">Symbol</th>
+                <th style="width: 30%;text-align: right;">7D change</th></thead>
               <% @results.each do |result| %>
               <% color2 = (result.id % 2 == 0) ? "a" : "b" %>
+              <% p result.id %>
               <tr data-toggle="collapse" class="<%= color2 %>" data-target="#accordion<%=result.id%>" style="border-collapse:collapse !important;">
-                <td><%= result.companyName %></td>
+                <td><a><i style="font-size:10px" class="fas fa-caret-down"></i></a> <%= result.companyName %></td>
                 <td><%= result.companySymbol %></td>
                 <% color = result.change >= 0 ? "pos" : "neg" %>
                 <% thing = color %>
                 <td style="text-align: right;" class="<%= color %>"><%= result.change  %>%</td>
-                <tr>
+                <tr id="<%=result.id%>" class="always_show">
                   <td colspan="3" style="padding: 0;">
                     <div id="accordion<%=result.id%>" class="collapse">
                       <div class="card" style="border: 0; border-radius: 0;">
                         <div class="card-body">
                           <% if result.change >= 0%>
-                          <%= area_chart [{name:"Historical", color:'#090396', data: [['19-03-2020', 155.21], ['20-03-2020', 149.66], ['21-03-2020', 156.02],['22-03-2020', 146.62],['23-03-2020', 139.74],['24-03-2020', 150.74],['25-03-2020', 152.32],['26-03-2020', 163.53],['27-03-2020', 159.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#029810', data:[['28-03-2020', 174.01], ['29-03-2020', 169.43], ['30-03-2020', 179.32]]}], curve: false%>                          
+                          <%= area_chart [{name:"Historical", color:'#090396', data: [['19-03', 155.21], ['20-03', 149.66], ['21-03', 156.02],['22-03', 146.62],['23-03', 139.74],['24-03', 150.74],['25-03', 152.32],['26-03', 163.53],['27-03', 159.54],['28-03', 174.01]]},{name:"Forecast", color:'#029810', data:[['28-03', 174.01], ['29-03', 169.43], ['30-03', 179.32]]}], curve: false%>                          
                           <% else %>
-                          <%= area_chart [{name:"Historical", color:'#090396', data: [['19-03-2020', 155.21], ['20-03-2020', 149.66], ['21-03-2020', 156.02],['22-03-2020', 146.62],['23-03-2020', 139.74],['24-03-2020', 150.74],['25-03-2020', 152.32],['26-03-2020', 163.53],['27-03-2020', 159.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#C91801', data:[['28-03-2020', 174.01], ['29-03-2020', 169.43], ['30-03-2020', 179.32]]}], curve: false %>      
+                          <%= area_chart [{name:"Historical", color:'#090396', data: [['19-03', 155.21], ['20-03', 149.66], ['21-03', 156.02],['22-03', 146.62],['23-03', 139.74],['24-03', 150.74],['25-03', 152.32],['26-03', 163.53],['27-03', 159.54],['28-03', 174.01]]},{name:"Forecast", color:'#C91801', data:[['28-03', 174.01], ['29-03', 169.43], ['30-03', 179.32]]}], curve: false %>      
                           <% end %>
-
-                          
                         </div>
                       </div>
-                      
                     </div>
                 </td>
                 </tr>
-                  
               </tr>
               <% end %>
               </div>
               </div>
-                      </tbody>
-
-                    </table>
-            </div>
+            </tbody>
+          </table>
+        </div>
       </div>
-
   </body>
 
 </main>
@@ -222,30 +219,43 @@
     // Declare variables
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("myInput");
+    
+
     filter = input.value.toUpperCase();
     table = document.getElementById("myTable");
     tr = table.getElementsByTagName("tr");
 
     // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      td2 = tr[i].getElementsByTagName("td")[1];
-      if (td || td2) {
+    for (i = 0; i < tr.length + 1; i++) {
+      if (tr[i] != undefined) {
+        td = tr[i].getElementsByTagName("td")[0];
+        td2 = tr[i].getElementsByTagName("td")[1];
+      }
+      if (td) {
         txtValue = td.textContent || td.innerText;
-        txtValue2 = td2.textContent || td2.innerText;
+        
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
+            tr[i].style.display = "";
         }
-        else if (txtValue2.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        }
+        
         else {
-          tr[i].style.display = "none";
+          tr[i].style.display = "none";       
+        }
+
+
+
+      }
+      if (td2) {
+          txtValue2 = td2.textContent || td2.innerText;
+          if (txtValue2.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
         }
       }
-
+      p = document.getElementsByClassName("always_show");
+          for (j = 0; j < p.length; j++) {
+            p[j].style.display = "";     
+          }  
     }
-
   }
   </script>
   <script>
