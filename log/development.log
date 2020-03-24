@@ -2633,3 +2633,938 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 112ms (Views: 34.3ms | ActiveRecord: 75.7ms)
 
 
+Started GET "/" for ::1 at 2020-03-24 18:41:27 +0000
+  [1m[35m (88.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rubyonrails/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (90.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 885ms (ActiveRecord: 772.6ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected '{', expecting ']'
+....01], ['30-03-2020', 169.43]]}{name:"Historical", color:'#02...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected '}', expecting ')'
+...59.54],['28-03-2020', 174.01]]}] );@output_buffer.safe_appen...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+...                           else 
+...                           ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+...;                           end 
+...                            ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/welcome/index.html.erb:191: syntax error, unexpected '{', expecting ']'
+app/views/welcome/index.html.erb:191: syntax error, unexpected '}', expecting ')'
+app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2020-03-24 18:41:41 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (37.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (51.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (57.4ms)
+Completed 200 OK in 334ms (Views: 242.9ms | ActiveRecord: 89.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:41:49 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (47.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (55.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (76.3ms)
+Completed 200 OK in 297ms (Views: 81.6ms | ActiveRecord: 156.9ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:42:55 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (71.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (65.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (72.5ms)
+Completed 200 OK in 193ms (Views: 53.9ms | ActiveRecord: 136.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:43:19 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (63.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (69.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (86.2ms)
+Completed 200 OK in 354ms (Views: 88.7ms | ActiveRecord: 189.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:43:20 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (53.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (63.5ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (70.7ms)
+Completed 200 OK in 164ms (Views: 45.1ms | ActiveRecord: 117.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:43:33 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (47.8ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (50.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 134ms (Views: 33.3ms | ActiveRecord: 97.9ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:43:43 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (47.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (210.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (217.1ms)
+Completed 200 OK in 297ms (Views: 36.6ms | ActiveRecord: 258.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:43:49 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (69.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (62.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (68.3ms)
+Completed 200 OK in 168ms (Views: 35.0ms | ActiveRecord: 131.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:43:54 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (63.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (62.7ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (93.3ms)
+Completed 200 OK in 191ms (Views: 62.4ms | ActiveRecord: 125.8ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:44:11 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (64.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (58.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 160ms (Views: 35.6ms | ActiveRecord: 122.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:46:23 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (64.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (69.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 177ms (Views: 40.8ms | ActiveRecord: 134.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:46:53 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (60.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (62.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (72.7ms)
+Completed 200 OK in 174ms (Views: 48.3ms | ActiveRecord: 123.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:47:09 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (85.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (85.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (91.2ms)
+Completed 200 OK in 228ms (Views: 54.3ms | ActiveRecord: 171.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:47:34 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (88.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (339.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (346.0ms)
+Completed 200 OK in 466ms (Views: 35.8ms | ActiveRecord: 427.8ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:47:59 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (47.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (55.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (61.8ms)
+Completed 200 OK in 138ms (Views: 34.3ms | ActiveRecord: 102.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:48:50 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (65.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 65.0ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:193: syntax error, unexpected ',', expecting ']'
+....54],['28-03-2020', 174.01]]},,{name:"Forecast", color:'#029...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:193: syntax error, unexpected ']', expecting ')'
+....43], ['30-03-2020', 179.32]]}] );@output_buffer.safe_append...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+...;                           end 
+...                            ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/welcome/index.html.erb:193: syntax error, unexpected ',', expecting ']'
+app/views/welcome/index.html.erb:193: syntax error, unexpected ']', expecting ')'
+app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2020-03-24 18:49:07 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (67.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (128.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (134.3ms)
+Completed 200 OK in 233ms (Views: 35.1ms | ActiveRecord: 196.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:49:18 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (62.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (60.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (69.3ms)
+Completed 200 OK in 176ms (Views: 51.0ms | ActiveRecord: 122.7ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:49:44 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (54.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 54.1ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting '}'
+...Historical", color:'#60BCF2', ,curve: false, data: [['19-03-...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: Can't assign to false
+... color:'#60BCF2', ,curve: false, data: [['19-03-2020', 155.2...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected '}', expecting ')'
+...59.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#02...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+....43], ['30-03-2020', 179.32]]}] );@output_buffer.safe_append...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+...                           else 
+...                           ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+...;                           end 
+...                            ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting '}'
+app/views/welcome/index.html.erb:191: Can't assign to false
+app/views/welcome/index.html.erb:191: syntax error, unexpected '}', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2020-03-24 18:49:54 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (338.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 343ms (ActiveRecord: 338.2ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting '}'
+...Historical", color:'#60BCF2', ,curve:'false', data: [['19-03...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...olor:'#60BCF2', ,curve:'false', data: [['19-03-2020', 155.21...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected '}', expecting ')'
+...59.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#02...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+....43], ['30-03-2020', 179.32]]}] );@output_buffer.safe_append...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+...                           else 
+...                           ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+...;                           end 
+...                            ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting '}'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected '}', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2020-03-24 18:49:56 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (59.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 59.2ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting '}'
+...Historical", color:'#60BCF2', ,curve:'false', data: [['19-03...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...olor:'#60BCF2', ,curve:'false', data: [['19-03-2020', 155.21...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected '}', expecting ')'
+...59.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#02...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+....43], ['30-03-2020', 179.32]]}] );@output_buffer.safe_append...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+...                           else 
+...                           ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+...;                           end 
+...                            ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting '}'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected '}', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2020-03-24 18:50:00 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (65.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (132.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (139.0ms)
+Completed 200 OK in 237ms (Views: 37.0ms | ActiveRecord: 197.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:50:14 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (80.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 80.7ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ')', expecting =>
+...3], ['30-03-2020', 179.32]]}] );@output_buffer.safe_append='...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+...                           else 
+...                           ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+...;                           end 
+...                            ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/welcome/index.html.erb:191: syntax error, unexpected ')', expecting =>
+app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2020-03-24 18:50:30 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (31.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (24.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 91ms (Views: 32.4ms | ActiveRecord: 55.8ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:51:07 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (77.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 77.5ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting =>
+...9.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#029...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+....43], ['30-03-2020', 179.32]]}] );@output_buffer.safe_append...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+...                           else 
+...                           ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+...;                           end 
+...                            ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting =>
+app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2020-03-24 18:51:12 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (100.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 100.5ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected '{', expecting ']'
+...nd=( area_chart [curve: false {name:"Historical", color:'#60...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected '}', expecting ')'
+...59.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#02...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+....43], ['30-03-2020', 179.32]]}] );@output_buffer.safe_append...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+...                           else 
+...                           ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+...;                           end 
+...                            ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/welcome/index.html.erb:191: syntax error, unexpected '{', expecting ']'
+app/views/welcome/index.html.erb:191: syntax error, unexpected '}', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2020-03-24 18:51:22 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (62.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (64.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (72.6ms)
+Completed 200 OK in 165ms (Views: 36.0ms | ActiveRecord: 126.8ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:51:38 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (76.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 76.4ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting =>
+...:false, ['19-03-2020', 155.21], ['20-03-2020', 149.66], ['21...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...55.21], ['20-03-2020', 149.66], ['21-03-2020', 156.02],['22-...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...49.66], ['21-03-2020', 156.02],['22-03-2020', 146.62],['23-0...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...156.02],['22-03-2020', 146.62],['23-03-2020', 139.74],['24-0...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...146.62],['23-03-2020', 139.74],['24-03-2020', 150.74],['25-0...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...139.74],['24-03-2020', 150.74],['25-03-2020', 152.32],['26-0...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...150.74],['25-03-2020', 152.32],['26-03-2020', 163.53],['27-0...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...152.32],['26-03-2020', 163.53],['27-03-2020', 159.54],['28-0...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...163.53],['27-03-2020', 159.54],['28-03-2020', 174.01]]},{nam...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+...159.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#0...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+....43], ['30-03-2020', 179.32]]}] );@output_buffer.safe_append...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+...                           else 
+...                           ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+...;                           end 
+...                            ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting =>
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2020-03-24 18:51:43 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (74.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 74.0ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting =>
+...false', ['19-03-2020', 155.21], ['20-03-2020', 149.66], ['21...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...55.21], ['20-03-2020', 149.66], ['21-03-2020', 156.02],['22-...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...49.66], ['21-03-2020', 156.02],['22-03-2020', 146.62],['23-0...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...156.02],['22-03-2020', 146.62],['23-03-2020', 139.74],['24-0...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...146.62],['23-03-2020', 139.74],['24-03-2020', 150.74],['25-0...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...139.74],['24-03-2020', 150.74],['25-03-2020', 152.32],['26-0...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...150.74],['25-03-2020', 152.32],['26-03-2020', 163.53],['27-0...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...152.32],['26-03-2020', 163.53],['27-03-2020', 159.54],['28-0...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+...163.53],['27-03-2020', 159.54],['28-03-2020', 174.01]]},{nam...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+...159.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#0...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+....43], ['30-03-2020', 179.32]]}] );@output_buffer.safe_append...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+...                           else 
+...                           ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+...;                           end 
+...                            ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting =>
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ',', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+app/views/welcome/index.html.erb:191: syntax error, unexpected ']', expecting ')'
+app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2020-03-24 18:51:49 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (77.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (79.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 189ms (Views: 30.3ms | ActiveRecord: 156.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:52:43 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (46.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (41.5ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (45.2ms)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 87.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for false:FalseClass):
+    188:                       <div class="card" style="border: 0; border-radius: 0;">
+    189:                         <div class="card-body">
+    190:                           <% if result.change >= 0%>
+    191:                           <%= area_chart curve: false[{name:"Historical", color:'#60BCF2', curve:'false', data: [['19-03-2020', 155.21], ['20-03-2020', 149.66], ['21-03-2020', 156.02],['22-03-2020', 146.62],['23-03-2020', 139.74],['24-03-2020', 150.74],['25-03-2020', 152.32],['26-03-2020', 163.53],['27-03-2020', 159.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#029810', data:[['28-03-2020', 174.01], ['29-03-2020', 169.43], ['30-03-2020', 179.32]]}] %>                          
+    192:                           <% else %>
+    193:                           <%= area_chart [{name:"Historical", color:'#60BCF2', data: [['19-03-2020', 155.21], ['20-03-2020', 149.66], ['21-03-2020', 156.02],['22-03-2020', 146.62],['23-03-2020', 139.74],['24-03-2020', 150.74],['25-03-2020', 152.32],['26-03-2020', 163.53],['27-03-2020', 159.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#C91801', data:[['28-03-2020', 174.01], ['29-03-2020', 169.43], ['30-03-2020', 179.32]]}] %>      
+    194:                           <% end %>
+  
+app/views/welcome/index.html.erb:191:in `block in _app_views_welcome_index_html_erb___2508405091990173731_70273822334600'
+app/views/welcome/index.html.erb:177:in `_app_views_welcome_index_html_erb___2508405091990173731_70273822334600'
+Started GET "/" for ::1 at 2020-03-24 18:52:46 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (38.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (48.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (52.5ms)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 87.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for false:FalseClass):
+    188:                       <div class="card" style="border: 0; border-radius: 0;">
+    189:                         <div class="card-body">
+    190:                           <% if result.change >= 0%>
+    191:                           <%= area_chart curve: false [{name:"Historical", color:'#60BCF2', curve:'false', data: [['19-03-2020', 155.21], ['20-03-2020', 149.66], ['21-03-2020', 156.02],['22-03-2020', 146.62],['23-03-2020', 139.74],['24-03-2020', 150.74],['25-03-2020', 152.32],['26-03-2020', 163.53],['27-03-2020', 159.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#029810', data:[['28-03-2020', 174.01], ['29-03-2020', 169.43], ['30-03-2020', 179.32]]}] %>                          
+    192:                           <% else %>
+    193:                           <%= area_chart [{name:"Historical", color:'#60BCF2', data: [['19-03-2020', 155.21], ['20-03-2020', 149.66], ['21-03-2020', 156.02],['22-03-2020', 146.62],['23-03-2020', 139.74],['24-03-2020', 150.74],['25-03-2020', 152.32],['26-03-2020', 163.53],['27-03-2020', 159.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#C91801', data:[['28-03-2020', 174.01], ['29-03-2020', 169.43], ['30-03-2020', 179.32]]}] %>      
+    194:                           <% end %>
+  
+app/views/welcome/index.html.erb:191:in `block in _app_views_welcome_index_html_erb___2508405091990173731_70273831358380'
+app/views/welcome/index.html.erb:177:in `_app_views_welcome_index_html_erb___2508405091990173731_70273831358380'
+Started GET "/" for ::1 at 2020-03-24 18:53:02 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (65.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 65.1ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected tIDENTIFIER, expecting ']'
+..., ['30-03-2020', 179.32]]}curve: false] );@output_buffer.saf...
+...                          ^~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+...                           else 
+...                           ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+...;                           end 
+...                            ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/welcome/index.html.erb:191: syntax error, unexpected tIDENTIFIER, expecting ']'
+app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2020-03-24 18:53:12 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (68.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 68.6ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected ')', expecting =>
+...3], ['30-03-2020', 179.32]]}] );@output_buffer.safe_append='...
+...                              ^
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+...                           else 
+...                           ^~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+...;                           end 
+...                            ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/welcome/index.html.erb:191: syntax error, unexpected ')', expecting =>
+app/views/welcome/index.html.erb:192: syntax error, unexpected else, expecting ')'
+app/views/welcome/index.html.erb:194: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:205: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:260: syntax error, unexpected ensure, expecting ')'
+app/views/welcome/index.html.erb:262: syntax error, unexpected end, expecting ')'
+Started GET "/" for ::1 at 2020-03-24 18:53:40 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (84.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 84.4ms)
+
+
+  
+SyntaxError (/Users/rubyonrails/Desktop/untitled folder/palesun/app/views/welcome/index.html.erb:191: syntax error, unexpected tLABEL, expecting '='
+...30-03-2020', 179.32]]}], curve: false );@output_buffer.safe_...
+...                         ^~~~~~):
+  
+app/views/welcome/index.html.erb:191: syntax error, unexpected tLABEL, expecting '='
+Started GET "/" for ::1 at 2020-03-24 18:53:47 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (67.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (65.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (68.4ms)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 132.4ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    188:                       <div class="card" style="border: 0; border-radius: 0;">
+    189:                         <div class="card-body">
+    190:                           <% if result.change >= 0%>
+    191:                           <%= area_chart[{name:"Historical", color:'#60BCF2',data: [['19-03-2020', 155.21], ['20-03-2020', 149.66], ['21-03-2020', 156.02],['22-03-2020', 146.62],['23-03-2020', 139.74],['24-03-2020', 150.74],['25-03-2020', 152.32],['26-03-2020', 163.53],['27-03-2020', 159.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#029810', data:[['28-03-2020', 174.01], ['29-03-2020', 169.43], ['30-03-2020', 179.32]]}] %>                          
+    192:                           <% else %>
+    193:                           <%= area_chart [{name:"Historical", color:'#60BCF2', data: [['19-03-2020', 155.21], ['20-03-2020', 149.66], ['21-03-2020', 156.02],['22-03-2020', 146.62],['23-03-2020', 139.74],['24-03-2020', 150.74],['25-03-2020', 152.32],['26-03-2020', 163.53],['27-03-2020', 159.54],['28-03-2020', 174.01]]},{name:"Forecast", color:'#C91801', data:[['28-03-2020', 174.01], ['29-03-2020', 169.43], ['30-03-2020', 179.32]]}] %>      
+    194:                           <% end %>
+  
+app/views/welcome/index.html.erb:191:in `block in _app_views_welcome_index_html_erb___2508405091990173731_70273804228980'
+app/views/welcome/index.html.erb:177:in `_app_views_welcome_index_html_erb___2508405091990173731_70273804228980'
+Started GET "/" for ::1 at 2020-03-24 18:53:57 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (66.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (67.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (74.9ms)
+Completed 200 OK in 169ms (Views: 32.8ms | ActiveRecord: 134.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:54:04 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (76.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (76.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (83.1ms)
+Completed 200 OK in 188ms (Views: 33.3ms | ActiveRecord: 152.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:54:12 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (78.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (78.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (84.7ms)
+Completed 200 OK in 194ms (Views: 33.2ms | ActiveRecord: 157.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:54:27 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (47.8ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (57.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 173ms (Views: 65.0ms | ActiveRecord: 105.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:54:51 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (78.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (82.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (90.3ms)
+Completed 200 OK in 207ms (Views: 44.2ms | ActiveRecord: 160.8ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 18:55:46 +0000
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (38.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (61.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:177
+  Rendered welcome/index.html.erb within layouts/application (67.7ms)
+Completed 200 OK in 139ms (Views: 36.4ms | ActiveRecord: 100.8ms)
+
+
