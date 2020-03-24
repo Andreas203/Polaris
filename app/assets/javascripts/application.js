@@ -17,3 +17,5 @@
 //= require turbolinks
 //= require_tree .
 //= require filterrific/filterrific-jquery
+//= require chartkick
+//= require Chart.bundle

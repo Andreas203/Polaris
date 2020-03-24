@@ -14,6 +14,8 @@ gem 'filterrific'
 
 gem "bootstrap_form", "~> 4.0"
 
+gem "chartkick"
+
 
 gem 'bootstrap'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
