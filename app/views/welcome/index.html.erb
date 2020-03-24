@@ -180,14 +180,20 @@
                 <td><%= result.companyName %></td>
                 <td><%= result.companySymbol %></td>
                 <% color = result.change >= 0 ? "pos" : "neg" %>
+                <% thing = color %>
                 <td style="text-align: right;" class="<%= color %>"><%= result.change  %>%</td>
                 <tr>
                   <td colspan="3" style="padding: 0;">
                     <div id="accordion<%=result.id%>" class="collapse">
                       <div class="card" style="border: 0; border-radius: 0;">
                         <div class="card-body">
-                          <%= result.companyName %>
-                          <%= area_chart [{name: result.companySymbol, data: [['19-03-2020', 155.21], ['20-03-2020', 149.66], ['21-03-2020', 156.02],['22-03-2020', 146.62],['23-03-2020', 139.74],['24-03-2020', 150.74],['25-03-2020', 152.32],['26-03-2020', 163.53],['27-03-2020', 159.54],['28-03-2020', 174.01]]}] %>
+                          <% if result.change >= 0%>
+                          <%= area_chart [{name:"Forecast", color:'#029810', legend: false, data: [['19-03-2020', 155.21], ['20-03-2020', 149.66], ['21-03-2020', 156.02],['22-03-2020', 146.62],['23-03-2020', 139.74],['24-03-2020', 150.74],['25-03-2020', 152.32],['26-03-2020', 163.53],['27-03-2020', 159.54],['28-03-2020', 174.01]]}] %>                          
+                          <% else %>
+                            <%= area_chart [{name:"Forecast", color:'#C91801', legend: false, data: [['19-03-2020', 155.21], ['20-03-2020', 149.66], ['21-03-2020', 156.02],['22-03-2020', 146.62],['23-03-2020', 139.74],['24-03-2020', 150.74],['25-03-2020', 152.32],['26-03-2020', 163.53],['27-03-2020', 159.54],['28-03-2020', 174.01]]}] %>
+                          <% end %>
+
+                          
                         </div>
                       </div>
                       
