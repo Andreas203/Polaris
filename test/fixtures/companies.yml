@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  companyName: MyString
-  companySymbol: MyString
+  companyname: MyString
+  companysymbol: MyString
   past: 
   pred: 
 
 two:
-  companyName: MyString
-  companySymbol: MyString
+  companyname: MyString
+  companysymbol: MyString
   past: 
   pred: 

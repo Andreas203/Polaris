@@ -79,7 +79,7 @@
       background-color: rgba(0,0,0,.05);
     }
 
-    
+
     .has-search .form-control-feedback {
         position: absolute;
         z-index: 2;
@@ -180,8 +180,8 @@
               <% color2 = (result.id % 2 == 0) ? "a" : "b" %>
               <% p result.id %>
               <tr data-toggle="collapse" class="<%= color2 %>" data-target="#accordion<%=result.id%>" style="border-collapse:collapse !important;">
-                <td><a><i style="font-size:10px" class="fas fa-caret-down"></i></a> <%= result.companyName %></td>
-                <td><%= result.companySymbol %></td>
+                <td><a><i style="font-size:10px" class="fas fa-caret-down"></i></a> <%= result.companyname %></td>
+                <td><%= result.companysymbol %></td>
                 <% color = result.change >= 0 ? "pos" : "neg" %>
                 <% thing = color %>
                 <td style="text-align: right;" class="<%= color %>"><%= result.change  %>%</td>
@@ -217,9 +217,9 @@
                           <%end%>
 
                           <% if result.change >= 0%>
-                          <%= area_chart [{name:"Historical", color:'#090396', data: array},{name:"Forecast", color:'#029810', data:forecast}], curve: false%>                          
+                          <%= area_chart [{name:"Historical", color:'#090396', data: array},{name:"Forecast", color:'#029810', data:forecast}], curve: false%>
                           <% else %>
-                          <%= area_chart [{name:"Historical", color:'#090396', data: array},{name:"Forecast", color:'#C91801', data:forecast}], curve: false %>      
+                          <%= area_chart [{name:"Historical", color:'#090396', data: array},{name:"Forecast", color:'#C91801', data:forecast}], curve: false %>
                           <% end %>
                         </div>
                       </div>
@@ -245,7 +245,7 @@
     // Declare variables
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("myInput");
-    
+
 
     filter = input.value.toUpperCase();
     table = document.getElementById("myTable");
@@ -259,13 +259,13 @@
       }
       if (td) {
         txtValue = td.textContent || td.innerText;
-        
+
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             tr[i].style.display = "";
         }
-        
+
         else {
-          tr[i].style.display = "none";       
+          tr[i].style.display = "none";
         }
 
 
@@ -279,15 +279,15 @@
       }
       p = document.getElementsByClassName("always_show");
           for (j = 0; j < p.length; j++) {
-            p[j].style.display = "";     
-          }  
+            p[j].style.display = "";
+          }
     }
   }
   </script>
   <script>
     document.getElementById("forecasts").className += " active";
   </script>
-  
+
 </body>
 
 </html>

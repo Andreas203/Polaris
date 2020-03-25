@@ -114,8 +114,8 @@ table {
 
                                         <% @results.each do |result| %>
                                         <tr style="border-collapse:collapse !important;">
-                                          <td><%= result.companyName %></td>
-                                          <td><%= result.companySymbol %></td>
+                                          <td><%= result.companyname %></td>
+                                          <td><%= result.companysymbol %></td>
 
                                           <% color = result.change >= 0 ? "pos" : "neg" %>
                                           <td class="<%= color %>">

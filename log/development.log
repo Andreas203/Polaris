@@ -6940,3 +6940,211 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 84ms (Views: 34.0ms | ActiveRecord: 47.7ms)
 
 
+  [1m[35m (19.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8497596247489658400)[0m
+  ↳ bin/rails:4
+  [1m[35m (17.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (22.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (19.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (17.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(8497596247489658400)[0m
+  ↳ bin/rails:4
+  [1m[35m (22.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mCompany Destroy (23.5ms)[0m  [1m[31mDELETE FROM "companies"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (19.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8497596247489658400)[0m
+  ↳ bin/rails:4
+  [1m[35m (27.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (23.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (20.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (26.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (19.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(8497596247489658400)[0m
+  ↳ bin/rails:4
+  [1m[35m (23.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mCompany Destroy (23.2ms)[0m  [1m[31mDELETE FROM "companies"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (19.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8497596247489658400)[0m
+  ↳ bin/rails:4
+  [1m[35m (18.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateCompaniesTable (20200325174351)
+  [1m[35m (20.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8497596247489658400)[0m
+  ↳ bin/rails:4
+  [1m[35m (23.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8497596247489658400)[0m
+  ↳ bin/rails:4
+  [1m[35m (26.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateCompaniesTable (20200325174351)
+  [1m[35m (21.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (57.5ms)[0m  [1m[35mCREATE TABLE "companies" ("id" bigserial primary key)[0m
+  ↳ db/migrate/20200325174351_create_companies_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (24.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200325174351"]]
+  ↳ bin/rails:4
+  [1m[35m (23.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddColumnsToCompaniesTable (20200325174421)
+  [1m[35m (23.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8497596247489658400)[0m
+  ↳ bin/rails:4
+  [1m[35m (20.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8497596247489658400)[0m
+  ↳ bin/rails:4
+  [1m[35m (20.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddColumnsToCompaniesTable (20200325174421)
+  [1m[35m (17.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (24.6ms)[0m  [1m[35mALTER TABLE "companies" ADD "companyname" character varying[0m
+  ↳ db/migrate/20200325174421_add_columns_to_companies_table.rb:3
+  [1m[35m (16.3ms)[0m  [1m[35mALTER TABLE "companies" ADD "companysymbol" character varying[0m
+  ↳ db/migrate/20200325174421_add_columns_to_companies_table.rb:4
+  [1m[35m (16.4ms)[0m  [1m[35mALTER TABLE "companies" ADD "past" jsonb[0m
+  ↳ db/migrate/20200325174421_add_columns_to_companies_table.rb:5
+  [1m[35m (16.2ms)[0m  [1m[35mALTER TABLE "companies" ADD "pred" jsonb[0m
+  ↳ db/migrate/20200325174421_add_columns_to_companies_table.rb:6
+  [1m[35m (16.1ms)[0m  [1m[35mALTER TABLE "companies" ADD "change" float[0m
+  ↳ db/migrate/20200325174421_add_columns_to_companies_table.rb:7
+  [1m[36mActiveRecord::SchemaMigration Create (16.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200325174421"]]
+  ↳ bin/rails:4
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (16.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (17.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (16.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (24.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(8497596247489658400)[0m
+  ↳ bin/rails:4
+  [1m[35m (19.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mCompany Destroy (21.0ms)[0m  [1m[31mDELETE FROM "companies"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (19.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (30.2ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Alibaba"], ["companysymbol", "BABA"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", -2.76]]
+  ↳ db/seeds.rb:15
+  [1m[35m (30.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (29.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (21.3ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Alphabet"], ["companysymbol", "GOOGL"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", -1.22]]
+  ↳ db/seeds.rb:15
+  [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (31.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (30.8ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Amazon"], ["companysymbol", "AMZN"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", 6.5]]
+  ↳ db/seeds.rb:15
+  [1m[35m (43.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (18.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (19.3ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Apple"], ["companysymbol", "AAPL"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", 8.82]]
+  ↳ db/seeds.rb:15
+  [1m[35m (21.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (21.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (23.9ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Baidu"], ["companysymbol", "BIDU"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", 0.93]]
+  ↳ db/seeds.rb:15
+  [1m[35m (18.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (22.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (20.5ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Cisco Systems"], ["companysymbol", "CSCO"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", 304.48]]
+  ↳ db/seeds.rb:15
+  [1m[35m (19.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (18.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (19.9ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Facebook"], ["companysymbol", "FB"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", 5.18]]
+  ↳ db/seeds.rb:15
+  [1m[35m (20.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (16.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (20.9ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "IBM"], ["companysymbol", "IBM"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", 4.13]]
+  ↳ db/seeds.rb:15
+  [1m[35m (18.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (15.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (16.3ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Intel"], ["companysymbol", "INTC"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", 3.28]]
+  ↳ db/seeds.rb:15
+  [1m[35m (16.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (15.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (15.6ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Microsoft"], ["companysymbol", "MSFT"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", -9.97]]
+  ↳ db/seeds.rb:15
+  [1m[35m (16.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (16.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (15.5ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Netflix"], ["companysymbol", "NFLX"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", 2.32]]
+  ↳ db/seeds.rb:15
+  [1m[35m (16.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (15.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (15.6ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Oracle"], ["companysymbol", "ORCL"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", -1.44]]
+  ↳ db/seeds.rb:15
+  [1m[35m (16.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (15.5ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "PayPal"], ["companysymbol", "PYP"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", 3.83]]
+  ↳ db/seeds.rb:15
+  [1m[35m (18.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (123.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (16.4ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "salesforce.com"], ["companysymbol", "CRM"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", -1.06]]
+  ↳ db/seeds.rb:15
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (16.6ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Samsung Electronics"], ["companysymbol", "SSNLF"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", -3.28]]
+  ↳ db/seeds.rb:15
+  [1m[35m (16.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (16.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (16.2ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "SAP SE"], ["companysymbol", "SAP"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", 0.18]]
+  ↳ db/seeds.rb:15
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (15.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (15.8ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "SoftBank"], ["companysymbol", "SFTBY"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", -13.55]]
+  ↳ db/seeds.rb:15
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (15.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (15.7ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Tencent Holdings"], ["companysymbol", "TCEHY"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", 6.69]]
+  ↳ db/seeds.rb:15
+  [1m[35m (16.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (16.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (15.4ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Tesla Motors"], ["companysymbol", "TSLA"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", -44.12]]
+  ↳ db/seeds.rb:15
+  [1m[35m (16.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCompany Create (15.5ms)[0m  [1m[32mINSERT INTO "companies" ("companyname", "companysymbol", "past", "pred", "change") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["companyname", "Twitter"], ["companysymbol", "TWTR"], ["past", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["pred", "{\"name\":\"Paint house\",\"tags\":[\"Improvements\",\"Office\"],\"finished\":true}"], ["change", 3.18]]
+  ↳ db/seeds.rb:15
+  [1m[35m (21.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
