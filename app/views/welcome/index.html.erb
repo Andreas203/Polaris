@@ -190,10 +190,36 @@
                     <div id="accordion<%=result.id%>" class="collapse">
                       <div class="card" style="border: 0; border-radius: 0;">
                         <div class="card-body">
+                          <%def range (min, max)%>
+                          <%    rand * (max-min) + min%>
+                          <%end%>
+                          <%array = []%>
+                          <%forecast = []%>
+                          <%i=-1%>
+                          <%loop do%>
+                          <%    if i == 15%>
+                          <%    break %>
+                          <%  end%>
+                          <%  i += 1%>
+                          <%  ran = range(100, 500)%>
+                          <%  array.push([i, ran])%>
+                          <%  if i == 15%>
+                          <%    forecast.push([i, ran])%>
+                          <%  end%>
+                          <%end%>
+                          <%j = 15%>
+                          <%loop do%>
+                          <%    if j == 20%>
+                          <%    break%>
+                          <%  end%>
+                          <%  j += 1%>
+                          <%  forecast.push([j, range(100, 1000)])%>
+                          <%end%>
+
                           <% if result.change >= 0%>
-                          <%= area_chart [{name:"Historical", color:'#090396', data: [['19-03', 155.21], ['20-03', 149.66], ['21-03', 156.02],['22-03', 146.62],['23-03', 139.74],['24-03', 150.74],['25-03', 152.32],['26-03', 163.53],['27-03', 159.54],['28-03', 174.01]]},{name:"Forecast", color:'#029810', data:[['28-03', 174.01], ['29-03', 169.43], ['30-03', 179.32]]}], curve: false%>                          
+                          <%= area_chart [{name:"Historical", color:'#090396', data: array},{name:"Forecast", color:'#029810', data:forecast}], curve: false%>                          
                           <% else %>
-                          <%= area_chart [{name:"Historical", color:'#090396', data: [['19-03', 155.21], ['20-03', 149.66], ['21-03', 156.02],['22-03', 146.62],['23-03', 139.74],['24-03', 150.74],['25-03', 152.32],['26-03', 163.53],['27-03', 159.54],['28-03', 174.01]]},{name:"Forecast", color:'#C91801', data:[['28-03', 174.01], ['29-03', 169.43], ['30-03', 179.32]]}], curve: false %>      
+                          <%= area_chart [{name:"Historical", color:'#090396', data: array},{name:"Forecast", color:'#C91801', data:forecast}], curve: false %>      
                           <% end %>
                         </div>
                       </div>
