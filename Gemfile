@@ -16,6 +16,9 @@ gem "bootstrap_form", "~> 4.0"
 
 gem "chartkick"
 
+gem "stock_quote", '~> 3.0.0'
+gem 'iex-ruby-client'
+
 
 gem 'bootstrap'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

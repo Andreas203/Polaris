@@ -130,6 +130,10 @@
             padding: 0 !important;
         }
 
+  .table td {
+    padding: 0.55rem;
+  }
+
 
 </style>
 
@@ -152,7 +156,8 @@
             <div class="row">
               <div class="col-md-8 p-2">
                 <div class="container">
-                <h5 style="display:contents">Top 20 global technology stocks </h5><br>
+                
+                <h5 style="display:contents">Top 20 global technology stocks <%= @james%></h5><br>
                 <small><i class="far fa-clock"></i> forecasted for <p class="accent-color-bold">20/03/2020</p></small>
               </div>
             </div>
@@ -162,7 +167,7 @@
                   <div class="input-group-prepend" >
                     <span class="input-group-text" id="basic-addon1"><i style="font-size: 14px !important" class="fas fa-search"></i></span>
                   </div>
-                  <input type="text" class="form-control" id="myInput" style="font-size: 14px !important; padding-bottom: -5em;" onkeyup="myFunction()" placeholder="Search by name or symbol" >
+                  <input type="text" class="form-control" id="myInput" style="font-size: 14px !important; padding-bottom: -5em;" onkeyup="myFunction()" placeholder="Filter by name or symbol" >
                 </div>
               </div>
               </div>
@@ -172,21 +177,45 @@
         <div class="row">
           <div class="col-lg-12 col-sm-12 mx-auto">
             <table class="table table c_dark_table table-borderless" id="myTable">
-              <thead style="border-top: 1px solid lightgrey;">
+              <thead style="border-top: 1px solid lightgrey;border-bottom: 1px solid lightgrey;">
                 <th style="width: 50%; font-weight: bold !important;"><b>Name</b></th>
-                <th style="width: 25%;">Symbol</th>
-                <th style="width: 30%;text-align: right;">7D change</th></thead>
+                <th style="width: 25%; text-align:left;">Symbol</th>
+                <th style="width: 25%; text-align:left;">Latest price</th>
+                <th style="width: 30%;text-align: right;">Change 7D</th>
               <% @results.each do |result| %>
               <% color2 = (result.id % 2 == 0) ? "a" : "b" %>
-              <% p result.id %>
               <tr data-toggle="collapse" class="<%= color2 %>" data-target="#accordion<%=result.id%>" style="border-collapse:collapse !important;">
-                <td><a><i style="font-size:10px" class="fas fa-caret-down"></i></a> <%= result.companyName %></td>
-                <td><%= result.companySymbol %></td>
+                <td height="5"><a><i style="font-size:10px; color:darkgrey" class="fas fa-caret-down"></i></a> <%= result.companyname %></td>
+                <td height="5" style="text-align:left;"><%= result.companysymbol %></td>
+                <td height="5">
+
+
+                <% if (result.companysymbol != 'PYP') %>
+                <% if @client.quote(result.companysymbol).iex_realtime_price == nil %>
+                <%= 'n/a'%>
+                <% else %>
+                $<%= @client.quote(result.companysymbol).iex_realtime_price%>
+                <% end %>
+                <% else %>
+                <%= 'n/a'%>
+                <% end %>
+            
+
+                
+                
+                
+                </td>
                 <% color = result.change >= 0 ? "pos" : "neg" %>
                 <% thing = color %>
-                <td style="text-align: right;" class="<%= color %>"><%= result.change  %>%</td>
+                <td style="text-align: right;" class="<%= color %>"><%= result.change  %>% 
+                <% if result.change >=0 %>
+                <i class="fas fa-arrow-up"></i>
+                <% else %>
+                <i class="fas fa-arrow-down"></i>
+                <% end %>
+                </td>
                 <tr id="<%=result.id%>" class="always_show">
-                  <td colspan="3" style="padding: 0;">
+                  <td colspan="4" style="padding: 0;">
                     <div id="accordion<%=result.id%>" class="collapse">
                       <div class="card" style="border: 0; border-radius: 0;">
                         <div class="card-body">
@@ -225,6 +254,7 @@
                       </div>
                     </div>
                 </td>
+                
                 </tr>
               </tr>
               <% end %>
@@ -265,7 +295,8 @@
         }
         
         else {
-          tr[i].style.display = "none";       
+          tr[i].style.display = "none";   
+
         }
 
 
