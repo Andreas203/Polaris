@@ -181,30 +181,18 @@
                 <th style="width: 50%; font-weight: bold !important;"><b>Name</b></th>
                 <th style="width: 25%; text-align:left;">Symbol</th>
                 <th style="width: 25%; text-align:left;">Latest price</th>
-                <th style="width: 30%;text-align: right;">Change 7D</th>
               <% @results.each do |result| %>
               <% color2 = (result.id % 2 == 0) ? "a" : "b" %>
               <tr data-toggle="collapse" class="<%= color2 %>" data-target="#accordion<%=result.id%>" style="border-collapse:collapse !important;">
                 <td height="5"><a><i style="font-size:10px; color:darkgrey" class="fas fa-caret-down"></i></a> <%= result.companyname %></td>
                 <td height="5" style="text-align:left;"><%= result.companysymbol %></td>
-                <td height="5">
 
 
-                <% if (result.companysymbol != 'PYP') %>
-                <% if @client.quote(result.companysymbol).iex_realtime_price == nil %>
-                <%= 'n/a'%>
-                <% else %>
-                $<%= @client.quote(result.companysymbol).iex_realtime_price%>
-                <% end %>
-                <% else %>
-                <%= 'n/a'%>
-                <% end %>
             
 
                 
                 
-                
-                </td>
+              
                 <% color = result.change >= 0 ? "pos" : "neg" %>
                 <% thing = color %>
                 <td style="text-align: right;" class="<%= color %>"><%= result.change  %>% 
@@ -215,7 +203,7 @@
                 <% end %>
                 </td>
                 <tr id="<%=result.id%>" class="always_show">
-                  <td colspan="4" style="padding: 0;">
+                  <td colspan="3" style="padding: 0;">
                     <div id="accordion<%=result.id%>" class="collapse">
                       <div class="card" style="border: 0; border-radius: 0;">
                         <div class="card-body">
@@ -244,7 +232,6 @@
                           <%  j += 1%>
                           <%  forecast.push([j, range(100, 1000)])%>
                           <%end%>
-
                           <% if result.change >= 0%>
                           <%= area_chart [{name:"Historical", color:'#090396', data: array},{name:"Forecast", color:'#029810', data:forecast}], curve: false%>                          
                           <% else %>
