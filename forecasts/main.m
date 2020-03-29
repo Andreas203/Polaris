@@ -1,6 +1,6 @@
 %
 % BABA
-symbol = 'BABA'
+symbol = 'BABA';
 data = num2cell(readmatrix('stocks/BABA.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -40,12 +40,32 @@ for i = 2:numTimeStepsTest+7
     [net,YPred(:,i)] = predictAndUpdateState(net,YPred(:,i-1),'ExecutionEnvironment','gpu');
 end
 YPred = sig*YPred + mu;
-sprintf('%s: %f', symbol, YPred(7))
+sprintf('%s: %f', symbol, YPred(7));
+
+disp(YPred(7));
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+conn = database('polarisanalytics','wvybtafwuesjox','4281f10d82eafab7f60f193fddb9b970c476af56b7b5c964f9faf952aeef0eb3');
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
+
 %
 %
 %
 % GOOGL
-symbol = 'GOOGL'
+symbol = 'GOOGL';
 data = num2cell(readmatrix('stocks/GOOGL.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -86,6 +106,23 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
 %
 %
 %
@@ -131,6 +168,22 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
 %
 %
 %
@@ -176,11 +229,28 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
 %
 %
 %
 % BIDU
-symbol = 'BIDU'
+symbol = 'BIDU';
 data = num2cell(readmatrix('stocks/BIDU.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -221,11 +291,29 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
+
 %
 %
 %
 % CSCO
-symbol = 'CSCO'
+symbol = 'CSCO';
 data = num2cell(readmatrix('stocks/CSCO.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -266,11 +354,28 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
 %
 %
 %
 % FB
-symbol = 'FB'
+symbol = 'FB';
 data = num2cell(readmatrix('stocks/FB.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -311,11 +416,29 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
+
 %
 %
 %
 % IBM
-symbol = 'IBM'
+symbol = 'IBM';
 data = num2cell(readmatrix('stocks/IBM.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -356,11 +479,29 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
+
 %
 %
 %
 % INTC
-symbol = 'INTC'
+symbol = 'INTC';
 data = num2cell(readmatrix('stocks/INTC.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -401,11 +542,29 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
+
 %
 %
 %
 % MSFT
-symbol = 'MSFT'
+symbol = 'MSFT';
 data = num2cell(readmatrix('stocks/MSFT.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -446,11 +605,27 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
 %
 %
 %
 % NFLX
-symbol = 'NFLX'
+symbol = 'NFLX';
 data = num2cell(readmatrix('stocks/NFLX.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -491,11 +666,28 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
 %
 %
 %
 % ORCL
-symbol = 'ORCL'
+symbol = 'ORCL';
 data = num2cell(readmatrix('stocks/ORCL.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -536,11 +728,28 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
 %
 %
 %
 % PYPL
-symbol = 'PYPL'
+symbol = 'PYPL';
 data = num2cell(readmatrix('stocks/PYPL.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -581,11 +790,28 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
 %
 %
 %
 % CRM
-symbol = 'CRM'
+symbol = 'CRM';
 data = num2cell(readmatrix('stocks/CRM.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -626,11 +852,29 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
+
 %
 %
 %
 % SSNLF
-symbol = 'SSNLF'
+symbol = 'SSNLF';
 data = num2cell(readmatrix('stocks/SSNLF.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -671,11 +915,28 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
 %
 %
 %
 % SAP
-symbol = 'SAP'
+symbol = 'SAP';
 data = num2cell(readmatrix('stocks/SAP.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -716,11 +977,29 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
+
 %
 %
 %
 % SFTBY
-symbol = 'SFTBY'
+symbol = 'SFTBY';
 data = num2cell(readmatrix('stocks/SFTBY.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -761,6 +1040,24 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
+
 %
 %
 %
@@ -806,11 +1103,28 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
 %
 %
 %
 % TSLA
-symbol = 'TSLA'
+symbol = 'TSLA';
 data = num2cell(readmatrix('stocks/TSLA.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -851,11 +1165,28 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
+
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+
 %
 %
 %
 % TWTR
-symbol = 'TWTR'
+symbol = 'TWTR';
 data = num2cell(readmatrix('stocks/TWTR.csv').');
 data = [data{:}];
 numTimeStepsTrain = floor(0.999999999999*numel(data));
@@ -896,9 +1227,23 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
-%
-%
 
+lastval = YPred(7);
+
+S = jsonencode(YPred);
+T = jsonencode(data);
+
+
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
+execute(conn, query);
+
+query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
+execute(conn, query);
+
+close(conn);
 
 
 
