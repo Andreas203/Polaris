@@ -7148,3 +7148,564 @@ Migrating to AddColumnsToCompaniesTable (20200325174421)
   ↳ db/seeds.rb:15
   [1m[35m (21.5ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:15
+Started GET "/" for ::1 at 2020-03-29 18:18:46 +0100
+  [1m[35m (23.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (22.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 115.2ms)
+
+
+  
+SyntaxError (C:/Users/HP/palesun/app/views/welcome/index.html.erb:301: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/welcome/index.html.erb:301: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for ::1 at 2020-03-29 18:19:49 +0100
+  [1m[35m (22.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (22.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (22.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (67.2ms)
+Completed 500 Internal Server Error in 245ms (ActiveRecord: 137.1ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% puts ps %>
+    196:                           <%end%>
+    197:                           <%def range (min, max)%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__525376180_95433440'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__525376180_95433440'
+Started GET "/" for ::1 at 2020-03-29 18:22:11 +0100
+  [1m[35m (22.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (25.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (23.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (66.8ms)
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 141.8ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_97326600'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_97326600'
+Started GET "/" for ::1 at 2020-03-29 18:24:26 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (23.8ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (34.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (66.2ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 58.6ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_98695120'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_98695120'
+Started GET "/" for ::1 at 2020-03-29 18:24:38 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (25.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (27.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (59.3ms)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 52.5ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_100494200'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_100494200'
+Started GET "/" for ::1 at 2020-03-29 18:24:39 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (25.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (26.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (66.4ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 51.7ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_102157100'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_102157100'
+Started GET "/" for ::1 at 2020-03-29 18:24:40 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (27.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (28.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (61.0ms)
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 56.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_71294800'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_71294800'
+Started GET "/" for ::1 at 2020-03-29 18:24:41 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (25.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (26.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (54.4ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 51.3ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_98443300'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_98443300'
+Started GET "/" for ::1 at 2020-03-29 18:24:41 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (24.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (25.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (54.9ms)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 50.1ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_100682460'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_100682460'
+Started GET "/" for ::1 at 2020-03-29 18:24:42 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (23.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (24.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (52.7ms)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 48.5ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_59356980'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_59356980'
+Started GET "/" for ::1 at 2020-03-29 18:24:43 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (23.8ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (25.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (55.9ms)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 48.8ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_97781780'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_97781780'
+Started GET "/" for ::1 at 2020-03-29 18:24:43 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (23.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (26.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (57.3ms)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 49.9ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_100522780'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_100522780'
+Started GET "/" for ::1 at 2020-03-29 18:24:44 +0100
+Started GET "/" for ::1 at 2020-03-29 18:24:44 +0100
+Started GET "/" for ::1 at 2020-03-29 18:24:44 +0100
+Processing by WelcomeController#index as HTML
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (26.8ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  [1m[36mCompany Load (26.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+Started GET "/" for ::1 at 2020-03-29 18:24:44 +0100
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (33.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  [1m[36mCompany Load (25.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (98.0ms)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 60.6ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+  Rendered welcome/index.html.erb within layouts/application (88.6ms)
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 70.7ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_70267060'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_70267060'
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_70267060'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_70267060'
+Started GET "/" for ::1 at 2020-03-29 18:24:44 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (45.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (43.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (138.3ms)
+Completed 500 Internal Server Error in 363ms (ActiveRecord: 128.3ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_101147740'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_101147740'
+Processing by WelcomeController#index as HTML
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (25.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (25.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  [1m[36mCompany Load (48.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+Started GET "/" for ::1 at 2020-03-29 18:24:45 +0100
+  Rendered welcome/index.html.erb within layouts/application (82.5ms)
+Completed 500 Internal Server Error in 296ms (ActiveRecord: 110.5ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_101147740'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_101147740'
+Started GET "/" for ::1 at 2020-03-29 18:24:45 +0100
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (27.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (90.3ms)
+Completed 500 Internal Server Error in 351ms (ActiveRecord: 124.5ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_71106420'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_71106420'
+Processing by WelcomeController#index as HTML
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (19.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  [1m[36mCompany Load (28.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (37.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  [1m[36mCompany Load (32.5ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (118.3ms)
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 57.4ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_100922160'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_100922160'
+  Rendered welcome/index.html.erb within layouts/application (127.0ms)
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 61.3ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into String):
+    191:                       <div class="card" style="border: 0; border-radius: 0;">
+    192:                         <div class="card-body">
+    193:                           <%if result.companysymbol == 'BABA'%>
+    194:                           <% ps = JSON.parse(result.pred) %>
+    195:                           <% ps.each do |s|%>
+    196:                           <% puts s+1 %>
+    197:                           <%end%>
+  
+app/views/welcome/index.html.erb:194:in `block in _app_views_welcome_index_html_erb__752146408_100922160'
+app/views/welcome/index.html.erb:179:in `_app_views_welcome_index_html_erb__752146408_100922160'
+Started GET "/" for ::1 at 2020-03-29 18:27:10 +0100
+  [1m[35m (22.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (25.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (22.7ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (89.8ms)
+Completed 200 OK in 4349ms (Views: 4155.7ms | ActiveRecord: 141.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-29 18:28:11 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (23.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 52.0ms)
+
+
+  
+SyntaxError (C:/Users/HP/palesun/app/views/welcome/index.html.erb:300: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/welcome/index.html.erb:300: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for ::1 at 2020-03-29 18:28:31 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (23.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (25.5ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 300ms (Views: 245.0ms | ActiveRecord: 49.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-29 18:30:21 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (22.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (25.9ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (53.9ms)
+Completed 200 OK in 308ms (Views: 211.9ms | ActiveRecord: 69.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-29 18:31:03 +0100
+  [1m[35m (27.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (22.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (22.8ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (65.4ms)
+Completed 200 OK in 957ms (Views: 761.7ms | ActiveRecord: 144.7ms)
+
+
+Started GET "/" for ::1 at 2020-03-29 19:05:24 +0100
+  [1m[35m (20.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Users/HP/Downloads/rubyinstaller-2.6.3-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (21.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 104.2ms)
+
+
+  
+SyntaxError (C:/Users/HP/palesun/app/views/welcome/index.html.erb:206: syntax error, unexpected '<'
+                          <% if result.change >= 0
+                          ^
+C:/Users/HP/palesun/app/views/welcome/index.html.erb:206: syntax error, unexpected tIDENTIFIER, expecting end
+...                   <% if result.change >= 0
+...                         ^~~~~~
+C:/Users/HP/palesun/app/views/welcome/index.html.erb:208: else without rescue is useless
+...                           else 
+...                           ^~~~
+C:/Users/HP/palesun/app/views/welcome/index.html.erb:217: syntax error, unexpected end, expecting end-of-input
+'.freeze;               end 
+                        ^~~):
+  
+app/views/welcome/index.html.erb:206: syntax error, unexpected '<'
+app/views/welcome/index.html.erb:206: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/welcome/index.html.erb:208: else without rescue is useless
+app/views/welcome/index.html.erb:217: syntax error, unexpected end, expecting end-of-input
+Started GET "/" for ::1 at 2020-03-29 19:07:21 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (21.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 21.1ms)
+
+
+  
+SyntaxError (C:/Users/HP/palesun/app/views/welcome/index.html.erb:206: syntax error, unexpected '<'
+                          <% if result.change >= 0
+                          ^
+C:/Users/HP/palesun/app/views/welcome/index.html.erb:206: syntax error, unexpected tIDENTIFIER, expecting end
+...                   <% if result.change >= 0
+...                         ^~~~~~
+C:/Users/HP/palesun/app/views/welcome/index.html.erb:208: else without rescue is useless
+...                           else 
+...                           ^~~~
+C:/Users/HP/palesun/app/views/welcome/index.html.erb:217: syntax error, unexpected end, expecting end-of-input
+'.freeze;               end 
+                        ^~~):
+  
+app/views/welcome/index.html.erb:206: syntax error, unexpected '<'
+app/views/welcome/index.html.erb:206: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/welcome/index.html.erb:208: else without rescue is useless
+app/views/welcome/index.html.erb:217: syntax error, unexpected end, expecting end-of-input
+Started GET "/" for ::1 at 2020-03-29 19:07:58 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (21.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:3
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (131.7ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:179
+  Rendered welcome/index.html.erb within layouts/application (469.9ms)
+Completed 200 OK in 1163ms (Views: 1002.0ms | ActiveRecord: 153.3ms)
+
+

@@ -190,33 +190,20 @@
                     <div id="accordion<%=result.id%>" class="collapse">
                       <div class="card" style="border: 0; border-radius: 0;">
                         <div class="card-body">
-                          <%def range (min, max)%>
-                          <%    rand * (max-min) + min%>
-                          <%end%>
+                          <% i=0 %>
                           <%array = []%>
-                          <%forecast = []%>
-                          <%i=-1%>
-                          <%loop do%>
-                          <%    if i == 15%>
-                          <%    break %>
-                          <%  end%>
-                          <%  i += 1%>
-                          <%  ran = range(100, 500)%>
-                          <%  array.push([i, ran])%>
-                          <%  if i == 15%>
-                          <%    forecast.push([i, ran])%>
-                          <%  end%>
-                          <%end%>
-                          <%j = 15%>
-                          <%loop do%>
-                          <%    if j == 20%>
-                          <%    break%>
-                          <%  end%>
-                          <%  j += 1%>
-                          <%  forecast.push([j, range(100, 1000)])%>
+                          <% (result.pred).each do |s| %>
+                            <%  array.push([i, s])%>
+                            <%  i += 1%>
                           <%end%>
 
-                          <% if result.change >= 0%>
+                          <%forecast = []%>
+                          <% (result.past).each do |t| %>
+                            <%  forecast.push([i, t])%>
+                            <%  i += 1%>
+                          <%end%>
+
+                          <% if result.change >= 0 %>
                           <%= area_chart [{name:"Historical", color:'#090396', data: array},{name:"Forecast", color:'#029810', data:forecast}], curve: false%>
                           <% else %>
                           <%= area_chart [{name:"Historical", color:'#090396', data: array},{name:"Forecast", color:'#C91801', data:forecast}], curve: false %>
