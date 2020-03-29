@@ -1,86 +1,73 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <title>Polaris Analytics</title>
-    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Nanum+Gothic+Coding|Share+Tech+Mono|Source+Code+Pro&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Code|Space+Mono&display=swap" rel="stylesheet">
+   
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= favicon_link_tag 'favicon.ico' %>
-    <link rel="stylesheet" href="/assets/theme.scss">
-    <link rel="stylesheet" href="/assets/template.scss">
+    <%= favicon_link_tag 'polaris_icon.ico' %>
+    <!-- <link rel="stylesheet" href="/assets/theme.scss">
+    <link rel="stylesheet" href="/assets/template.scss"> -->
+    <link rel="stylesheet" href="/assets/main.scss">
     <meta charset="utf-8">
+
+    <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    
   </head>
   <style>
     * {
-      /* font-family: 'Source Code Pro', monospace !important; */
-      /* font-family: 'Anonymous Pro', monospace; */
-      /* font-family: 'Space Mono', monospace; */
-      font-family: 'Fira Code', monospace;
-      font-size:12px;
+      font-family: 'Ubuntu Mono', monospace;
     }
 
-    .c_dark_navbar {
-      background-color: black;
+    .footer-link-color * {
+      color: #CCA032;
     }
+  </style>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand pa_header" href="<%= root_path %>">
+      <%= image_tag("/assets/polaris_v.png", :class => "d-inline-block align-top", :alt => "logo", :height => "32", :width => "32") %>
+      Polaris Analytics
+    </a>
 
 
-    .c_footer {
-      text-align: center;
-      border-top: 1px solid #101319 !important;
-      padding: 2.5rem 0;
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item" id="forecasts">
+          <%= link_to '<i class="fas fa-chart-line"></i> Forecasts'.html_safe, root_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item" id="about">
+          <%= link_to '<i class="fas fa-info-circle"></i> About'.html_safe, about_url, class:"nav-link" %>
+        </li>
+        <li class="nav-item" id="contact">
+          <%= link_to '<i class="fas fa-envelope"></i> Contact'.html_safe, contact_url, class:"nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    }
-
-    .c_footer a {
-      font-size: 8px;
-    }
-
-    </style>
-
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary" id="navbar1" style="background-color: #020F59 !important;">
-  <div class="container">
-
-      <%= link_to "Polaris Analytics", root_path, class:"navbar-brand mr-1 mb-1 mt-0" %>
-
-      <button class="navbar-toggler"type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
-          <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-              </li>
-          </ul>
-          <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                  <%= link_to "Forecasts", root_path, class:"nav-link", id:"forecasts"%>
-              </li>
-              <li class="nav-item">
-                  <%= link_to "About", about_url, class:"nav-link", id:"about_us"%>
-              </li>
-              <li class="nav-item">
-                <%= link_to "Contact us", contact_url, class:"nav-link", id:"contact_us"%>
-              </li>
-          </ul>
-      </div>
-  </div>
-</nav>
   <body>
     <%= yield %>
   </body>
-  <footer class="c_footer">
-      <p style="color: #3E38F2;">&copy; Polaris Analytics</p>
-      <p>
-        <%= link_to "Privacy and terms of use statement", privacy_url, class:"nav-link", id:"privacy"%>
-        </p>
-        <%= image_tag("/assets/logo.svg", :alt => "logo", :height => "30", :width => "30") %>
 
-    </footer>
-
+  <footer class="my-3 pt-2 text-muted text-center text-small">
+    <p class="mb-1">© 2019-2020 Polaris Analytics</p>
+    <ul class="list-inline">
+      <li class="list-inline-item accent-color "><a href="#">Privacy</a></li>
+      <li class="list-inline-item accent-color "><a href="#">Terms</a></li>
+      <li class="list-inline-item accent-color "><a href="#">Support</a></li>
+    </ul>
+    <%= image_tag("/assets/polaris_footer.png", :class => "", :alt => "logo", :height => "80", :width => "80") %>
+  </footer>
 
 </html>
+

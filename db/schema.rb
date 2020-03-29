@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2020_02_10_103105) do
   enable_extension "plpgsql"
 
   create_table "companies", force: :cascade do |t|
-    t.string "companyName"
-    t.string "companySymbol"
+    t.string "companyname"
+    t.string "companysymbol"
     t.jsonb "past"
     t.jsonb "pred"
   end

@@ -9,6 +9,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+ .accent-color *{
+   color:#CCA032 !important;
+ }
+
 :root {
   --blue:#007bff;
   --indigo:#6610f2;
@@ -73,7 +77,6 @@ body {
   line-height: 1.5;
   color: #cccccc;
   text-align: left;
-  background-color: #000;
 }
 
 [tabindex="-1"]:focus {
@@ -345,7 +348,7 @@ template {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: Comfortaa;
+  font-family: 'Fira Code', monospace;
   font-weight: 500;
   line-height: 1.2;
   color: inherit;
