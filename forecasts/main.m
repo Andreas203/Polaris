@@ -42,15 +42,15 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7));
 
-disp(YPred(7));
-lastval = YPred(7);
+
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
 conn = database('polarisanalytics','wvybtafwuesjox','4281f10d82eafab7f60f193fddb9b970c476af56b7b5c964f9faf952aeef0eb3');
 
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -107,13 +107,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -169,13 +168,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -231,13 +229,12 @@ YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -245,6 +242,7 @@ execute(conn, query);
 
 query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
 execute(conn, query);
+
 
 %
 %
@@ -292,13 +290,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -306,7 +303,6 @@ execute(conn, query);
 
 query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
 execute(conn, query);
-
 
 
 %
@@ -355,13 +351,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -369,6 +364,7 @@ execute(conn, query);
 
 query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
 execute(conn, query);
+
 
 
 %
@@ -417,13 +413,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -431,6 +426,7 @@ execute(conn, query);
 
 query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
 execute(conn, query);
+
 
 
 
@@ -480,13 +476,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -494,8 +489,6 @@ execute(conn, query);
 
 query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
 execute(conn, query);
-
-
 
 %
 %
@@ -543,13 +536,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -557,7 +549,6 @@ execute(conn, query);
 
 query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
 execute(conn, query);
-
 
 
 %
@@ -606,13 +597,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -667,13 +657,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -681,6 +670,7 @@ execute(conn, query);
 
 query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
 execute(conn, query);
+
 
 
 %
@@ -729,13 +719,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -743,6 +732,7 @@ execute(conn, query);
 
 query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
 execute(conn, query);
+
 
 
 %
@@ -791,13 +781,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -853,13 +842,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -916,13 +904,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -930,7 +917,6 @@ execute(conn, query);
 
 query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
 execute(conn, query);
-
 
 %
 %
@@ -978,13 +964,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -992,7 +977,6 @@ execute(conn, query);
 
 query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
 execute(conn, query);
-
 
 
 %
@@ -1041,13 +1025,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -1055,8 +1038,6 @@ execute(conn, query);
 
 query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
 execute(conn, query);
-
-
 
 %
 %
@@ -1104,13 +1085,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+llastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -1118,7 +1098,6 @@ execute(conn, query);
 
 query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
 execute(conn, query);
-
 
 %
 %
@@ -1165,14 +1144,12 @@ for i = 2:numTimeStepsTest+7
 end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
-
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
@@ -1180,7 +1157,6 @@ execute(conn, query);
 
 query = compose("UPDATE companies SET past = '%s' WHERE companysymbol =  '%s'",T, symbol);
 execute(conn, query);
-
 
 %
 %
@@ -1228,13 +1204,12 @@ end
 YPred = sig*YPred + mu;
 sprintf('%s: %f', symbol, YPred(7))
 
-lastval = YPred(7);
+lastval = ((YPred(end)-data(end))/data(end))*100;
 
 S = jsonencode(YPred);
 T = jsonencode(data);
 
-
-query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",YPred(7), symbol);
+query = compose("UPDATE companies SET change = %f WHERE companysymbol =  '%s'",lastval, symbol);
 execute(conn, query);
 
 query = compose("UPDATE companies SET pred = '%s' WHERE companysymbol =  '%s'",S, symbol);
