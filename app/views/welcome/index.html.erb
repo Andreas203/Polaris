@@ -1,320 +1,151 @@
-<!DOCTYPE html>
-<html>
-
 <head>
-    <script src="https://kit.fontawesome.com/5a2a5f70f2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/assets/main.scss">
+  <link href="https://getbootstrap.com/docs/4.0/examples/pricing/pricing.css" rel="stylesheet">
 </head>
-
 <style>
-
-    #myInput {
-
-    }
-
-    ::placeholder {
-        font-style: italic;
-        color: white;
-    }
-    /* enable absolute positioning */
-
-    .inner-addon {
-        position: relative;
-    }
-    /* style icon */
-
-    .inner-addon .glyphicon {
-        position: absolute;
-        padding: 10px;
-        pointer-events: none;
-    }
-    /* align icon */
-
-    .left-addon .glyphicon {
-        left: 0px;
-    }
-
-    .right-addon .glyphicon {
-        right: 0px;
-    }
-    /* add padding  */
-
-    .left-addon input {
-        padding-left: 30px;
-    }
-
-    .right-addon input {
-        padding-right: 30px;
-    }
-
-    table {
-        table-layout: fixed;
-        width: 200px;
-    }
-
-    #forecats {
-        font-size: 100px;
-    }
-
-    .has-search .form-control {
-        padding-left: 2.375rem;
-    }
-
     .pos {
         color: #029810;
-
-
-
-
     }
 
     .neg {
         color: #C91801;
-
-
-
     }
+    </style>
 
-    .a {
-      background-color: rgba(0,0,0,.05);
-    }
-
-
-    .has-search .form-control-feedback {
-        position: absolute;
-        z-index: 2;
-        display: block;
-        width: 2.375rem;
-        height: 2.375rem;
-        line-height: 2.6rem;
-        text-align: center;
-        pointer-events: none;
-        color: #aaa;
-        font-size: 15px;
-    }
-
-    .main-card-top {
-      margin-top: 2em;
-    }
-
-    .table {
-      margin-bottom: 0px !important;
-    }
+<body>
 
 
-
-
-    main {
-      height: 100%;
-    }
-    .input-icons i {
-            position: absolute;
-        }
-
-        .input-icons {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-
-        .icon {
-            padding: 5px;
-            min-width: 40px;
-        }
-
-        .input-field {
-            width: 100%;
-            padding: 5px;
-        }
-
-        .hiddenRow {
-            padding: 0 !important;
-        }
-
-  .table td {
-    padding: 0.55rem;
-  }
-
-
-</style>
-
-
-<main>
-
-  <body>
-    <div class="card text-center border-0 bg-none">
-      <div class="card-body">
-        <div class="card-title"><h3>The top stock price forecasting platform</h3></div>
-        <div class="card-text"><h6>Track your favourite stocks, anticipate future movements, and watch the price evolve over time.</h6></div>
-      </div>
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 ">Forecasting</h1>
+      <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+      <input type="text" class="form-control" id="myInput" style="font-size: 14px !important; padding-bottom: -5em;" onkeyup="myFunction()" placeholder="Filter by name or symbol" >
     </div>
 
-    <hr>
-    <div class="container main-card-top pb-2">
-      <div class="card">
-        <div class="card-body">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-8 p-2">
-                <div class="container">
-                
-                <h5 style="display:contents">Top 20 global technology stocks <%= @james%></h5><br>
-                <small><i class="far fa-clock"></i> forecasted for <p class="accent-color-bold">20/03/2020</p></small>
-              </div>
-            </div>
-              <div class="col-md-4">
-                <div class="p-0"  style="margin-top:0.51em;">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend" >
-                    <span class="input-group-text" id="basic-addon1"><i style="font-size: 14px !important" class="fas fa-search"></i></span>
-                  </div>
-                  <input type="text" class="form-control" id="myInput" style="font-size: 14px !important; padding-bottom: -5em;" onkeyup="myFunction()" placeholder="Filter by name or symbol" >
-                </div>
-              </div>
-              </div>
-            </div>
+    <div class="container">
+      <div class="card-deck mb-3 text-center" id="myDIV">
+      <% @results.each do |result| %>
+        <div class="card mb-4 box-shadow fixed-width">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal"><%= result.companyname%> <small style="font-size:10px;" class="text-muted"><%= result.companysymbol%></small> </h4>
+          </div>
+          <div class="card-body">
+            <%def range (min, max)%>
+            <%    rand * (max-min) + min%>
+            <%end%>
+            <% final = 0 %>
+            <% start = 0 %>
+            <%array = []%>
+            <%forecast = []%>
+            <%i=-1%>
+            <%loop do%>
+            <%    if i == 15%>
+            <%    break %>
+            <%  end%>
+            <%  i += 1%>
+            <%  ran = range(100, 500)%>
+            <%  array.push([i, ran])%>
+            <%  if i == 15%>
+            <%    forecast.push([i, ran])%>   
+            <% start = ran %>       
+            <%  end%>
+            <%end%>
+            <%j = 15%>
+            <%loop do%>
+            <%    if j == 20%>
+            <%    break%>
+            <%  end%>
+            <%  j += 1%>
+            <% c_ran = range(100, 1000) %>
+            <%  forecast.push([j, c_ran])%>
+            <% if j == 19 %>
+            <% final = c_ran %>
+            <% end %>
+            <%end%>
+            <h1 class="card-title pricing-card-title <%= (final - start)/start * 100 >= 0 ? "pos" : "neg" %>" <%= (final - start)/start * 100  %>><%= number_with_precision((final - start)/start * 100, :precision => 2) %><small class="text-muted">%</small></h1>
+            <!-- <ul class="list-unstyled mt-3 mb-4">
+              <li>10 users included</li>
+              <li>2 GB of storage</li>
+              <li>Email support</li>
+              <li>Help center access</li>
+            </ul> -->
+          </div>
+
+
+                          <% if final - start > 0 %>
+                          <%= area_chart [{name:"Forecast", color:'#029810', data:array}], curve: true, height:"200px"%>
+                          <% else %>
+                          <%= area_chart [{name:"Forecast", color:'#C91801', data:array}], curve: true, height:"200px" %>
+                          <% end %>
+        </div>
+        <% end %>
+      </div>
+
+      <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img class="mb-2" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+            <small class="d-block mb-3 text-muted">© 2017-2018</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Cool stuff</a></li>
+              <li><a class="text-muted" href="#">Random feature</a></li>
+              <li><a class="text-muted" href="#">Team feature</a></li>
+              <li><a class="text-muted" href="#">Stuff for developers</a></li>
+              <li><a class="text-muted" href="#">Another one</a></li>
+              <li><a class="text-muted" href="#">Last time</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Resource</a></li>
+              <li><a class="text-muted" href="#">Resource name</a></li>
+              <li><a class="text-muted" href="#">Another resource</a></li>
+              <li><a class="text-muted" href="#">Final resource</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Team</a></li>
+              <li><a class="text-muted" href="#">Locations</a></li>
+              <li><a class="text-muted" href="#">Privacy</a></li>
+              <li><a class="text-muted" href="#">Terms</a></li>
+            </ul>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-12 col-sm-12 mx-auto">
-            <table class="table table c_dark_table table-borderless" id="myTable">
-              <thead style="border-top: 1px solid lightgrey;border-bottom: 1px solid lightgrey;">
-                <th style="width: 50%; font-weight: bold !important;"><b>Name</b></th>
-                <th style="width: 25%; text-align:left;">Symbol</th>
-                <th style="width: 25%; text-align:left;">Latest price</th>
-              <% @results.each do |result| %>
-              <% color2 = (result.id % 2 == 0) ? "a" : "b" %>
-              <tr data-toggle="collapse" class="<%= color2 %>" data-target="#accordion<%=result.id%>" style="border-collapse:collapse !important;">
-<<<<<<< HEAD
-                <td height="5"><a><i style="font-size:10px; color:darkgrey" class="fas fa-caret-down"></i></a> <%= result.companyname %></td>
-                <td height="5" style="text-align:left;"><%= result.companysymbol %></td>
-
-
-            
-
-                
-                
-              
-=======
-                <td><a><i style="font-size:10px" class="fas fa-caret-down"></i></a> <%= result.companyname %></td>
-                <td><%= result.companysymbol %></td>
->>>>>>> 230b3ad4259fc5b5677affd5add38ca1e0197574
-                <% color = result.change >= 0 ? "pos" : "neg" %>
-                <% thing = color %>
-                <td style="text-align: right;" class="<%= color %>"><%= result.change  %>% 
-                <% if result.change >=0 %>
-                <i class="fas fa-arrow-up"></i>
-                <% else %>
-                <i class="fas fa-arrow-down"></i>
-                <% end %>
-                </td>
-                <tr id="<%=result.id%>" class="always_show">
-                  <td colspan="3" style="padding: 0;">
-                    <div id="accordion<%=result.id%>" class="collapse">
-                      <div class="card" style="border: 0; border-radius: 0;">
-                        <div class="card-body">
-                          <%def range (min, max)%>
-                          <%    rand * (max-min) + min%>
-                          <%end%>
-                          <%array = []%>
-                          <%forecast = []%>
-                          <%i=-1%>
-                          <%loop do%>
-                          <%    if i == 15%>
-                          <%    break %>
-                          <%  end%>
-                          <%  i += 1%>
-                          <%  ran = range(100, 500)%>
-                          <%  array.push([i, ran])%>
-                          <%  if i == 15%>
-                          <%    forecast.push([i, ran])%>
-                          <%  end%>
-                          <%end%>
-                          <%j = 15%>
-                          <%loop do%>
-                          <%    if j == 20%>
-                          <%    break%>
-                          <%  end%>
-                          <%  j += 1%>
-                          <%  forecast.push([j, range(100, 1000)])%>
-                          <%end%>
-                          <% if result.change >= 0%>
-                          <%= area_chart [{name:"Historical", color:'#090396', data: array},{name:"Forecast", color:'#029810', data:forecast}], curve: false%>
-                          <% else %>
-                          <%= area_chart [{name:"Historical", color:'#090396', data: array},{name:"Forecast", color:'#C91801', data:forecast}], curve: false %>
-                          <% end %>
-                        </div>
-                      </div>
-                    </div>
-                </td>
-                
-                </tr>
-              </tr>
-              <% end %>
-              </div>
-              </div>
-            </tbody>
-          </table>
-        </div>
-      </div>
-  </body>
-
-</main>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      </footer>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/umd/popper.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>
-  function myFunction() {
-    // Declare variables
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
+var input = document.getElementById("myInput");
+input.addEventListener("input", myFunction);
 
+function myFunction(e) {
+  var filter = e.target.value.toUpperCase();
 
-    filter = input.value.toUpperCase();
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
+  var list = document.getElementById("myDIV");
+  var divs = list.getElementsByTagName("div");
+  for (var i = 0; i < divs.length; i++) {
+    var a = divs[i].getElementsByTagName("h4")[0];
 
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length + 1; i++) {
-      if (tr[i] != undefined) {
-        td = tr[i].getElementsByTagName("td")[0];
-        td2 = tr[i].getElementsByTagName("td")[1];
-      }
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-        }
-
-        else {
-<<<<<<< HEAD
-          tr[i].style.display = "none";   
-
-=======
-          tr[i].style.display = "none";
->>>>>>> 230b3ad4259fc5b5677affd5add38ca1e0197574
-        }
-
-
-
-      }
-      if (td2) {
-          txtValue2 = td2.textContent || td2.innerText;
-          if (txtValue2.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
+    if (a) {
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        divs[i].style.display = "";
+      } else {
+        divs[i].style.display = "none";
+        if (i == (divs.length-1)) {
+          console.log(i);
         }
       }
-      p = document.getElementsByClassName("always_show");
-          for (j = 0; j < p.length; j++) {
-            p[j].style.display = "";
-          }
     }
   }
-  </script>
-  <script>
-    document.getElementById("forecasts").className += " active";
-  </script>
+}
+</script>
 
-</body>
 
 </html>
+
+

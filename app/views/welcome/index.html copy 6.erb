@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/5a2a5f70f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/main.scss">
+</head>
+
+<style>
+
+    #myInput {
+
+    }
+
+    ::placeholder {
+        font-style: italic;
+        color: white;
+    }
+    /* enable absolute positioning */
+
+    .inner-addon {
+        position: relative;
+    }
+    /* style icon */
+
+    .inner-addon .glyphicon {
+        position: absolute;
+        padding: 10px;
+        pointer-events: none;
+    }
+    /* align icon */
+
+    .left-addon .glyphicon {
+        left: 0px;
+    }
+
+    .right-addon .glyphicon {
+        right: 0px;
+    }
+    /* add padding  */
+
+    .left-addon input {
+        padding-left: 30px;
+    }
+
+    .right-addon input {
+        padding-right: 30px;
+    }
+
+    table {
+        table-layout: fixed;
+        width: 200px;
+    }
+
+    #forecats {
+        font-size: 100px;
+    }
+
+    .has-search .form-control {
+        padding-left: 2.375rem;
+    }
+
+    .pos {
+        color: #029810;
+
+
+
+
+    }
+
+    .neg {
+        color: #C91801;
+
+
+
+    }
+
+    .a {
+      background-color: rgba(0,0,0,.05);
+    }
+
+
+    .has-search .form-control-feedback {
+        position: absolute;
+        z-index: 2;
+        display: block;
+        width: 2.375rem;
+        height: 2.375rem;
+        line-height: 2.6rem;
+        text-align: center;
+        pointer-events: none;
+        color: #aaa;
+        font-size: 15px;
+    }
+
+    .main-card-top {
+      margin-top: 2em;
+    }
+
+    .table {
+      margin-bottom: 0px !important;
+    }
+
+
+
+
+    main {
+      height: 100%;
+    }
+    .input-icons i {
+            position: absolute;
+        }
+
+        .input-icons {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            padding: 5px;
+            min-width: 40px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 5px;
+        }
+
+        .hiddenRow {
+            padding: 0 !important;
+        }
+
+  .table td {
+    padding: 0.55rem;
+  }
+
+
+
+
+</style>
+
+
+<main>
+
+  <body>
+    <%# <div class="card text-center border-0 bg-none">
+      <div class="card-body">
+        <div class="card-title"><h3>The top stock price forecasting platform</h3></div>
+        <div class="card-text"><h6>Track your favourite stocks, anticipate future movements, and watch the price evolve over time.</h6></div>
+      </div>
+    </div>
+
+    <hr> %>
+    <div class="container main-card-top pb-2 px-5" id="alert_holder">
+      <div class="card rounded-0">
+        <div class="card-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-8 p-2">
+                <div class="container">
+                <h5 style="display:contents">Top 20 global technology stocks</h5><br>
+                <small><i class="far fa-clock"></i> forecasted for <p class="accent-color-bold">20/03/2020</p></small>
+              </div>
+            </div>
+              <div class="col-md-4">
+                <div class="p-0"  style="margin-top:0.51em;">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend" >
+                    <span class="input-group-text" id="basic-addon1"><i style="font-size: 14px !important" class="fas fa-search"></i></span>
+                  </div>
+                  <input type="text" class="form-control" id="myInput" style="font-size: 14px !important; padding-bottom: -5em;" onkeyup="myFunction()" placeholder="Filter by name or symbol" >
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 mx-auto rounded-0">
+            <table class="table table c_dark_table table-borderless rounded-0" id="myTable">
+              <thead style="border-top: 1px solid lightgrey;border-bottom: 1px solid lightgrey;">
+                <th style="width: 20%; font-weight: bold !important;"><b>ID</b></th>
+                <th style="width: 50%; font-weight: bold !important;"><b>Name</b></th>
+                <th style="width: 25%; text-align:left;">Symbol</th>
+                <th style="width: 30%; text-align:right;">Forecast</th>
+              <% @results.each do |result| %>
+              <% color2 = (result.id % 2 == 0) ? "a" : "b" %>
+              <tr data-toggle="collapse" class="<%= color2 %>" data-target="#accordion<%=result.id%>" style="border-collapse:collapse !important;">
+
+                <td><small><a><i style="font-size:10px" class="fas fa-caret-down"></i></a> <%= result.id %></small></td>
+                <td><a></a> <%= result.companyname %></td>
+                
+                <td><%= result.companysymbol %></td>
+                <% color = result.change >= 0 ? "pos" : "neg" %>
+                <% thing = color %>
+                <td style="text-align: right;" class="<%= color %>"><%= result.change  %>% 
+                </td>
+                <tr id="<%=result.id%>" class="always_show">
+                  <td colspan="4" style="padding: 0;">
+                    <div id="accordion<%=result.id%>" class="collapse">
+                      <div class="card" style="border: 0; border-radius: 0;">
+                        <div class="card-body">
+                          <%def range (min, max)%>
+                          <%    rand * (max-min) + min%>
+                          <%end%>
+                          <%array = []%>
+                          <%forecast = []%>
+                          <%i=-1%>
+                          <%loop do%>
+                          <%    if i == 15%>
+                          <%    break %>
+                          <%  end%>
+                          <%  i += 1%>
+                          <%  ran = range(100, 500)%>
+                          <%  array.push([i, ran])%>
+                          <%  if i == 15%>
+                          <%    forecast.push([i, ran])%>
+                          <%  end%>
+                          <%end%>
+                          <%j = 15%>
+                          <%loop do%>
+                          <%    if j == 20%>
+                          <%    break%>
+                          <%  end%>
+                          <%  j += 1%>
+                          <%  forecast.push([j, range(100, 1000)])%>
+                          <% p array%>
+                          <% p forecast%>
+                          <%end%>
+                          <% if result.change >= 0%>
+                          <%= area_chart [{name:"Historical", color:'#090396', data: array},{name:"Forecast", color:'#029810', data:forecast}], curve: false%>
+                          <% else %>
+                          <%= area_chart [{name:"Historical", color:'#090396', data: array},{name:"Forecast", color:'#C91801', data:forecast}], curve: false %>
+                          <% end %>
+                        </div>
+                      </div>
+                    </div>
+                </td>
+                
+                </tr>
+              </tr>
+              <% end %>
+              </div>
+              </div>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </body>
+
+</main>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/umd/popper.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+count = 0;
+  function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+
+
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    result = false;
+    
+    for (i = 0; i < tr.length + 1; i++) {
+      if (tr[i] != undefined) {
+        td = tr[i].getElementsByTagName("td")[1];
+        td2 = tr[i].getElementsByTagName("td")[2];
+      }
+      
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+            result = true
+        }
+        else {
+          tr[i].style.display = "none";   
+        }
+      }
+      if (td2) {
+          txtValue2 = td2.textContent || td2.innerText;
+          if (txtValue2.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+          result = true
+        }
+      }
+      p = document.getElementsByClassName("always_show");
+          for (j = 0; j < p.length; j++) {
+            p[j].style.display = "";
+          }
+    }
+
+    
+  }
+
+  
+  </script>
+  <script>
+    document.getElementById("forecasts").className += " active";
+  </script>
+
+</body>
+
+</html>

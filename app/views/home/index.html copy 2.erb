@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/5a2a5f70f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/main.scss">
+    <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<style>
+
+    #myInput {
+      
+    }
+    
+    ::placeholder {
+        font-style: italic;
+        color: white;
+    }
+    /* enable absolute positioning */
+    
+    .inner-addon {
+        position: relative;
+    }
+    /* style icon */
+    
+    .inner-addon .glyphicon {
+        position: absolute;
+        padding: 10px;
+        pointer-events: none;
+    }
+    /* align icon */
+    
+    .left-addon .glyphicon {
+        left: 0px;
+    }
+    
+    .right-addon .glyphicon {
+        right: 0px;
+    }
+    /* add padding  */
+    
+    .left-addon input {
+        padding-left: 30px;
+    }
+    
+    .right-addon input {
+        padding-right: 30px;
+    }
+    
+    table {
+        table-layout: fixed;
+        width: 200px;
+    }
+    
+    #forecats {
+        font-size: 100px;
+    }
+    
+    .has-search .form-control {
+        padding-left: 2.375rem;
+    }
+    
+    .pos {
+        color: green;
+    }
+    
+    .neg {
+        color: red;
+    }
+    
+    .has-search .form-control-feedback {
+        position: absolute;
+        z-index: 2;
+        display: block;
+        width: 2.375rem;
+        height: 2.375rem;
+        line-height: 2.6rem;
+        text-align: center;
+        pointer-events: none;
+        color: #aaa;
+        font-size: 15px;
+    }
+
+    .main-card-top {
+      margin-top: 2em;
+    }
+
+    .table {
+      margin-bottom: 0px !important;
+    }
+
+
+    main {
+      height: 100%;
+    }
+
+</style>
+<main>
+
+  <body>
+    <div class="container main-card-top">
+      <div class="card">
+        <div class="card-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 p-2">
+                <div class="container">
+                <h5 class="accent-color" style="display:contents"><i class="fas fa-envelope"></i> Contact us </h5><br>
+                <small> We are always happy to reply to any questions or queries that you may have. Please allow up to 48 hours for us to get back to you!</p></small>
+                <hr>
+                <div class="p-2">
+                      <%= render 'contact_form' %>                    
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>          
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 mx-auto">
+            </div>
+      </div>
+      </div>
+      <div class="card mt-3">
+        <div class="card-body small text-center">
+          Alternatively, please use our LinkedIn <i style="color: #0e76a8" class="fab fa-linkedin"></i>
+          <br>
+        </div>
+      </div>
+      
+    </div>
+
+  </body>
+
+</main>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/umd/popper.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById("contact").className += " active";
+  </script>
+</body>
+
+</html>
