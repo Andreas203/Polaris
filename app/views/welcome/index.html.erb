@@ -36,6 +36,7 @@
               <li>Help center access</li>
             </ul> -->
           </div>
+          <% p result.pred%>
           <%past_values_start = result.past.length - 6 %>
           <%past_values_end = result.past.length%>
           <%counter_i = past_values_start%>
@@ -70,15 +71,15 @@
           <% end %>
           <% forecast_correct.push([1+counter_j, result.pred[counter_j]]) %>
           <% counter_j += 1 %>
-          <% if counter_j > 5%>
+          <% if counter_j > 6%>
           <% break%>
           <% end %>
           <% end %>
 
                           <% if result.change > 0 %>
-                          <%= area_chart [ {name:"Forecast", color:'#029810', data:forecast_correct}], min: start, max:final, curve: false, height:"250px"%>
+                          <%= area_chart [ {name:"Forecast", color:'#029810', data:forecast_correct}], min: start, max:final, curve: true, height:"250px"%>
                           <% else %>
-                          <%= area_chart [ {name:"Forecast", color:'#C91801', data:forecast_correct}], min: start, max:final, urve: false, height:"250px" %>
+                          <%= area_chart [ {name:"Forecast", color:'#C91801', data:forecast_correct}], min: start, max:final, urve: true, height:"250px" %>
                           <% end %>
         </div>
         <% end %>
