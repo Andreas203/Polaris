@@ -10928,3 +10928,104 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 286ms (Views: 62.8ms | ActiveRecord: 221.1ms)
 
 
+Started GET "/" for ::1 at 2020-04-06 18:15:15 +0100
+  [1m[35m (23.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rubyonrails/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (27.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:14
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (208.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:26
+  Rendered welcome/index.html.erb within layouts/application (257.5ms)
+Completed 200 OK in 698ms (Views: 323.9ms | ActiveRecord: 333.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-06 18:15:20 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (26.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:14
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (234.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:26
+  Rendered welcome/index.html.erb within layouts/application (251.0ms)
+Completed 200 OK in 472ms (Views: 41.6ms | ActiveRecord: 376.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-06 18:15:32 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (66.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:14
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (308.7ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:26
+  Rendered welcome/index.html.erb within layouts/application (335.5ms)
+Completed 200 OK in 430ms (Views: 52.3ms | ActiveRecord: 375.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-06 18:15:37 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (25.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:14
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (224.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:26
+  Rendered welcome/index.html.erb within layouts/application (252.4ms)
+Completed 200 OK in 339ms (Views: 87.8ms | ActiveRecord: 249.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-06 18:15:44 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (26.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:14
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (236.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:26
+  Rendered welcome/index.html.erb within layouts/application (266.2ms)
+Completed 200 OK in 336ms (Views: 68.7ms | ActiveRecord: 263.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-06 18:15:48 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (26.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:14
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (225.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:26
+  Rendered welcome/index.html.erb within layouts/application (242.2ms)
+Completed 200 OK in 297ms (Views: 42.7ms | ActiveRecord: 252.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-06 18:16:32 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (27.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:14
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (208.0ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:26
+  Rendered welcome/index.html.erb within layouts/application (223.5ms)
+Completed 200 OK in 278ms (Views: 39.6ms | ActiveRecord: 235.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-06 18:16:50 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (31.8ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:14
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (206.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:26
+  Rendered welcome/index.html.erb within layouts/application (223.1ms)
+Completed 200 OK in 282ms (Views: 42.1ms | ActiveRecord: 238.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-06 18:17:21 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mCompany Load (29.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" ORDER BY "companies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:14
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCompany Load (217.5ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/views/welcome/index.html.erb:26
+  Rendered welcome/index.html.erb within layouts/application (233.4ms)
+Completed 200 OK in 290ms (Views: 40.8ms | ActiveRecord: 246.6ms)
+
+

@@ -79,11 +79,13 @@
           <% end %>
 
                           <% if result.change > 0 %>
-                          <%= area_chart [{name:"Forecast", color:'#029810', data:forecast_correct}], min:start, max:final, curve: true, height:'250px', discrete: true, points: false, prefix: "$", messages: {empty: "No data"}%>
+                          <%= area_chart [{name:"Forecast", data:forecast_correct}], min:start, max:final, curve: true, height:'250px', discrete: true, points: false, prefix: "$", messages: {empty: "No data"}%>
                           <% else %>
-                          <%= area_chart [{name:"Forecast", color:'#C91801', data:forecast_correct}], min:start, max:final, curve: true, height:'250px', discrete: true, points: false, prefix: "$", messages: {empty: "No data"}%>
+                          <%= area_chart [{name:"Forecast", data:forecast_correct}], min:start, max:final, curve: true, height:'250px', discrete: true, points: false, prefix: "$", messages: {empty: "No data"}%>
                           <% end %>
         </div>
+        <%# color:'#029810'
+        color:'#C91801' %>
         <% end %>
       </div>
 
