@@ -24,7 +24,8 @@
     <div class="container">
       <div class="card-deck mb-3 text-center" id="myDIV">
       <% @results.each do |result| %>
-
+      <% p result.id%>
+        <% next if result.id.odd? || result.id>10 %>
         <div class="card mb-4 box-shadow fixed-width">
           <div class="card-header">
             <h4 class="my-0 font-weight-normal"><%= result.companyname%> <small style="font-size:10px;" class="text-muted"><%= result.companysymbol%></small> </h4>
