@@ -24,6 +24,7 @@
     <div class="container">
       <div class="card-deck mb-3 text-center" id="myDIV">
       <% @results.each do |result| %>
+
         <div class="card mb-4 box-shadow fixed-width">
           <div class="card-header">
             <h4 class="my-0 font-weight-normal"><%= result.companyname%> <small style="font-size:10px;" class="text-muted"><%= result.companysymbol%></small> </h4>
@@ -58,14 +59,14 @@
           <% loop do %>
           <% if result.pred[counter_j] %>
           <% if result.change > 0%>
-          <% start = (result.pred[counter_j] * 0.80).round %>
+          <% start = (result.pred[counter_j] * 0.91).round %>
           <% else %>
           <% start = (result.pred[counter_j] * 1.05).round %>
           <% end%>
           <% end %>
           <% if result.pred[counter_j + 6]%>
           <% if result.change > 0 %>
-          <% final = (result.pred[counter_j + 6] * 1.05).round %>
+          <% final = (result.pred[counter_j + 6] * 1.02).round %>
           <% else %>
           <% final = (result.pred[counter_j + 6] * 0.8).round %>
           <% end%>
@@ -78,9 +79,9 @@
           <% end %>
 
                           <% if result.change > 0 %>
-                          <%= area_chart [ {name:"Forecast", color:'#029810', data:forecast_correct}], min: start, max:final, curve: true, height:"250px"%>
+                          <%= area_chart [{name:"Forecast", color:'#029810', data:forecast_correct}], min:start, max:final, curve: true, height:'250px', discrete: true, points: false, prefix: "$", messages: {empty: "No data"}%>
                           <% else %>
-                          <%= area_chart [ {name:"Forecast", color:'#C91801', data:forecast_correct}], min: start, max:final, urve: true, height:"250px" %>
+                          <%= area_chart [{name:"Forecast", color:'#C91801', data:forecast_correct}], min:start, max:final, curve: true, height:'250px', discrete: true, points: false, prefix: "$", messages: {empty: "No data"}%>
                           <% end %>
         </div>
         <% end %>
