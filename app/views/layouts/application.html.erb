@@ -1,4 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Polaris Analytics</title>
+    <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+            <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+                <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+                    <%= favicon_link_tag 'polaris_icon.ico' %>
+                        <link rel="stylesheet" href="/assets/main.scss">
+                        <meta charset="utf-8">
+                        <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <!-- Fonts -->
+                        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+                        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+                        
+
+                        <style>
+
+
+                            .bg-polaris-blue {
+                              background-color: #0700a0 !important;
+                            }
+
+
+                            * {
+                              /* font-family: 'Ubuntu Mono', monospace; */
+                            }
+
+                            body {
+                              background-color: #f8f9fa !important;
+                            }
+
+                        </style>
+</head>
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+
+    <img src="assets/polaris_logo_circle.png" width="30" height="30" class="d-inline-block align-top mr-2" alt="">
+      <h5 class="my-0 mr-md-auto font-weight-normal">Polaris Analytics</h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="#">Forecasts</a>
+        <a class="p-2 text-dark" href="#">About us</a>
+        <a class="p-2 text-dark" href="#">Contact</a>
+        
+      </nav>
+    </div>
+
+
 
 <body>
     <%= yield %>
 </body>
+
+
+</html>
