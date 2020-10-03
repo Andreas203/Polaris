@@ -2,134 +2,158 @@
   <link href="https://getbootstrap.com/docs/4.0/examples/pricing/pricing.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
+
 <style>
+
+    body { background: #274156 !important; }
+
     .pos {
-        color: #029810;
+        color: #2D7D65;
     }
 
     .neg {
-        color: #C91801;
+        color: #B54C23;
     }
-    </style>
+
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 200px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card.active .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      background-color: darkgray;
+      color: black;
+    }
+
+    .flip-card-back {
+      background-color: darkgray;
+      transform: rotateY(180deg);
+    }
+
+    .card_grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      align-items: center;
+      grid-gap: 15px;
+    }
+
+    .card_values{
+      font-size: 20px;
+      color: #5386CC;
+    }
+
+
+</style>
 
 <body>
 
-
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="display-4 ">Forecasting</h1>
-      <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
       <input type="text" class="form-control" id="myInput" style="font-size: 14px !important; padding-bottom: -5em;" onkeyup="myFunction()" placeholder="Filter by name or symbol" >
     </div>
 
-    <div class="container">
-      <div class="card-deck mb-3 text-center" id="myDIV">
+    <div class="container card_grid" id="myDIV">
       <% @results.each do |result| %>
       <% p result.id%>
         <% next if result.id.odd? || result.id>10 %>
-        <div class="card mb-4 box-shadow fixed-width">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal"><%= result.companyname%> <small style="font-size:10px;" class="text-muted"><%= result.companysymbol%></small> </h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title <%= result.change >= 0 ? "pos" : "neg" %>" <%= result.change  %>><%= number_with_precision(result.change, :precision => 2) %><small class="text-muted">%</small></h1>
-            <!-- <ul class="list-unstyled mt-3 mb-4">
-              <li>10 users included</li>
-              <li>2 GB of storage</li>
-              <li>Email support</li>
-              <li>Help center access</li>
-            </ul> -->
-          </div>
-          <% p result.pred%>
-          <%past_values_start = result.past.length - 6 %>
-          <%past_values_end = result.past.length%>
-          <%counter_i = past_values_start%>
-          <%past_values_right_format = []%>
-          <% start = -999%>
-          <% final = 0%>
-          <% final_index = -1000%>
-          <%loop do%>
-          <%  counter_i += 1%>
-          <%  past_values_right_format.push([counter_i+1-result.past.length, result.past[counter_i]])%>
-          <%  if counter_i > past_values_end - 2%>
-          <% final_index = counter_i+1-result.past.length + 5 %>
-          <%    break%>
-          <%  end%>
-          <%end%>
-          <% forecast_correct = [] %>
-          <% counter_j = 0 %>
-          <% loop do %>
-          <% if result.pred[counter_j] %>
-          <% if result.change > 0%>
-          <% start = (result.pred[counter_j] * 0.91).round %>
-          <% else %>
-          <% start = (result.pred[counter_j] * 1.05).round %>
-          <% end%>
-          <% end %>
-          <% if result.pred[counter_j + 6]%>
-          <% if result.change > 0 %>
-          <% final = (result.pred[counter_j + 6] * 1.02).round %>
-          <% else %>
-          <% final = (result.pred[counter_j + 6] * 0.8).round %>
-          <% end%>
-          <% end %>
-          <% forecast_correct.push([1+counter_j, result.pred[counter_j]]) %>
-          <% counter_j += 1 %>
-          <% if counter_j > 6%>
-          <% break%>
-          <% end %>
-          <% end %>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal"><%= result.companyname%> <small style="font-size:10px;" class="text-muted"><%= result.companysymbol%></small> </h4>
+              </div>
+              <h1 class="card-title card_values"><%= " #{number_with_precision(result.past[-1], :precision => 2)}"%><small class="text-muted">$</small></h1>
+              <h1 class="card-title card_values"><%= " #{number_with_precision(result.pred[-1], :precision => 2)}" %><small class="text-muted">$</small></h1>
+              <h1 class="card-title  <%= result.change >= 0 ? "pos" : "neg" %>" <%= result.change  %>><%= number_with_precision(result.change, :precision => 2) %><small class="text-muted">%</small></h1>
+            </div>
 
-                          <% if result.change > 0 %>
-                          <%= area_chart [{name:"Forecast", data:forecast_correct}], min:start, max:final, curve: true, height:'250px', discrete: true, points: false, prefix: "$", messages: {empty: "No data"}%>
-                          <% else %>
-                          <%= area_chart [{name:"Forecast", data:forecast_correct}], min:start, max:final, curve: true, height:'250px', discrete: true, points: false, prefix: "$", messages: {empty: "No data"}%>
-                          <% end %>
+          <div class="flip-card-back">
+            <% p result.pred%>
+            <%past_values_start = result.past.length - 6 %>
+            <%past_values_end = result.past.length%>
+            <%counter_i = past_values_start%>
+            <%past_values_right_format = []%>
+            <% start = -999%>
+            <% final = 0%>
+            <% final_index = -1000%>
+            <%loop do%>
+            <%  counter_i += 1%>
+            <%  past_values_right_format.push([counter_i+1-result.past.length, result.past[counter_i]])%>
+            <%  if counter_i > past_values_end - 2%>
+            <% final_index = counter_i+1-result.past.length + 5 %>
+            <%    break%>
+            <%  end%>
+            <%end%>
+            <% forecast_correct = [] %>
+            <% counter_j = 0 %>
+            <% loop do %>
+            <% if result.pred[counter_j] %>
+            <% if result.change > 0%>
+            <% start = (result.pred[counter_j] * 0.91).round %>
+            <% else %>
+            <% start = (result.pred[counter_j] * 1.05).round %>
+            <% end%>
+            <% end %>
+            <% if result.pred[counter_j + 6]%>
+            <% if result.change > 0 %>
+            <% final = (result.pred[counter_j + 6] * 1.02).round %>
+            <% else %>
+            <% final = (result.pred[counter_j + 6] * 0.8).round %>
+            <% end%>
+            <% end %>
+            <% forecast_correct.push([1+counter_j, result.pred[counter_j]]) %>
+            <% counter_j += 1 %>
+            <% if counter_j > 6%>
+            <% break%>
+            <% end %>
+            <% end %>
+
+            <% if result.change > 0 %>
+            <%= area_chart [{name: result.companyname, data:forecast_correct}], colors: ["#029810"], min:start, max:final, curve: true, height:'200px', discrete: true, points: false, prefix: "$", messages: {empty: "No data"}%>
+            <% else %>
+            <%= area_chart [{name: result.companyname, data:forecast_correct}], colors: ["#C91801"], min:start, max:final, curve: true, height:'200px', discrete: true, points: false, prefix: "$", messages: {empty: "No data"}%>
+            <% end %>
+          </div>
+
         </div>
-        <%# color:'#029810'
-        color:'#C91801' %>
+          <%# color:'#029810'
+          color:'#C91801' %>
+        </div>
         <% end %>
       </div>
 
-      <footer class="pt-4 my-md-5 pt-md-5 border-top">
-        <div class="row">
-          <div class="col-12 col-md">
-            <img class="mb-2" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-            <small class="d-block mb-3 text-muted">© 2017-2018</small>
-          </div>
-          <div class="col-6 col-md">
-            <h5>Features</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Cool stuff</a></li>
-              <li><a class="text-muted" href="#">Random feature</a></li>
-              <li><a class="text-muted" href="#">Team feature</a></li>
-              <li><a class="text-muted" href="#">Stuff for developers</a></li>
-              <li><a class="text-muted" href="#">Another one</a></li>
-              <li><a class="text-muted" href="#">Last time</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md">
-            <h5>Resources</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Resource</a></li>
-              <li><a class="text-muted" href="#">Resource name</a></li>
-              <li><a class="text-muted" href="#">Another resource</a></li>
-              <li><a class="text-muted" href="#">Final resource</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md">
-            <h5>About</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Team</a></li>
-              <li><a class="text-muted" href="#">Locations</a></li>
-              <li><a class="text-muted" href="#">Privacy</a></li>
-              <li><a class="text-muted" href="#">Terms</a></li>
-            </ul>
-          </div>
-        </div>
-      </footer>
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <footer class="pt-4 my-md-5 pt-md-5">
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/umd/popper.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 <script>
 var input = document.getElementById("myInput");
 input.addEventListener("input", myFunction);
@@ -154,6 +178,11 @@ function myFunction(e) {
     }
   }
 }
+
+$('.flip-card .flip-card-inner').click(function() {
+    $(this).closest('.flip-card').toggleClass('active');
+    $(this).css('transform, rotateY(180deg)');
+});
 </script>
 
 
