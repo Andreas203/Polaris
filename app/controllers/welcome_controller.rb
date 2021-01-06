@@ -17,8 +17,9 @@ class WelcomeController < ApplicationController
 
 
     else
-      @results = ["two", "four", "tres"]
+      @results = ["0"]
     end
+
   end
 
   def new
