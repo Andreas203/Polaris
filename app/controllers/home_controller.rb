@@ -1,5 +1,4 @@
 # app/controllers/home_controller.rb
-
 class HomeController < ApplicationController
   def index
     @contact = Home.new(params[:home])
